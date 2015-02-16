@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html lang="es-co">
+<head>
+    <meta charset="utf-8">
+    <title>APP/Profesor</title>
+    <link rel="shortcut icon" href="/BOOTSTRAP/img/plantel/icono.ico" />
+    <meta name="description" content="description">
+    <meta name="author" content="DevOOPS">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/BOOTSTRAP/plugins/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="/BOOTSTRAP/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+    <script src="BOOTSTRAP/js/cargarmaster.js"></script>
+    <link href="BOOTSTRAP/css/fuente-google.woff" rel="stylesheet" />
+    <script src="/ACADEMIA/inicio.js"></script>
+    <link href="/BOOTSTRAP/css/font-awesome.css" rel="stylesheet" />
+    <link href="/BOOTSTRAP/css/fonts-googleapis.css" rel="stylesheet" />
+    <script src="/BOOTSTRAP/plugins/jquery/jquery-2.1.0.min.js"></script>
+    <link href="/BOOTSTRAP/css/style.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+    <script src="validaciones-tools.js"></script>
+    <script src="/ACADEMIA/usuarios/password.js"></script>
+
+    <style>
+         .boton-top {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            background: #2062A1;
+            cursor: pointer;
+        }
+         .boton-top2 {
+            display: block;
+            position: fixed;
+            bottom: 0;
+            right: auto;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            background: #808080;
+            cursor: pointer;
+        }
+    </style>
+
+
+</head>
+<body >
+    <div id="screensaver">
+        <canvas id="canvas"></canvas>
+        <i class="fa fa-lock" id="screen_unlock"></i>
+    </div>
+    <div id="modalbox">
+        <div class="devoops-modal">
+            <div class="devoops-modal-header">
+                <div class="modal-header-name">
+                    <span>Basic table</span>
+                </div>
+                <div class="box-icons">
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="devoops-modal-inner">
+            </div>
+            <div class="devoops-modal-bottom">
+            </div>
+        </div>
+    </div>
+    <header class="navbar">
+        <div class="container-fluid expanded-panel">
+            <div class="row">
+                <div id="logo" class="col-xs-12 col-sm-2">
+                    <a href="profesor.html">APP NOTAS / PROFESOR</a>
+                </div>
+                <div id="top-panel" class="col-xs-12 col-sm-10">
+                    <div class="row">
+                        <div class="col-xs-8 col-sm-4">
+                            <!--Boton del Menú-->
+                           <!-- <a href="#" class="show-sidebar">
+                                <i class="fa fa-bars"></i>
+                            </a>-->
+                        </div>
+                         <div class="col-xs-4 col-sm-8 top-panel-right">
+                            <ul class="nav navbar-nav pull-right panel-menu">
+                                <!-- <li class="dropdown">
+                                    <a  class="dropdown-toggle account" data-toggle="dropdown">
+                                        <div  id="AvatarSeccion" class="avatar">                                            
+                                        </div>
+                                        <i class="fa  pull-right"></i>
+                                        <div class="user-mini pull-right">
+                                            <span class="welcome">Fecha y hora de sección:</span>
+                                            <span id="SpanSeccion"> 2012/2/3 </span>
+                                        </div>
+                                    </a>
+                                </li>-->
+                              <!--   <li class="dropdown">
+                                    <a class="dropdown-toggle account" data-toggle="dropdown">
+                                        <div  id="AvatarAno" class="avatar">                                            
+                                        </div>
+                                        <i class="fa pull-right"></i>
+                                        <div class="user-mini pull-right">
+                                            <span class="welcome">AÑO ACADEMICO:</span>
+                                            <span id="SpanAno"></span> <!--Ojo que esto va ligado al SeccionAnoAcademico-->
+                                           <!-- <script>
+                                                $("#SpanAno").text(localStorage.getItem('SeccionAnoAcademico'));
+                                            </script>
+                                        </div>
+                                    </a>
+                                </li>-->
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle account" data-toggle="dropdown">
+                                        <div  id="AvatarUser" class="avatar">                                            
+                                         
+                                        </div>
+                                        <i class="fa fa-angle-down pull-right"></i>
+                                        <div class="user-mini pull-right">
+                                            <span class="welcome">Bienvenido(a),</span>
+                                            <span id="userName"> COMPRILET-SOFT </span>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="logout.html" class="ajax-link">
+                                                <i class="fa fa-power-off"></i>
+                                                <span id="logout" class="hidden-sm text">Cerrar Sesión</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </header>
+
+    <div id="main" class="container-fluid">
+        <div class="row">
+            <div id="sidebar-left" class="col-xs-2 col-sm-2">
+                <ul class="nav main-menu">
+                    <li class="dropdown">
+                        <a href="/ACADEMIA/inicio.html" class="dropdown-toggle ajax-link">
+                            <i class="fa fa-home hidden-xs"></i>
+                            <!--<span class="hidden-xs">Inicio</span>  SI DESEO QUE EL ICONO SE OCULTE CUNADO PASA A MOBILE ACTIVO LA CLASE hidden-xs-->
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--<!--Desde aca comienza el contenido de  ppal-->
+            <div id="content" class="col-xs-12 col-sm-10">
+                <div class="preloader">
+                    <img src="/BOOTSTRAP/img/devoops_getdata.gif" class="devoops-getdata" alt="preloader" />
+                </div>
+                <div id="ajax-content" onload="validar_pagina()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------ MODAL PARA EL RESULTADO DE LAS OPERACIONES --------------------------------->
+    <div class="modal fade" id="Modal" tabindex="-1 " role="dialog" aria-labelledby="tituloModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Cerrar</span>
+                    </button>
+                    <h4 id="tituloModal" class="modal-title"></h4>
+                </div>
+                <div id="textoModal" class="modal-body"></div>
+                <div id="ModalFooter" class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+          <!------------------------------------ MODAL PARA EL ACEPTAR --------------------------------->
+    <div class="modal fade" id="ModalPregunta" tabindex="-1 " role="dialog" aria-labelledby="tituloModalPregunta" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Cerrar</span>
+                    </button>
+                    <h4 id="tituloModalPregunta" class="modal-title"></h4>
+                </div>
+                <div id="textoModalPregunta" class="modal-body"></div>
+                <div id="ModalFooterPregunta" class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------ FIN DEL MODAL PARA LAS OPERACIONES ---------------------------------------->
+    <script src="/BOOTSTRAP/plugins/jquery/jquery-2.1.0.min.js"></script>
+    <script src="/BOOTSTRAP/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/BOOTSTRAP/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="/BOOTSTRAP/plugins/justified-gallery/jquery.justifiedgallery.min.js"></script>
+    <script src="/BOOTSTRAP/plugins/tinymce/tinymce.min.js"></script>
+    <script src="/BOOTSTRAP/plugins/tinymce/jquery.tinymce.min.js"></script>
+    <!-- All functions for this theme + document.ready processing -->
+    <script src="/BOOTSTRAP/js/devoopsCOMPRILET.js"></script>  <!--OJO que este es qeu me permite las animaciones con el boton del menu ppal-->
+      <script>    if (localStorage.getItem('SeccionSexo') == 'MASCULINO') {
+        $("#AvatarUser").append('<img src="/BOOTSTRAP/img/avatar-hombre.png" class="img-rounded" alt="avatar" />');
+    }
+    else if (localStorage.getItem('SeccionSexo') == 'FEMENINO') {
+        $("#AvatarUser").append('<img src="/BOOTSTRAP/img/avatar-mujer.png" class="img-rounded" alt="avatar" />');
+    } else {
+        $("#AvatarUser").append('<img src="/BOOTSTRAP/img/avatar-sinsexo.png" class="img-rounded" alt="avatar" />');
+    }
+
+    //$("#AvatarAno").append('<img src="/BOOTSTRAP/img/ano-academico.png" class="img-rounded" alt="avatar" />');
+    //$("#AvatarSeccion").append('<img src="/BOOTSTRAP/img/seccion.png" class="img-rounded" alt="avatar" />');
+
+    </script>
+
+</body>
+</html>

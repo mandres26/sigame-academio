@@ -1,0 +1,1231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{84CF39FE-460C-43A2-ABD4-5902747EF71D}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PPL_APP</RootNamespace>
+    <AssemblyName>4-PPL-APP</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.9.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySql.Data.6.9.5\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySql.Data.Entity.6.9.5\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="areas.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="asignatura.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BDSIGAME.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDSIGAME.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BDSIGAME.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BDSIGAME.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDSIGAME.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="bitacora.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\logrosController.cs" />
+    <Compile Include="Controllers\matriculasController.cs" />
+    <Compile Include="Controllers\notasController.cs" />
+    <Compile Include="Controllers\periodosController.cs" />
+    <Compile Include="Controllers\personasController.cs" />
+    <Compile Include="Controllers\usersController.cs" />
+    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="directores_g.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GestionNotass.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="grados.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="grupos.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="horarios.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="jornadas.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="logros.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="matricula1.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="matricula2.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="notas.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="observatorio.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="periodos.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="personas.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepoBitacora.cs" />
+    <Compile Include="RepoLogros.cs" />
+    <Compile Include="RepoMatricula2.cs" />
+    <Compile Include="RepoNotas.cs" />
+    <Compile Include="RepoPeriodos.cs" />
+    <Compile Include="RepoPersonas.cs" />
+    <Compile Include="reportes.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="roles.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usuarios.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ACADEMIA\inicio.html" />
+    <Content Include="ACADEMIA\notas\generadata.js" />
+    <Content Include="ACADEMIA\notas\notas-grupos.js" />
+    <Content Include="ACADEMIA\notas\simulator.js" />
+    <Content Include="BOOTSTRAP\ajax\sigameboard.html" />
+    <Content Include="BOOTSTRAP\css\font-awesome.css" />
+    <Content Include="BOOTSTRAP\css\fonts-googleapis.css" />
+    <Content Include="BOOTSTRAP\css\jqx.base.css" />
+    <Content Include="BOOTSTRAP\css\style.css" />
+    <Content Include="BOOTSTRAP\css\style.min.css" />
+    <Content Include="BOOTSTRAP\img\avatar-hombre.png" />
+    <Content Include="BOOTSTRAP\img\avatar-mujer.png" />
+    <Content Include="BOOTSTRAP\img\chevron-left.png" />
+    <Content Include="BOOTSTRAP\img\chevron-right.png" />
+    <Content Include="BOOTSTRAP\img\COMPRILET\comprilet-soft-small.ico" />
+    <Content Include="BOOTSTRAP\img\COMPRILET\CompriletSoft-big.ico" />
+    <Content Include="BOOTSTRAP\img\COMPRILET\innovacion.jpg" />
+    <Content Include="BOOTSTRAP\img\COMPRILET\Logo-ComprileSoft.png" />
+    <Content Include="BOOTSTRAP\img\COMPRILET\Slogan-ComprileSoftt.png" />
+    <Content Include="BOOTSTRAP\img\devoops_getdata.gif" />
+    <Content Include="BOOTSTRAP\img\devoops_pattern_b10.png" />
+    <Content Include="BOOTSTRAP\img\logo-200.png" />
+    <Content Include="BOOTSTRAP\img\logo.png" />
+    <Content Include="BOOTSTRAP\img\sort-asc.png" />
+    <Content Include="BOOTSTRAP\img\sort-desc.png" />
+    <Content Include="BOOTSTRAP\img\sort.png" />
+    <Content Include="BOOTSTRAP\img\times.png" />
+    <Content Include="BOOTSTRAP\img\ui-accordion-down.png" />
+    <Content Include="BOOTSTRAP\img\ui-accordion-right.png" />
+    <Content Include="BOOTSTRAP\img\ui-left.png" />
+    <Content Include="BOOTSTRAP\img\ui-right.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\globalization\globalize.culture.cs-CZ.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\globalization\globalize.culture.de-DE.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\globalization\globalize.culture.en-CA.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\globalization\globalize.culture.en-US.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\globalization\globalize.culture.fr-FR.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\globalization\globalize.culture.he-IL.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\globalization\globalize.culture.hr-HR.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\globalization\globalize.culture.hu-HU.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\globalization\globalize.culture.it-IT.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\globalization\globalize.culture.ja-JP.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\globalization\globalize.culture.lt.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\globalization\globalize.culture.ru-RU.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\globalization\globalize.culture.sa-IN.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\globalization\globalize.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\globalization\ReadMe.txt" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxangular.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxbulletchart.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxbuttongroup.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxbuttons.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxcalendar.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxchart.core.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxchart.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxchart.rangeselector.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxcheckbox.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxcolorpicker.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxcombobox.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxcore.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxdata.export.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxdata.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxdatatable.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxdatetimeinput.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxdocking.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxdockpanel.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxdragdrop.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxdraw.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxdropdownbutton.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxdropdownlist.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxeditor.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxexpander.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxgauge.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxgrid.aggregates.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxgrid.columnsreorder.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxgrid.columnsresize.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxgrid.edit.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxgrid.export.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxgrid.filter.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxgrid.grouping.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxgrid.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxgrid.pager.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxgrid.selection.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxgrid.sort.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxgrid.storage.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxinput.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxknockout.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxlistbox.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxlistmenu.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxmaskedinput.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxmenu.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxnavigationbar.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxnotification.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxnumberinput.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxpanel.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxpasswordinput.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxprogressbar.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxradiobutton.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxrangeselector.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxrating.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxresponse.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxscrollbar.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxscrollview.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxslider.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxsplitter.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxswitchbutton.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxtabs.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxtooltip.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxtouch.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxtree.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxtreegrid.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxtreemap.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxvalidator.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\jqxwindow.js" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\backgroundTop.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\backImage.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\bg_black.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\bg_blackhover.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\bg_blackhover_horizontal.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\bg_blackpressed.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\bg_blackpressed_horizontal.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\bg_black_horizontal.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\bg_blueenergy.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\bg_darkblue.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\bg_darkbluehover.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\bg_darkbluepressed.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\blackbackground.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\black_gradient.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\check_black.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\check_blue.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\check_blue_indeterminate.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\check_disabled.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\check_indeterminate_black.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\check_indeterminate_disabled.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\check_indeterminate_white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\check_lightblue.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\check_lightblue_indeterminate.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\check_white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\close.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\close_black.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\close_blue.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\close_white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\colorpicker\bar-hue.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\colorpicker\bar-saturation.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\colorpicker\map-hue.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\colorpicker\map-saturation-overlay.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\colorpicker\map-saturation.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\colorpicker\ReadMe.txt" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\crosshair-white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\crosshair.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\darkness\ReadMe.txt" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\darkness\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\darkness\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\darkness\ui-bg_glass_20_555555_1x400.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\darkness\ui-bg_glass_40_0078a3_1x400.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\darkness\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\darkness\ui-bg_gloss-wave_25_333333_500x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\darkness\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\darkness\ui-bg_inset-soft_25_000000_1x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\darkness\ui-bg_inset-soft_30_f58400_1x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\darkness\ui-icons_222222_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\darkness\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\darkness\ui-icons_a83300_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\darkness\ui-icons_cccccc_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\darkness\ui-icons_ffffff_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\darkred_gradient.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\drag.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\dragcancel.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\error.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\filter.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\html_editor.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\html_editor_white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-calendar-white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-calendar.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-cancel-white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-cancel.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-delete-white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-delete.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-down-blue.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-down-transparent.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-down-white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-down.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-edit-white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-edit.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-first-blue.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-first-transparent.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-first-white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-first.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-last-blue.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-last-transparent.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-last-white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-last.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-left-blue.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-left-transparent.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-left-white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-left.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-menu-minimized-white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-menu-minimized.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-right-blue.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-right-transparent.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-right-white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-right.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-save-white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-save.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-showpassword-white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-showpassword.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-up-blue.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-up-transparent.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-up-white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\icon-up.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\info.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\le-frog\ReadMe.txt" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\le-frog\ui-bg_diagonals-small_0_aaaaaa_40x40.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\le-frog\ui-bg_diagonals-thick_15_444444_40x40.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\le-frog\ui-bg_diagonals-thick_95_ffdc2e_40x40.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\le-frog\ui-bg_glass_55_fbf5d0_1x400.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\le-frog\ui-bg_highlight-hard_30_285c00_1x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\le-frog\ui-bg_highlight-soft_33_3a8104_1x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\le-frog\ui-bg_highlight-soft_50_4eb305_1x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\le-frog\ui-bg_highlight-soft_60_4ca20b_1x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\le-frog\ui-bg_inset-soft_10_285c00_1x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\le-frog\ui-icons_4eb305_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\le-frog\ui-icons_72b42d_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\le-frog\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\le-frog\ui-icons_ffffff_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\lightness\icon-first.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\lightness\icon-last.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\lightness\ReadMe.txt" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\lightness\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\lightness\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\lightness\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\lightness\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\lightness\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\lightness\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\lightness\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\lightness\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\lightness\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\lightness\ui-icons_222222_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\lightness\ui-icons_228ef1_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\lightness\ui-icons_ef8c08_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\lightness\ui-icons_ffd27a_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\lightness\ui-icons_ffffff_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\loader.gif" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\mail.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\menubutton.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\metro-icon-down-white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\metro-icon-down.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\metro-icon-first-white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\metro-icon-first.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\metro-icon-last-white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\metro-icon-last.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\metro-icon-left-white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\metro-icon-left.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\metro-icon-right - Copy.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\metro-icon-right-white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\metro-icon-right.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\metro-icon-up-white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\metro-icon-up.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\multi-arrow.gif" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\office-icon-down.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\office-icon-first.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\office-icon-last.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\office-icon-left.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\office-icon-right.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\office-icon-up.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\overcast\ReadMe.txt" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\overcast\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\overcast\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\overcast\ui-bg_flat_55_c0402a_40x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\overcast\ui-bg_flat_55_eeeeee_40x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\overcast\ui-bg_glass_100_f8f8f8_1x400.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\overcast\ui-bg_glass_35_dddddd_1x400.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\overcast\ui-bg_glass_60_eeeeee_1x400.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\overcast\ui-bg_inset-hard_75_999999_1x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\overcast\ui-bg_inset-soft_50_c9c9c9_1x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\overcast\ui-icons_3383bb_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\overcast\ui-icons_454545_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\overcast\ui-icons_70b2e1_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\overcast\ui-icons_999999_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\overcast\ui-icons_fbc856_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\plus.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\plus_white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\pointer.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\rangebar_classic.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\rangebar_darkblue.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\rangebar_shinyblack.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\rangebar_summer.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\redmond\icon-first.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\redmond\icon-last.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\redmond\ReadMe.txt" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\redmond\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\redmond\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\redmond\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\redmond\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\redmond\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\redmond\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\redmond\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\redmond\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\redmond\ui-icons_217bc0_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\redmond\ui-icons_2e83ff_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\redmond\ui-icons_469bdd_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\redmond\ui-icons_6da8d5_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\redmond\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\redmond\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\redmond\ui-icons_f9bd01_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\red_arrow_down.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\red_arrow_up.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\red_gradient.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\roundbg_check_black.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\roundbg_check_disabled.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\roundbg_check_indeterminate.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\roundbg_check_white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\roundbg_classic_hover.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\roundbg_classic_normal.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\roundbg_disabled.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\search.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\search_white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\smoothness\ReadMe.txt" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\smoothness\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\smoothness\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\smoothness\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\smoothness\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\smoothness\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\smoothness\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\smoothness\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\smoothness\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\smoothness\ui-icons_222222_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\smoothness\ui-icons_2e83ff_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\smoothness\ui-icons_454545_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\smoothness\ui-icons_888888_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\smoothness\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sortasc.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sortascbutton.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sortdesc.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sortdescbutton.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sortremove.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\star.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\start\ReadMe.txt" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\start\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\start\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\start\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\start\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\start\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\start\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\start\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\start\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\start\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\start\ui-icons_0078ae_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\start\ui-icons_056b93_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\start\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\start\ui-icons_e0fdff_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\start\ui-icons_f5e175_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\start\ui-icons_f7a50d_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\start\ui-icons_fcd113_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\star_disabled.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\star_hover.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\success.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sunny\ReadMe.txt" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sunny\ui-bg_diagonals-medium_20_d34d17_40x40.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sunny\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sunny\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sunny\ui-bg_gloss-wave_45_817865_500x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sunny\ui-bg_gloss-wave_60_fece2f_500x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sunny\ui-bg_gloss-wave_70_ffdd57_500x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sunny\ui-bg_gloss-wave_90_fff9e5_500x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sunny\ui-bg_highlight-soft_100_feeebd_1x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sunny\ui-bg_inset-soft_30_ffffff_1x100.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sunny\ui-icons_3d3d3d_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sunny\ui-icons_bd7b00_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sunny\ui-icons_d19405_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sunny\ui-icons_eb990f_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sunny\ui-icons_ed9f26_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sunny\ui-icons_fadc7a_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\sunny\ui-icons_ffe180_256x240.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\tick.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\time.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\track_classic.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\track_darkblue.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\track_shinyblack.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\track_summer.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\warning.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\wp_check_indeterminate_white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\images\wp_check_white.png" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.android.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.arctic.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.base.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.black.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.blackberry.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.bootstrap.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.classic.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.darkblue.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.energyblue.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.fresh.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.highcontrast.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.metro.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.metrodark.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.mobile.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.office.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.orange.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.shinyblack.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.summer.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.ui-darkness.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.ui-le-frog.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.ui-lightness.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.ui-overcast.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.ui-redmond.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.ui-smoothness.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.ui-start.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.ui-sunny.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.web.css" />
+    <Content Include="BOOTSTRAP\jqwidgets\styles\jqx.windowsphone.css" />
+    <Content Include="BOOTSTRAP\js\cargarmaster.js" />
+    <Content Include="BOOTSTRAP\js\devoops.js" />
+    <Content Include="BOOTSTRAP\js\devoops.min.js" />
+    <Content Include="BOOTSTRAP\js\devoopsCOMPRILET.js" />
+    <Content Include="BOOTSTRAP\js\jquery-2.1.0.min.js" />
+    <Content Include="BOOTSTRAP\js\main.css" />
+    <Content Include="BOOTSTRAP\js\normalize.min.css" />
+    <Content Include="BOOTSTRAP\js\typeahead.bundle.js" />
+    <Content Include="BOOTSTRAP\plugins\bootstrapvalidator\bootstrapValidator.css" />
+    <Content Include="BOOTSTRAP\plugins\bootstrapvalidator\bootstrapValidator.js" />
+    <Content Include="BOOTSTRAP\plugins\bootstrapvalidator\bootstrapValidator.min.css" />
+    <Content Include="BOOTSTRAP\plugins\bootstrapvalidator\bootstrapValidator.min.js" />
+    <Content Include="BOOTSTRAP\plugins\bootstrap\bootstrap-theme.css" />
+    <Content Include="BOOTSTRAP\plugins\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="BOOTSTRAP\plugins\bootstrap\bootstrap.css" />
+    <Content Include="BOOTSTRAP\plugins\bootstrap\bootstrap.js" />
+    <Content Include="BOOTSTRAP\plugins\bootstrap\bootstrap.min.css" />
+    <Content Include="BOOTSTRAP\plugins\bootstrap\bootstrap.min.js" />
+    <Content Include="BOOTSTRAP\plugins\bootstrap\bootstrapSIGAME.css" />
+    <Content Include="BOOTSTRAP\plugins\d3\d3.v3.js" />
+    <Content Include="BOOTSTRAP\plugins\d3\d3.v3.min.js" />
+    <Content Include="BOOTSTRAP\plugins\datatables\copy_csv_xls_pdf.swf" />
+    <Content Include="BOOTSTRAP\plugins\datatables\dataTables.bootstrap.js" />
+    <Content Include="BOOTSTRAP\plugins\datatables\jquery.dataTables.js" />
+    <Content Include="BOOTSTRAP\plugins\datatables\TableTools.js" />
+    <Content Include="BOOTSTRAP\plugins\datatables\TableTools_orig.js" />
+    <Content Include="BOOTSTRAP\plugins\datatables\ZeroClipboard.js" />
+    <Content Include="BOOTSTRAP\plugins\fancybox\blank.gif" />
+    <Content Include="BOOTSTRAP\plugins\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="BOOTSTRAP\plugins\fancybox\fancybox_loading.gif" />
+    <Content Include="BOOTSTRAP\plugins\fancybox\fancybox_overlay.png" />
+    <Content Include="BOOTSTRAP\plugins\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="BOOTSTRAP\plugins\fancybox\fancybox_sprite.png" />
+    <Content Include="BOOTSTRAP\plugins\fancybox\helpers\fancybox_buttons.png" />
+    <Content Include="BOOTSTRAP\plugins\fancybox\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="BOOTSTRAP\plugins\fancybox\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="BOOTSTRAP\plugins\fancybox\helpers\jquery.fancybox-media.js" />
+    <Content Include="BOOTSTRAP\plugins\fancybox\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="BOOTSTRAP\plugins\fancybox\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="BOOTSTRAP\plugins\fancybox\jquery.fancybox.css" />
+    <Content Include="BOOTSTRAP\plugins\fancybox\jquery.fancybox.js" />
+    <Content Include="BOOTSTRAP\plugins\fancybox\jquery.fancybox.pack.js" />
+    <Content Include="BOOTSTRAP\plugins\fineuploader\edit.gif" />
+    <Content Include="BOOTSTRAP\plugins\fineuploader\fineuploader-5.0.1.css" />
+    <Content Include="BOOTSTRAP\plugins\fineuploader\fineuploader-5.0.1.min.css" />
+    <Content Include="BOOTSTRAP\plugins\fineuploader\iframe.xss.response-5.0.1.js" />
+    <Content Include="BOOTSTRAP\plugins\fineuploader\jquery.fineuploader-5.0.1.js" />
+    <Content Include="BOOTSTRAP\plugins\fineuploader\jquery.fineuploader-5.0.1.min.js" />
+    <Content Include="BOOTSTRAP\plugins\fineuploader\loading.gif" />
+    <Content Include="BOOTSTRAP\plugins\fineuploader\processing.gif" />
+    <Content Include="BOOTSTRAP\plugins\flot\jquery.flot.js" />
+    <Content Include="BOOTSTRAP\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="BOOTSTRAP\plugins\flot\jquery.flot.time.js" />
+    <Content Include="BOOTSTRAP\plugins\flot\LICENSE.txt" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\fullcalendar.css" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\fullcalendar.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\fullcalendar.print.css" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\gcal.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\all.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\ar-ma.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\ar.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\bg.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\ca.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\cs.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\da.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\de.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\el.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\en-au.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\en-ca.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\en-gb.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\es.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\fa.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\fi.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\fr-ca.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\fr.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\hi.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\hr.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\hu.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\it.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\ja.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\ko.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\lt.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\lv.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\nl.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\pl.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\pt-br.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\pt.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\ro.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\ru.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\sk.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\sl.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\sv.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\th.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\tr.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\uk.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\zh-cn.js" />
+    <Content Include="BOOTSTRAP\plugins\fullcalendar\lang\zh-tw.js" />
+    <Content Include="BOOTSTRAP\plugins\jQuery-Knob\jquery.knob.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-af.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-am.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-bg.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-ca.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-cs.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-da.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-de.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-el.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-es.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-et.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-eu.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-fi.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-fr.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-gl.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-he.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-hr.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-hu.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-id.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-it.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-ja.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-ko.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-lt.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-nl.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-no.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-pl.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-pt-BR.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-pt.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-ro.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-ru.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-sk.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-sr-RS.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-sr-YU.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-sv.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-th.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-tr.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-uk.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-vi.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-zh-CN.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-zh-TW.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\index.html" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\jquery-ui-sliderAccess.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\jquery-ui-timepicker-addon.css" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\jquery-ui-timepicker-addon.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\jquery-ui-timepicker-addon.min.css" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\jquery-ui-timepicker-addon.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery-ui-i18n.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-af.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-ar-DZ.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-ar.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-az.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-be.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-bg.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-bs.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-ca.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-cs.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-cy-GB.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-da.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-de.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-el.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-en-AU.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-en-GB.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-en-NZ.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-eo.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-es.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-et.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-eu.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-fa.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-fi.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-fo.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-fr-CA.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-fr-CH.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-fr.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-gl.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-he.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-hi.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-hr.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-hu.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-hy.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-id.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-is.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-it.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-ja.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-ka.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-kk.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-km.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-ko.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-ky.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-lb.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-lt.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-lv.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-mk.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-ml.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-ms.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-nb.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-nl-BE.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-nl.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-nn.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-no.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-pl.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-pt-BR.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-pt.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-rm.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-ro.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-ru.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-sk.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-sl.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-sq.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-sr-SR.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-sr.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-sv.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-ta.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-th.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-tj.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-tr.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-uk.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-vi.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-zh-CN.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-zh-HK.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\i18n\jquery.ui.datepicker-zh-TW.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\images\animated-overlay.gif" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\images\ui-icons_454545_256x240.png" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\images\ui-icons_888888_256x240.png" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\jquery-ui.css" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\jquery-ui.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\jquery-ui.min.css" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui\jquery-ui.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery\jquery-1.10.2.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery\jquery-1.11.1.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery\jquery-2.1.0.min.js" />
+    <Content Include="BOOTSTRAP\plugins\jquery\jquery.cookie.js" />
+    <Content Include="BOOTSTRAP\plugins\justified-gallery\jquery.justifiedgallery.css" />
+    <Content Include="BOOTSTRAP\plugins\justified-gallery\jquery.justifiedgallery.js" />
+    <Content Include="BOOTSTRAP\plugins\justified-gallery\jquery.justifiedgallery.min.css" />
+    <Content Include="BOOTSTRAP\plugins\justified-gallery\jquery.justifiedgallery.min.js" />
+    <Content Include="BOOTSTRAP\plugins\justified-gallery\loading.gif" />
+    <Content Include="BOOTSTRAP\plugins\moment\langs.js" />
+    <Content Include="BOOTSTRAP\plugins\moment\langs.min.js" />
+    <Content Include="BOOTSTRAP\plugins\moment\moment-with-langs.js" />
+    <Content Include="BOOTSTRAP\plugins\moment\moment-with-langs.min.js" />
+    <Content Include="BOOTSTRAP\plugins\moment\moment.min.js" />
+    <Content Include="BOOTSTRAP\plugins\morris\morris.js" />
+    <Content Include="BOOTSTRAP\plugins\morris\morris.min.js" />
+    <Content Include="BOOTSTRAP\plugins\raphael\raphael-min.js" />
+    <Content Include="BOOTSTRAP\plugins\raphael\raphael.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2-bootstrap.css" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2-spinner.gif" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2.css" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2.min.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2.png" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2x2.png" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_ar.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_bg.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_ca.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_cs.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_da.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_de.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_el.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_es.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_et.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_eu.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_fa.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_fi.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_fr.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_gl.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_he.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_hr.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_hu.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_id.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_is.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_it.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_ja.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_ko.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_lt.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_lv.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_mk.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_ms.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_nl.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_no.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_pl.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_pt-BR.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_pt-PT.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_ro.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_ru.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_sk.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_sv.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_th.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_tr.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_ua.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_vi.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_zh-CN.js" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_zh-TW.js" />
+    <Content Include="BOOTSTRAP\plugins\sparkline\jquery.sparkline.js" />
+    <Content Include="BOOTSTRAP\plugins\sparkline\jquery.sparkline.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\jquery.tinymce.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\license.txt" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\example\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\example_dependency\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\layer\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\media\moxieplayer.swf" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\skins\lightgray\skin.ie7.min.css" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\themes\modern\theme.min.js" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\tinymce.min.js" />
+    <Content Include="BOOTSTRAP\plugins\xcharts\xcharts.css" />
+    <Content Include="BOOTSTRAP\plugins\xcharts\xcharts.js" />
+    <Content Include="BOOTSTRAP\plugins\xcharts\xcharts.min.css" />
+    <Content Include="BOOTSTRAP\plugins\xcharts\xcharts.min.js" />
+    <Content Include="cargando.html" />
+    <Content Include="config.xml" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="BOOTSTRAP\css\fuente-google.woff" />
+    <Content Include="BOOTSTRAP\fonts\fuente-google.woff" />
+    <Content Include="BOOTSTRAP\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="BOOTSTRAP\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="BOOTSTRAP\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="BOOTSTRAP\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="BOOTSTRAP\plugins\bootstrap\bootstrap-theme.css.map" />
+    <Content Include="BOOTSTRAP\plugins\bootstrap\bootstrap.css.map" />
+    <Content Include="BOOTSTRAP\plugins\bootstrapvalidator\bootstrapValidator.scss" />
+    <Content Include="BOOTSTRAP\plugins\d3\LICENSE" />
+    <Content Include="BOOTSTRAP\plugins\fineuploader\LICENSE" />
+    <Content Include="BOOTSTRAP\plugins\jQuery-Knob\LICENSE" />
+    <Content Include="BOOTSTRAP\plugins\jquery-ui-timepicker-addon\LICENSE-MIT" />
+    <Content Include="BOOTSTRAP\plugins\justified-gallery\README.md" />
+    <Content Include="BOOTSTRAP\plugins\moment\LICENSE" />
+    <Content Include="BOOTSTRAP\plugins\select2\bower.json" />
+    <Content Include="BOOTSTRAP\plugins\select2\LICENSE" />
+    <Content Include="BOOTSTRAP\plugins\select2\README.md" />
+    <Content Include="BOOTSTRAP\plugins\select2\release.sh" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2.jquery.json" />
+    <Content Include="BOOTSTRAP\plugins\select2\select2_locale_en.js.template" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\langs\readme.md" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\skins\lightgray\fonts\readme.md" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\skins\lightgray\fonts\tinymce.eot" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\skins\lightgray\fonts\tinymce.ttf" />
+    <Content Include="BOOTSTRAP\plugins\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="BOOTSTRAP\plugins\xcharts\LICENSE" />
+    <Content Include="BOOTSTRAP\plugins\xcharts\README.md" />
+    <EntityDeploy Include="BDSIGAME.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BDSIGAME.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="BDSIGAME.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDSIGAME.edmx</DependentUpon>
+      <LastGenOutput>BDSIGAME.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BDSIGAME.edmx.diagram">
+      <DependentUpon>BDSIGAME.edmx</DependentUpon>
+    </Content>
+    <Content Include="BDSIGAME.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDSIGAME.edmx</DependentUpon>
+      <LastGenOutput>BDSIGAME.cs</LastGenOutput>
+    </Content>
+    <None Include="Properties\PublishProfiles\APPULTIMATE.pubxml" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="index.html" />
+    <Content Include="indextest.html" />
+    <Content Include="LOGIN\index.js" />
+    <Content Include="logout.html" />
+    <Content Include="profesor.html" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="validaciones-tools.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ENTIDADES\ENTIDADES.csproj">
+      <Project>{2a1dfab0-3f7d-4f8c-a161-9d3256fa9d96}</Project>
+      <Name>ENTIDADES</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2632/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

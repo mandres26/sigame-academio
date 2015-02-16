@@ -1,0 +1,54 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://sigame.com"
+        id        = "compriletsoft"
+        version   = "1.0.0">
+    <name>NotasApp</name>
+
+    <description>
+        Aplicación movil para la gestión de notas de compriletsoft
+    </description>
+
+    <author href="http://compriletsoft.comprilet.co" email="l.r.s.m.2013@gmnail.com">
+        Luis Silva - Sindry Rueda
+    </author>
+    <preference name="permissions"                value="none"/>
+    
+    <!-- Define app icon for each platform. -->
+    <icon src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png" />
+    <icon src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"   gap:platform="android"    gap:qualifier="ldpi" />
+    <icon src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"   gap:platform="android"    gap:qualifier="mdpi" />
+    <icon src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"   gap:platform="android"    gap:qualifier="hdpi" />
+    <icon src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"  gap:platform="android"    gap:qualifier="xhdpi" />
+    <icon src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"     gap:platform="blackberry" />
+    <icon src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"     gap:platform="blackberry" gap:state="hover"/>
+    <icon src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"            gap:platform="ios"        width="57" height="57" />
+    <icon src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"            gap:platform="ios"        width="72" height="72" />
+    <icon src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"         gap:platform="ios"        width="114" height="114" />
+    <icon src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"         gap:platform="ios"        width="144" height="144" />
+    <icon src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"          gap:platform="webos" />
+    <icon src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"  gap:platform="winphone" />
+    <icon src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png" gap:platform="winphone"   gap:role="background" />
+
+    <!-- Define app splash screen for each platform. -->
+    <gap:splash src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"       gap:platform="android" gap:qualifier="port-ldpi" />
+    <gap:splash src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"       gap:platform="android" gap:qualifier="port-mdpi" />
+    <gap:splash src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"       gap:platform="android" gap:qualifier="port-hdpi" />
+    <gap:splash src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"      gap:platform="android" gap:qualifier="port-xhdpi" />
+    <gap:splash src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"              gap:platform="blackberry" />
+    <gap:splash src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"         gap:platform="ios"     width="320" height="480" />
+    <gap:splash src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"      gap:platform="ios"     width="640" height="960" />
+    <gap:splash src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png" gap:platform="ios"     width="640" height="1136" />
+    <gap:splash src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"           gap:platform="ios"     width="768" height="1024" />
+    <gap:splash src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"          gap:platform="ios"     width="1024" height="768" />
+    <gap:splash src="BOOTSTRAP/img/COMPRILET/comprilet-soft-small.png"      gap:platform="winphone" />
+
+    <gap:config-file platform="ios" parent="CFBundleShortVersionString">
+    <string>100</string>
+    </gap:config-file>
+    <access origin="*"/>
+
+</widget>

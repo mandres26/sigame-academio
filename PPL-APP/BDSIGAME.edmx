@@ -1,0 +1,1761 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="bdsigameModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="bdsigameModelStoreContainer">
+          <EntitySet Name="areas" EntityType="bdsigameModel.Store.areas" store:Type="Tables" Schema="bdsigame" />
+          <EntitySet Name="asignatura" EntityType="bdsigameModel.Store.asignatura" store:Type="Tables" Schema="bdsigame" />
+          <EntitySet Name="bitacora" EntityType="bdsigameModel.Store.bitacora" store:Type="Tables" Schema="bdsigame" />
+          <EntitySet Name="directores_g" EntityType="bdsigameModel.Store.directores_g" store:Type="Tables" Schema="bdsigame" />
+          <EntitySet Name="grados" EntityType="bdsigameModel.Store.grados" store:Type="Tables" Schema="bdsigame" />
+          <EntitySet Name="grupos" EntityType="bdsigameModel.Store.grupos" store:Type="Tables" Schema="bdsigame" />
+          <EntitySet Name="horarios" EntityType="bdsigameModel.Store.horarios" store:Type="Tables" Schema="bdsigame" />
+          <EntitySet Name="jornadas" EntityType="bdsigameModel.Store.jornadas" store:Type="Tables" Schema="bdsigame" />
+          <EntitySet Name="logros" EntityType="bdsigameModel.Store.logros" store:Type="Tables" Schema="bdsigame" />
+          <EntitySet Name="matricula1" EntityType="bdsigameModel.Store.matricula1" store:Type="Tables" Schema="bdsigame" />
+          <EntitySet Name="matricula2" EntityType="bdsigameModel.Store.matricula2" store:Type="Tables" Schema="bdsigame" />
+          <EntitySet Name="notas" EntityType="bdsigameModel.Store.notas" store:Type="Tables" Schema="bdsigame" />
+          <EntitySet Name="observatorio" EntityType="bdsigameModel.Store.observatorio" store:Type="Tables" Schema="bdsigame" />
+          <EntitySet Name="periodos" EntityType="bdsigameModel.Store.periodos" store:Type="Tables" Schema="bdsigame" />
+          <EntitySet Name="personas" EntityType="bdsigameModel.Store.personas" store:Type="Tables" Schema="bdsigame" />
+          <EntitySet Name="reportes" EntityType="bdsigameModel.Store.reportes" store:Type="Tables" Schema="bdsigame" />
+          <EntitySet Name="roles" EntityType="bdsigameModel.Store.roles" store:Type="Tables" Schema="bdsigame" />
+          <EntitySet Name="usuarios" EntityType="bdsigameModel.Store.usuarios" store:Type="Tables" Schema="bdsigame" />
+          <AssociationSet Name="fk-acudie" Association="bdsigameModel.Store.fk-acudie">
+            <End Role="personas" EntitySet="personas" />
+            <End Role="matricula2" EntitySet="matricula2" />
+          </AssociationSet>
+          <AssociationSet Name="fk-ahL" Association="bdsigameModel.Store.fk-ahL">
+            <End Role="asignatura" EntitySet="asignatura" />
+            <End Role="horarios" EntitySet="horarios" />
+          </AssociationSet>
+          <AssociationSet Name="fk-asignatur" Association="bdsigameModel.Store.fk-asignatur">
+            <End Role="asignatura" EntitySet="asignatura" />
+            <End Role="logros" EntitySet="logros" />
+          </AssociationSet>
+          <AssociationSet Name="fk-asignatura" Association="bdsigameModel.Store.fk-asignatura">
+            <End Role="asignatura" EntitySet="asignatura" />
+            <End Role="matricula1" EntitySet="matricula1" />
+          </AssociationSet>
+          <AssociationSet Name="fk-asignaturass" Association="bdsigameModel.Store.fk-asignaturass">
+            <End Role="asignatura" EntitySet="asignatura" />
+            <End Role="notas" EntitySet="notas" />
+          </AssociationSet>
+          <AssociationSet Name="fk-asignaturasss" Association="bdsigameModel.Store.fk-asignaturasss">
+            <End Role="asignatura" EntitySet="asignatura" />
+            <End Role="observatorio" EntitySet="observatorio" />
+          </AssociationSet>
+          <AssociationSet Name="fkdir1" Association="bdsigameModel.Store.fkdir1">
+            <End Role="grupos" EntitySet="grupos" />
+            <End Role="directores_g" EntitySet="directores_g" />
+          </AssociationSet>
+          <AssociationSet Name="fkdir2" Association="bdsigameModel.Store.fkdir2">
+            <End Role="personas" EntitySet="personas" />
+            <End Role="directores_g" EntitySet="directores_g" />
+          </AssociationSet>
+          <AssociationSet Name="fk-e" Association="bdsigameModel.Store.fk-e">
+            <End Role="personas" EntitySet="personas" />
+            <End Role="reportes" EntitySet="reportes" />
+          </AssociationSet>
+          <AssociationSet Name="fk-estudi" Association="bdsigameModel.Store.fk-estudi">
+            <End Role="personas" EntitySet="personas" />
+            <End Role="matricula2" EntitySet="matricula2" />
+          </AssociationSet>
+          <AssociationSet Name="fk-estudiantess" Association="bdsigameModel.Store.fk-estudiantess">
+            <End Role="personas" EntitySet="personas" />
+            <End Role="notas" EntitySet="notas" />
+          </AssociationSet>
+          <AssociationSet Name="fk-estudiantesss" Association="bdsigameModel.Store.fk-estudiantesss">
+            <End Role="personas" EntitySet="personas" />
+            <End Role="observatorio" EntitySet="observatorio" />
+          </AssociationSet>
+          <AssociationSet Name="fk-g" Association="bdsigameModel.Store.fk-g">
+            <End Role="grupos" EntitySet="grupos" />
+            <End Role="reportes" EntitySet="reportes" />
+          </AssociationSet>
+          <AssociationSet Name="fk-ghL" Association="bdsigameModel.Store.fk-ghL">
+            <End Role="grupos" EntitySet="grupos" />
+            <End Role="horarios" EntitySet="horarios" />
+          </AssociationSet>
+          <AssociationSet Name="fk-grad" Association="bdsigameModel.Store.fk-grad">
+            <End Role="grados" EntitySet="grados" />
+            <End Role="grupos" EntitySet="grupos" />
+          </AssociationSet>
+          <AssociationSet Name="fk-grade" Association="bdsigameModel.Store.fk-grade">
+            <End Role="grados" EntitySet="grados" />
+            <End Role="logros" EntitySet="logros" />
+          </AssociationSet>
+          <AssociationSet Name="fk-grup" Association="bdsigameModel.Store.fk-grup">
+            <End Role="grupos" EntitySet="grupos" />
+            <End Role="matricula2" EntitySet="matricula2" />
+          </AssociationSet>
+          <AssociationSet Name="fk-grupo" Association="bdsigameModel.Store.fk-grupo">
+            <End Role="grupos" EntitySet="grupos" />
+            <End Role="matricula1" EntitySet="matricula1" />
+          </AssociationSet>
+          <AssociationSet Name="fk-gruposs" Association="bdsigameModel.Store.fk-gruposs">
+            <End Role="grupos" EntitySet="grupos" />
+            <End Role="notas" EntitySet="notas" />
+          </AssociationSet>
+          <AssociationSet Name="fk-gruposss" Association="bdsigameModel.Store.fk-gruposss">
+            <End Role="grupos" EntitySet="grupos" />
+            <End Role="observatorio" EntitySet="observatorio" />
+          </AssociationSet>
+          <AssociationSet Name="fk-jor" Association="bdsigameModel.Store.fk-jor">
+            <End Role="jornadas" EntitySet="jornadas" />
+            <End Role="horarios" EntitySet="horarios" />
+          </AssociationSet>
+          <AssociationSet Name="fk-logross" Association="bdsigameModel.Store.fk-logross">
+            <End Role="logros" EntitySet="logros" />
+            <End Role="notas" EntitySet="notas" />
+          </AssociationSet>
+          <AssociationSet Name="fk-p" Association="bdsigameModel.Store.fk-p">
+            <End Role="periodos" EntitySet="periodos" />
+            <End Role="reportes" EntitySet="reportes" />
+          </AssociationSet>
+          <AssociationSet Name="fk-period" Association="bdsigameModel.Store.fk-period">
+            <End Role="periodos" EntitySet="periodos" />
+            <End Role="notas" EntitySet="notas" />
+          </AssociationSet>
+          <AssociationSet Name="fk-periodosss" Association="bdsigameModel.Store.fk-periodosss">
+            <End Role="periodos" EntitySet="periodos" />
+            <End Role="observatorio" EntitySet="observatorio" />
+          </AssociationSet>
+          <AssociationSet Name="fk-personas" Association="bdsigameModel.Store.fk-personas">
+            <End Role="personas" EntitySet="personas" />
+            <End Role="usuarios" EntitySet="usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="fk-profesor" Association="bdsigameModel.Store.fk-profesor">
+            <End Role="personas" EntitySet="personas" />
+            <End Role="matricula1" EntitySet="matricula1" />
+          </AssociationSet>
+          <AssociationSet Name="fk-profesoress" Association="bdsigameModel.Store.fk-profesoress">
+            <End Role="personas" EntitySet="personas" />
+            <End Role="notas" EntitySet="notas" />
+          </AssociationSet>
+          <AssociationSet Name="fk-profesoresss" Association="bdsigameModel.Store.fk-profesoresss">
+            <End Role="personas" EntitySet="personas" />
+            <End Role="observatorio" EntitySet="observatorio" />
+          </AssociationSet>
+          <AssociationSet Name="jjjjjj" Association="bdsigameModel.Store.jjjjjj">
+            <End Role="areas" EntitySet="areas" />
+            <End Role="asignatura" EntitySet="asignatura" />
+          </AssociationSet>
+          <AssociationSet Name="jornada" Association="bdsigameModel.Store.jornada">
+            <End Role="jornadas" EntitySet="jornadas" />
+            <End Role="personas" EntitySet="personas" />
+          </AssociationSet>
+          <AssociationSet Name="rol" Association="bdsigameModel.Store.rol">
+            <End Role="roles" EntitySet="roles" />
+            <End Role="personas" EntitySet="personas" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="areas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" Nullable="false" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="asignatura">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" Nullable="false" MaxLength="11" />
+          <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="horas" Type="varchar" Nullable="false" MaxLength="4" />
+          <Property Name="area" Type="varchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="bitacora">
+          <Key>
+            <PropertyRef Name="id-bitacora" />
+          </Key>
+          <Property Name="id-bitacora" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="seccion" Type="varchar" MaxLength="20" />
+          <Property Name="accion" Type="varchar" MaxLength="20" />
+          <Property Name="usuario" Type="varchar" MaxLength="60" />
+          <Property Name="id-usuario" Type="varchar" MaxLength="20" />
+          <Property Name="fecha" Type="datetime" />
+          <Property Name="observacion" Type="text" />
+        </EntityType>
+        <EntityType Name="directores_g">
+          <Key>
+            <PropertyRef Name="referencia" />
+          </Key>
+          <Property Name="referencia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id_profesor" Type="varchar" Nullable="false" MaxLength="13" />
+          <Property Name="id-grupo" Type="varchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="grados">
+          <Key>
+            <PropertyRef Name="id-grado" />
+          </Key>
+          <Property Name="id-grado" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="nom-grado" Type="varchar" Nullable="false" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="grupos">
+          <Key>
+            <PropertyRef Name="id-grupo" />
+          </Key>
+          <Property Name="id-grupo" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="id-aula" Type="varchar" Nullable="false" MaxLength="5" />
+          <Property Name="id-grado" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="año" Type="varchar" MaxLength="8" />
+        </EntityType>
+        <EntityType Name="horarios">
+          <Key>
+            <PropertyRef Name="referencia" />
+          </Key>
+          <Property Name="referencia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id-grupo" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="id-asignatura" Type="varchar" Nullable="false" MaxLength="11" />
+          <Property Name="jornada" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="dia" Type="varchar" MaxLength="45" />
+          <Property Name="horaI" Type="varchar" MaxLength="10" />
+          <Property Name="horaF" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="jornadas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="horaI" Type="time" />
+          <Property Name="horaF" Type="time" />
+        </EntityType>
+        <EntityType Name="logros">
+          <Key>
+            <PropertyRef Name="id-logro" />
+          </Key>
+          <Property Name="id-logro" Type="varchar" Nullable="false" MaxLength="13" />
+          <Property Name="descripcion" Type="text" Nullable="false" />
+          <Property Name="id-grado" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="id-asignatura" Type="varchar" Nullable="false" MaxLength="11" />
+        </EntityType>
+        <EntityType Name="matricula1">
+          <Key>
+            <PropertyRef Name="referencia" />
+          </Key>
+          <Property Name="referencia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id-asignatura" Type="varchar" Nullable="false" MaxLength="11" />
+          <Property Name="id-grupo" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="id-profesor" Type="varchar" MaxLength="13" />
+        </EntityType>
+        <EntityType Name="matricula2">
+          <Key>
+            <PropertyRef Name="referencia" />
+          </Key>
+          <Property Name="referencia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id-estudiante" Type="varchar" Nullable="false" MaxLength="13" />
+          <Property Name="id-grupo" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="id-acudiente" Type="varchar" Nullable="false" MaxLength="13" />
+        </EntityType>
+        <EntityType Name="notas">
+          <Key>
+            <PropertyRef Name="referencia" />
+          </Key>
+          <Property Name="referencia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id-estudiante" Type="varchar" Nullable="false" MaxLength="13" />
+          <Property Name="id-asignatura" Type="varchar" Nullable="false" MaxLength="11" />
+          <Property Name="id-grupo" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="id-periodo" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="id-profesor" Type="varchar" Nullable="false" MaxLength="13" />
+          <Property Name="id-logro" Type="varchar" MaxLength="13" />
+          <Property Name="nota" Type="varchar" Nullable="false" MaxLength="4" />
+          <Property Name="nota-s" Type="varchar" MaxLength="4" />
+          <Property Name="equivalencia" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="equivalencia-s" Type="varchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="observatorio">
+          <Key>
+            <PropertyRef Name="referencia" />
+          </Key>
+          <Property Name="referencia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id-estudiante" Type="varchar" Nullable="false" MaxLength="13" />
+          <Property Name="id-asignatura" Type="varchar" Nullable="false" MaxLength="11" />
+          <Property Name="id-grupo" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="id-periodo" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="id-profesor" Type="varchar" Nullable="false" MaxLength="13" />
+          <Property Name="observacion" Type="text" Nullable="false" />
+          <Property Name="fecha" Type="datetime" Nullable="false" />
+          <Property Name="tipo" Type="varchar" MaxLength="12" />
+          <Property Name="notificacion" Type="varchar" MaxLength="13" />
+          <Property Name="acceso" Type="varchar" MaxLength="13" />
+        </EntityType>
+        <EntityType Name="periodos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="rangoI" Type="varchar" MaxLength="15" />
+          <Property Name="rangoF" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="personas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" Nullable="false" MaxLength="13" />
+          <Property Name="id-tipo" Type="varchar" MaxLength="4" />
+          <Property Name="nombres" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="apellidos" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="telefono" Type="varchar" MaxLength="15" />
+          <Property Name="telefono2" Type="varchar" MaxLength="15" />
+          <Property Name="cel" Type="varchar" MaxLength="15" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="direccion" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="direccion2" Type="varchar" MaxLength="60" />
+          <Property Name="sexo" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="rol" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="rol-secundario" Type="varchar" MaxLength="30" />
+          <Property Name="rol-terciario" Type="varchar" MaxLength="30" />
+          <Property Name="edad" Type="varchar" MaxLength="3" />
+          <Property Name="jornada" Type="varchar" MaxLength="25" />
+          <Property Name="f-naci" Type="datetime" />
+          <Property Name="estado" Type="varchar" MaxLength="20" />
+          <Property Name="observacion" Type="text" />
+        </EntityType>
+        <EntityType Name="reportes">
+          <Key>
+            <PropertyRef Name="referencia" />
+          </Key>
+          <Property Name="referencia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id-estudiante" Type="varchar" Nullable="false" MaxLength="13" />
+          <Property Name="id-grupo" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="id-periodo" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="observacion" Type="text" />
+          <Property Name="fecha" Type="datetime" />
+          <Property Name="acceso" Type="varchar" MaxLength="13" />
+          <Property Name="notificacion" Type="varchar" MaxLength="13" />
+        </EntityType>
+        <EntityType Name="roles">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="usuarios">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" Nullable="false" MaxLength="13" />
+          <Property Name="password" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="acceso" Type="varchar" Nullable="false" MaxLength="5" />
+          <Property Name="niu-mobil" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <Association Name="fk-acudie">
+          <End Role="personas" Type="bdsigameModel.Store.personas" Multiplicity="1" />
+          <End Role="matricula2" Type="bdsigameModel.Store.matricula2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="personas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="matricula2">
+              <PropertyRef Name="id-acudiente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-ahL">
+          <End Role="asignatura" Type="bdsigameModel.Store.asignatura" Multiplicity="1" />
+          <End Role="horarios" Type="bdsigameModel.Store.horarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="asignatura">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="horarios">
+              <PropertyRef Name="id-asignatura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-asignatur">
+          <End Role="asignatura" Type="bdsigameModel.Store.asignatura" Multiplicity="1" />
+          <End Role="logros" Type="bdsigameModel.Store.logros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="asignatura">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="logros">
+              <PropertyRef Name="id-asignatura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-asignatura">
+          <End Role="asignatura" Type="bdsigameModel.Store.asignatura" Multiplicity="1" />
+          <End Role="matricula1" Type="bdsigameModel.Store.matricula1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="asignatura">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="matricula1">
+              <PropertyRef Name="id-asignatura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-asignaturass">
+          <End Role="asignatura" Type="bdsigameModel.Store.asignatura" Multiplicity="1" />
+          <End Role="notas" Type="bdsigameModel.Store.notas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="asignatura">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="notas">
+              <PropertyRef Name="id-asignatura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-asignaturasss">
+          <End Role="asignatura" Type="bdsigameModel.Store.asignatura" Multiplicity="1" />
+          <End Role="observatorio" Type="bdsigameModel.Store.observatorio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="asignatura">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="observatorio">
+              <PropertyRef Name="id-asignatura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkdir1">
+          <End Role="grupos" Type="bdsigameModel.Store.grupos" Multiplicity="1" />
+          <End Role="directores_g" Type="bdsigameModel.Store.directores_g" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grupos">
+              <PropertyRef Name="id-grupo" />
+            </Principal>
+            <Dependent Role="directores_g">
+              <PropertyRef Name="id-grupo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkdir2">
+          <End Role="personas" Type="bdsigameModel.Store.personas" Multiplicity="1" />
+          <End Role="directores_g" Type="bdsigameModel.Store.directores_g" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="personas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="directores_g">
+              <PropertyRef Name="id_profesor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-e">
+          <End Role="personas" Type="bdsigameModel.Store.personas" Multiplicity="1" />
+          <End Role="reportes" Type="bdsigameModel.Store.reportes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="personas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="reportes">
+              <PropertyRef Name="id-estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-estudi">
+          <End Role="personas" Type="bdsigameModel.Store.personas" Multiplicity="1" />
+          <End Role="matricula2" Type="bdsigameModel.Store.matricula2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="personas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="matricula2">
+              <PropertyRef Name="id-estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-estudiantess">
+          <End Role="personas" Type="bdsigameModel.Store.personas" Multiplicity="1" />
+          <End Role="notas" Type="bdsigameModel.Store.notas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="personas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="notas">
+              <PropertyRef Name="id-estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-estudiantesss">
+          <End Role="personas" Type="bdsigameModel.Store.personas" Multiplicity="1" />
+          <End Role="observatorio" Type="bdsigameModel.Store.observatorio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="personas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="observatorio">
+              <PropertyRef Name="id-estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-g">
+          <End Role="grupos" Type="bdsigameModel.Store.grupos" Multiplicity="1" />
+          <End Role="reportes" Type="bdsigameModel.Store.reportes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grupos">
+              <PropertyRef Name="id-grupo" />
+            </Principal>
+            <Dependent Role="reportes">
+              <PropertyRef Name="id-grupo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-ghL">
+          <End Role="grupos" Type="bdsigameModel.Store.grupos" Multiplicity="1" />
+          <End Role="horarios" Type="bdsigameModel.Store.horarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grupos">
+              <PropertyRef Name="id-grupo" />
+            </Principal>
+            <Dependent Role="horarios">
+              <PropertyRef Name="id-grupo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-grad">
+          <End Role="grados" Type="bdsigameModel.Store.grados" Multiplicity="1" />
+          <End Role="grupos" Type="bdsigameModel.Store.grupos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grados">
+              <PropertyRef Name="id-grado" />
+            </Principal>
+            <Dependent Role="grupos">
+              <PropertyRef Name="id-grado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-grade">
+          <End Role="grados" Type="bdsigameModel.Store.grados" Multiplicity="1" />
+          <End Role="logros" Type="bdsigameModel.Store.logros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grados">
+              <PropertyRef Name="id-grado" />
+            </Principal>
+            <Dependent Role="logros">
+              <PropertyRef Name="id-grado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-grup">
+          <End Role="grupos" Type="bdsigameModel.Store.grupos" Multiplicity="1" />
+          <End Role="matricula2" Type="bdsigameModel.Store.matricula2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grupos">
+              <PropertyRef Name="id-grupo" />
+            </Principal>
+            <Dependent Role="matricula2">
+              <PropertyRef Name="id-grupo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-grupo">
+          <End Role="grupos" Type="bdsigameModel.Store.grupos" Multiplicity="1" />
+          <End Role="matricula1" Type="bdsigameModel.Store.matricula1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grupos">
+              <PropertyRef Name="id-grupo" />
+            </Principal>
+            <Dependent Role="matricula1">
+              <PropertyRef Name="id-grupo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-gruposs">
+          <End Role="grupos" Type="bdsigameModel.Store.grupos" Multiplicity="1" />
+          <End Role="notas" Type="bdsigameModel.Store.notas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grupos">
+              <PropertyRef Name="id-grupo" />
+            </Principal>
+            <Dependent Role="notas">
+              <PropertyRef Name="id-grupo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-gruposss">
+          <End Role="grupos" Type="bdsigameModel.Store.grupos" Multiplicity="1" />
+          <End Role="observatorio" Type="bdsigameModel.Store.observatorio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grupos">
+              <PropertyRef Name="id-grupo" />
+            </Principal>
+            <Dependent Role="observatorio">
+              <PropertyRef Name="id-grupo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-jor">
+          <End Role="jornadas" Type="bdsigameModel.Store.jornadas" Multiplicity="1" />
+          <End Role="horarios" Type="bdsigameModel.Store.horarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="jornadas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="horarios">
+              <PropertyRef Name="jornada" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-logross">
+          <End Role="logros" Type="bdsigameModel.Store.logros" Multiplicity="0..1" />
+          <End Role="notas" Type="bdsigameModel.Store.notas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="logros">
+              <PropertyRef Name="id-logro" />
+            </Principal>
+            <Dependent Role="notas">
+              <PropertyRef Name="id-logro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-p">
+          <End Role="periodos" Type="bdsigameModel.Store.periodos" Multiplicity="1" />
+          <End Role="reportes" Type="bdsigameModel.Store.reportes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="periodos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="reportes">
+              <PropertyRef Name="id-periodo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-period">
+          <End Role="periodos" Type="bdsigameModel.Store.periodos" Multiplicity="1" />
+          <End Role="notas" Type="bdsigameModel.Store.notas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="periodos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="notas">
+              <PropertyRef Name="id-periodo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-periodosss">
+          <End Role="periodos" Type="bdsigameModel.Store.periodos" Multiplicity="1" />
+          <End Role="observatorio" Type="bdsigameModel.Store.observatorio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="periodos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="observatorio">
+              <PropertyRef Name="id-periodo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-personas">
+          <End Role="personas" Type="bdsigameModel.Store.personas" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="usuarios" Type="bdsigameModel.Store.usuarios" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="personas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="usuarios">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-profesor">
+          <End Role="personas" Type="bdsigameModel.Store.personas" Multiplicity="0..1" />
+          <End Role="matricula1" Type="bdsigameModel.Store.matricula1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="personas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="matricula1">
+              <PropertyRef Name="id-profesor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-profesoress">
+          <End Role="personas" Type="bdsigameModel.Store.personas" Multiplicity="1" />
+          <End Role="notas" Type="bdsigameModel.Store.notas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="personas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="notas">
+              <PropertyRef Name="id-profesor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk-profesoresss">
+          <End Role="personas" Type="bdsigameModel.Store.personas" Multiplicity="1" />
+          <End Role="observatorio" Type="bdsigameModel.Store.observatorio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="personas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="observatorio">
+              <PropertyRef Name="id-profesor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="jjjjjj">
+          <End Role="areas" Type="bdsigameModel.Store.areas" Multiplicity="0..1" />
+          <End Role="asignatura" Type="bdsigameModel.Store.asignatura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="areas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="asignatura">
+              <PropertyRef Name="area" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="jornada">
+          <End Role="jornadas" Type="bdsigameModel.Store.jornadas" Multiplicity="0..1" />
+          <End Role="personas" Type="bdsigameModel.Store.personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="jornadas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="personas">
+              <PropertyRef Name="jornada" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="rol">
+          <End Role="roles" Type="bdsigameModel.Store.roles" Multiplicity="1" />
+          <End Role="personas" Type="bdsigameModel.Store.personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="roles">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="personas">
+              <PropertyRef Name="rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="bdsigameModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="bdsigameEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="areas" EntityType="bdsigameModel.areas" />
+          <EntitySet Name="asignatura" EntityType="bdsigameModel.asignatura" />
+          <EntitySet Name="bitacora" EntityType="bdsigameModel.bitacora" />
+          <EntitySet Name="directores_g" EntityType="bdsigameModel.directores_g" />
+          <EntitySet Name="grados" EntityType="bdsigameModel.grados" />
+          <EntitySet Name="grupos" EntityType="bdsigameModel.grupos" />
+          <EntitySet Name="horarios" EntityType="bdsigameModel.horarios" />
+          <EntitySet Name="jornadas" EntityType="bdsigameModel.jornadas" />
+          <EntitySet Name="logros" EntityType="bdsigameModel.logros" />
+          <EntitySet Name="matricula1" EntityType="bdsigameModel.matricula1" />
+          <EntitySet Name="matricula2" EntityType="bdsigameModel.matricula2" />
+          <EntitySet Name="notas" EntityType="bdsigameModel.notas" />
+          <EntitySet Name="observatorio" EntityType="bdsigameModel.observatorio" />
+          <EntitySet Name="periodos" EntityType="bdsigameModel.periodos" />
+          <EntitySet Name="personas" EntityType="bdsigameModel.personas" />
+          <EntitySet Name="reportes" EntityType="bdsigameModel.reportes" />
+          <EntitySet Name="roles" EntityType="bdsigameModel.roles" />
+          <EntitySet Name="usuarios" EntityType="bdsigameModel.usuarios" />
+          <AssociationSet Name="jjjjjj" Association="bdsigameModel.jjjjjj">
+            <End Role="areas" EntitySet="areas" />
+            <End Role="asignatura" EntitySet="asignatura" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ahL" Association="bdsigameModel.fk_ahL">
+            <End Role="asignatura" EntitySet="asignatura" />
+            <End Role="horarios" EntitySet="horarios" />
+          </AssociationSet>
+          <AssociationSet Name="fk_asignatur" Association="bdsigameModel.fk_asignatur">
+            <End Role="asignatura" EntitySet="asignatura" />
+            <End Role="logros" EntitySet="logros" />
+          </AssociationSet>
+          <AssociationSet Name="fk_asignatura" Association="bdsigameModel.fk_asignatura">
+            <End Role="asignatura" EntitySet="asignatura" />
+            <End Role="matricula1" EntitySet="matricula1" />
+          </AssociationSet>
+          <AssociationSet Name="fk_asignaturass" Association="bdsigameModel.fk_asignaturass">
+            <End Role="asignatura" EntitySet="asignatura" />
+            <End Role="notas" EntitySet="notas" />
+          </AssociationSet>
+          <AssociationSet Name="fk_asignaturasss" Association="bdsigameModel.fk_asignaturasss">
+            <End Role="asignatura" EntitySet="asignatura" />
+            <End Role="observatorio" EntitySet="observatorio" />
+          </AssociationSet>
+          <AssociationSet Name="fkdir1" Association="bdsigameModel.fkdir1">
+            <End Role="grupos" EntitySet="grupos" />
+            <End Role="directores_g" EntitySet="directores_g" />
+          </AssociationSet>
+          <AssociationSet Name="fkdir2" Association="bdsigameModel.fkdir2">
+            <End Role="personas" EntitySet="personas" />
+            <End Role="directores_g" EntitySet="directores_g" />
+          </AssociationSet>
+          <AssociationSet Name="fk_grad" Association="bdsigameModel.fk_grad">
+            <End Role="grados" EntitySet="grados" />
+            <End Role="grupos" EntitySet="grupos" />
+          </AssociationSet>
+          <AssociationSet Name="fk_grade" Association="bdsigameModel.fk_grade">
+            <End Role="grados" EntitySet="grados" />
+            <End Role="logros" EntitySet="logros" />
+          </AssociationSet>
+          <AssociationSet Name="fk_g" Association="bdsigameModel.fk_g">
+            <End Role="grupos" EntitySet="grupos" />
+            <End Role="reportes" EntitySet="reportes" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ghL" Association="bdsigameModel.fk_ghL">
+            <End Role="grupos" EntitySet="grupos" />
+            <End Role="horarios" EntitySet="horarios" />
+          </AssociationSet>
+          <AssociationSet Name="fk_grup" Association="bdsigameModel.fk_grup">
+            <End Role="grupos" EntitySet="grupos" />
+            <End Role="matricula2" EntitySet="matricula2" />
+          </AssociationSet>
+          <AssociationSet Name="fk_grupo" Association="bdsigameModel.fk_grupo">
+            <End Role="grupos" EntitySet="grupos" />
+            <End Role="matricula1" EntitySet="matricula1" />
+          </AssociationSet>
+          <AssociationSet Name="fk_gruposs" Association="bdsigameModel.fk_gruposs">
+            <End Role="grupos" EntitySet="grupos" />
+            <End Role="notas" EntitySet="notas" />
+          </AssociationSet>
+          <AssociationSet Name="fk_gruposss" Association="bdsigameModel.fk_gruposss">
+            <End Role="grupos" EntitySet="grupos" />
+            <End Role="observatorio" EntitySet="observatorio" />
+          </AssociationSet>
+          <AssociationSet Name="fk_jor" Association="bdsigameModel.fk_jor">
+            <End Role="jornadas" EntitySet="jornadas" />
+            <End Role="horarios" EntitySet="horarios" />
+          </AssociationSet>
+          <AssociationSet Name="jornada" Association="bdsigameModel.jornada">
+            <End Role="jornadas" EntitySet="jornadas" />
+            <End Role="personas" EntitySet="personas" />
+          </AssociationSet>
+          <AssociationSet Name="fk_logross" Association="bdsigameModel.fk_logross">
+            <End Role="logros" EntitySet="logros" />
+            <End Role="notas" EntitySet="notas" />
+          </AssociationSet>
+          <AssociationSet Name="fk_profesor" Association="bdsigameModel.fk_profesor">
+            <End Role="personas" EntitySet="personas" />
+            <End Role="matricula1" EntitySet="matricula1" />
+          </AssociationSet>
+          <AssociationSet Name="fk_acudie" Association="bdsigameModel.fk_acudie">
+            <End Role="personas" EntitySet="personas" />
+            <End Role="matricula2" EntitySet="matricula2" />
+          </AssociationSet>
+          <AssociationSet Name="fk_estudi" Association="bdsigameModel.fk_estudi">
+            <End Role="personas" EntitySet="personas" />
+            <End Role="matricula2" EntitySet="matricula2" />
+          </AssociationSet>
+          <AssociationSet Name="fk_estudiantess" Association="bdsigameModel.fk_estudiantess">
+            <End Role="personas" EntitySet="personas" />
+            <End Role="notas" EntitySet="notas" />
+          </AssociationSet>
+          <AssociationSet Name="fk_period" Association="bdsigameModel.fk_period">
+            <End Role="periodos" EntitySet="periodos" />
+            <End Role="notas" EntitySet="notas" />
+          </AssociationSet>
+          <AssociationSet Name="fk_profesoress" Association="bdsigameModel.fk_profesoress">
+            <End Role="personas" EntitySet="personas" />
+            <End Role="notas" EntitySet="notas" />
+          </AssociationSet>
+          <AssociationSet Name="fk_estudiantesss" Association="bdsigameModel.fk_estudiantesss">
+            <End Role="personas" EntitySet="personas" />
+            <End Role="observatorio" EntitySet="observatorio" />
+          </AssociationSet>
+          <AssociationSet Name="fk_periodosss" Association="bdsigameModel.fk_periodosss">
+            <End Role="periodos" EntitySet="periodos" />
+            <End Role="observatorio" EntitySet="observatorio" />
+          </AssociationSet>
+          <AssociationSet Name="fk_profesoresss" Association="bdsigameModel.fk_profesoresss">
+            <End Role="personas" EntitySet="personas" />
+            <End Role="observatorio" EntitySet="observatorio" />
+          </AssociationSet>
+          <AssociationSet Name="fk_p" Association="bdsigameModel.fk_p">
+            <End Role="periodos" EntitySet="periodos" />
+            <End Role="reportes" EntitySet="reportes" />
+          </AssociationSet>
+          <AssociationSet Name="fk_e" Association="bdsigameModel.fk_e">
+            <End Role="personas" EntitySet="personas" />
+            <End Role="reportes" EntitySet="reportes" />
+          </AssociationSet>
+          <AssociationSet Name="fk_personas" Association="bdsigameModel.fk_personas">
+            <End Role="personas" EntitySet="personas" />
+            <End Role="usuarios" EntitySet="usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="rol" Association="bdsigameModel.rol">
+            <End Role="roles" EntitySet="roles" />
+            <End Role="personas" EntitySet="personas" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="areas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="asignatura" Relationship="bdsigameModel.jjjjjj" FromRole="areas" ToRole="asignatura" />
+        </EntityType>
+        <EntityType Name="asignatura">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="false" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="horas" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="area" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="areas" Relationship="bdsigameModel.jjjjjj" FromRole="asignatura" ToRole="areas" />
+          <NavigationProperty Name="horarios" Relationship="bdsigameModel.fk_ahL" FromRole="asignatura" ToRole="horarios" />
+          <NavigationProperty Name="logros" Relationship="bdsigameModel.fk_asignatur" FromRole="asignatura" ToRole="logros" />
+          <NavigationProperty Name="matricula1" Relationship="bdsigameModel.fk_asignatura" FromRole="asignatura" ToRole="matricula1" />
+          <NavigationProperty Name="notas" Relationship="bdsigameModel.fk_asignaturass" FromRole="asignatura" ToRole="notas" />
+          <NavigationProperty Name="observatorio" Relationship="bdsigameModel.fk_asignaturasss" FromRole="asignatura" ToRole="observatorio" />
+        </EntityType>
+        <EntityType Name="bitacora">
+          <Key>
+            <PropertyRef Name="id_bitacora" />
+          </Key>
+          <Property Name="id_bitacora" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="seccion" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="accion" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="usuario" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="id_usuario" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="fecha" Type="DateTime" Precision="0" />
+          <Property Name="observacion" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="directores_g">
+          <Key>
+            <PropertyRef Name="referencia" />
+          </Key>
+          <Property Name="referencia" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="id_profesor" Type="String" Nullable="false" MaxLength="13" Unicode="false" FixedLength="false" />
+          <Property Name="id_grupo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="grupos" Relationship="bdsigameModel.fkdir1" FromRole="directores_g" ToRole="grupos" />
+          <NavigationProperty Name="personas" Relationship="bdsigameModel.fkdir2" FromRole="directores_g" ToRole="personas" />
+        </EntityType>
+        <EntityType Name="grados">
+          <Key>
+            <PropertyRef Name="id_grado" />
+          </Key>
+          <Property Name="id_grado" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="nom_grado" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="grupos" Relationship="bdsigameModel.fk_grad" FromRole="grados" ToRole="grupos" />
+          <NavigationProperty Name="logros" Relationship="bdsigameModel.fk_grade" FromRole="grados" ToRole="logros" />
+        </EntityType>
+        <EntityType Name="grupos">
+          <Key>
+            <PropertyRef Name="id_grupo" />
+          </Key>
+          <Property Name="id_grupo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="id_aula" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="id_grado" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="año" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="directores_g" Relationship="bdsigameModel.fkdir1" FromRole="grupos" ToRole="directores_g" />
+          <NavigationProperty Name="grados" Relationship="bdsigameModel.fk_grad" FromRole="grupos" ToRole="grados" />
+          <NavigationProperty Name="reportes" Relationship="bdsigameModel.fk_g" FromRole="grupos" ToRole="reportes" />
+          <NavigationProperty Name="horarios" Relationship="bdsigameModel.fk_ghL" FromRole="grupos" ToRole="horarios" />
+          <NavigationProperty Name="matricula2" Relationship="bdsigameModel.fk_grup" FromRole="grupos" ToRole="matricula2" />
+          <NavigationProperty Name="matricula1" Relationship="bdsigameModel.fk_grupo" FromRole="grupos" ToRole="matricula1" />
+          <NavigationProperty Name="notas" Relationship="bdsigameModel.fk_gruposs" FromRole="grupos" ToRole="notas" />
+          <NavigationProperty Name="observatorio" Relationship="bdsigameModel.fk_gruposss" FromRole="grupos" ToRole="observatorio" />
+        </EntityType>
+        <EntityType Name="horarios">
+          <Key>
+            <PropertyRef Name="referencia" />
+          </Key>
+          <Property Name="referencia" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="id_grupo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="id_asignatura" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="false" />
+          <Property Name="jornada" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="dia" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="horaI" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="horaF" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="asignatura" Relationship="bdsigameModel.fk_ahL" FromRole="horarios" ToRole="asignatura" />
+          <NavigationProperty Name="grupos" Relationship="bdsigameModel.fk_ghL" FromRole="horarios" ToRole="grupos" />
+          <NavigationProperty Name="jornadas" Relationship="bdsigameModel.fk_jor" FromRole="horarios" ToRole="jornadas" />
+        </EntityType>
+        <EntityType Name="jornadas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="horaI" Type="Time" Precision="0" />
+          <Property Name="horaF" Type="Time" Precision="0" />
+          <NavigationProperty Name="horarios" Relationship="bdsigameModel.fk_jor" FromRole="jornadas" ToRole="horarios" />
+          <NavigationProperty Name="personas" Relationship="bdsigameModel.jornada" FromRole="jornadas" ToRole="personas" />
+        </EntityType>
+        <EntityType Name="logros">
+          <Key>
+            <PropertyRef Name="id_logro" />
+          </Key>
+          <Property Name="id_logro" Type="String" Nullable="false" MaxLength="13" Unicode="false" FixedLength="false" />
+          <Property Name="descripcion" Type="String" Nullable="false" MaxLength="65535" Unicode="false" FixedLength="false" />
+          <Property Name="id_grado" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="id_asignatura" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="asignatura" Relationship="bdsigameModel.fk_asignatur" FromRole="logros" ToRole="asignatura" />
+          <NavigationProperty Name="grados" Relationship="bdsigameModel.fk_grade" FromRole="logros" ToRole="grados" />
+          <NavigationProperty Name="notas" Relationship="bdsigameModel.fk_logross" FromRole="logros" ToRole="notas" />
+        </EntityType>
+        <EntityType Name="matricula1">
+          <Key>
+            <PropertyRef Name="referencia" />
+          </Key>
+          <Property Name="referencia" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="id_asignatura" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="false" />
+          <Property Name="id_grupo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="id_profesor" Type="String" MaxLength="13" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="asignatura" Relationship="bdsigameModel.fk_asignatura" FromRole="matricula1" ToRole="asignatura" />
+          <NavigationProperty Name="grupos" Relationship="bdsigameModel.fk_grupo" FromRole="matricula1" ToRole="grupos" />
+          <NavigationProperty Name="personas" Relationship="bdsigameModel.fk_profesor" FromRole="matricula1" ToRole="personas" />
+        </EntityType>
+        <EntityType Name="matricula2">
+          <Key>
+            <PropertyRef Name="referencia" />
+          </Key>
+          <Property Name="referencia" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="id_estudiante" Type="String" Nullable="false" MaxLength="13" Unicode="false" FixedLength="false" />
+          <Property Name="id_grupo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="id_acudiente" Type="String" Nullable="false" MaxLength="13" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="grupos" Relationship="bdsigameModel.fk_grup" FromRole="matricula2" ToRole="grupos" />
+          <NavigationProperty Name="personas" Relationship="bdsigameModel.fk_acudie" FromRole="matricula2" ToRole="personas" />
+          <NavigationProperty Name="personas1" Relationship="bdsigameModel.fk_estudi" FromRole="matricula2" ToRole="personas" />
+        </EntityType>
+        <EntityType Name="notas">
+          <Key>
+            <PropertyRef Name="referencia" />
+          </Key>
+          <Property Name="referencia" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="id_estudiante" Type="String" Nullable="false" MaxLength="13" Unicode="false" FixedLength="false" />
+          <Property Name="id_asignatura" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="false" />
+          <Property Name="id_grupo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="id_periodo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="id_profesor" Type="String" Nullable="false" MaxLength="13" Unicode="false" FixedLength="false" />
+          <Property Name="id_logro" Type="String" MaxLength="13" Unicode="false" FixedLength="false" />
+          <Property Name="nota" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="nota_s" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="equivalencia" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="equivalencia_s" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="asignatura" Relationship="bdsigameModel.fk_asignaturass" FromRole="notas" ToRole="asignatura" />
+          <NavigationProperty Name="grupos" Relationship="bdsigameModel.fk_gruposs" FromRole="notas" ToRole="grupos" />
+          <NavigationProperty Name="logros" Relationship="bdsigameModel.fk_logross" FromRole="notas" ToRole="logros" />
+          <NavigationProperty Name="personas" Relationship="bdsigameModel.fk_estudiantess" FromRole="notas" ToRole="personas" />
+          <NavigationProperty Name="periodos" Relationship="bdsigameModel.fk_period" FromRole="notas" ToRole="periodos" />
+          <NavigationProperty Name="personas1" Relationship="bdsigameModel.fk_profesoress" FromRole="notas" ToRole="personas" />
+        </EntityType>
+        <EntityType Name="observatorio">
+          <Key>
+            <PropertyRef Name="referencia" />
+          </Key>
+          <Property Name="referencia" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="id_estudiante" Type="String" Nullable="false" MaxLength="13" Unicode="false" FixedLength="false" />
+          <Property Name="id_asignatura" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="false" />
+          <Property Name="id_grupo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="id_periodo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="id_profesor" Type="String" Nullable="false" MaxLength="13" Unicode="false" FixedLength="false" />
+          <Property Name="observacion" Type="String" Nullable="false" MaxLength="65535" Unicode="false" FixedLength="false" />
+          <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="tipo" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="notificacion" Type="String" MaxLength="13" Unicode="false" FixedLength="false" />
+          <Property Name="acceso" Type="String" MaxLength="13" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="asignatura" Relationship="bdsigameModel.fk_asignaturasss" FromRole="observatorio" ToRole="asignatura" />
+          <NavigationProperty Name="grupos" Relationship="bdsigameModel.fk_gruposss" FromRole="observatorio" ToRole="grupos" />
+          <NavigationProperty Name="personas" Relationship="bdsigameModel.fk_estudiantesss" FromRole="observatorio" ToRole="personas" />
+          <NavigationProperty Name="periodos" Relationship="bdsigameModel.fk_periodosss" FromRole="observatorio" ToRole="periodos" />
+          <NavigationProperty Name="personas1" Relationship="bdsigameModel.fk_profesoresss" FromRole="observatorio" ToRole="personas" />
+        </EntityType>
+        <EntityType Name="periodos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="rangoI" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="rangoF" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="notas" Relationship="bdsigameModel.fk_period" FromRole="periodos" ToRole="notas" />
+          <NavigationProperty Name="observatorio" Relationship="bdsigameModel.fk_periodosss" FromRole="periodos" ToRole="observatorio" />
+          <NavigationProperty Name="reportes" Relationship="bdsigameModel.fk_p" FromRole="periodos" ToRole="reportes" />
+        </EntityType>
+        <EntityType Name="personas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" Nullable="false" MaxLength="13" Unicode="false" FixedLength="false" />
+          <Property Name="id_tipo" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="nombres" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="apellidos" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="telefono" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="telefono2" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="cel" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="direccion" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="direccion2" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="sexo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="rol" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="rol_secundario" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="rol_terciario" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="edad" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="jornada" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="f_naci" Type="DateTime" Precision="0" />
+          <Property Name="estado" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="observacion" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="directores_g" Relationship="bdsigameModel.fkdir2" FromRole="personas" ToRole="directores_g" />
+          <NavigationProperty Name="jornadas" Relationship="bdsigameModel.jornada" FromRole="personas" ToRole="jornadas" />
+          <NavigationProperty Name="matricula1" Relationship="bdsigameModel.fk_profesor" FromRole="personas" ToRole="matricula1" />
+          <NavigationProperty Name="matricula2" Relationship="bdsigameModel.fk_acudie" FromRole="personas" ToRole="matricula2" />
+          <NavigationProperty Name="matricula21" Relationship="bdsigameModel.fk_estudi" FromRole="personas" ToRole="matricula2" />
+          <NavigationProperty Name="notas" Relationship="bdsigameModel.fk_estudiantess" FromRole="personas" ToRole="notas" />
+          <NavigationProperty Name="notas1" Relationship="bdsigameModel.fk_profesoress" FromRole="personas" ToRole="notas" />
+          <NavigationProperty Name="observatorio" Relationship="bdsigameModel.fk_estudiantesss" FromRole="personas" ToRole="observatorio" />
+          <NavigationProperty Name="observatorio1" Relationship="bdsigameModel.fk_profesoresss" FromRole="personas" ToRole="observatorio" />
+          <NavigationProperty Name="reportes" Relationship="bdsigameModel.fk_e" FromRole="personas" ToRole="reportes" />
+          <NavigationProperty Name="usuarios" Relationship="bdsigameModel.fk_personas" FromRole="personas" ToRole="usuarios" />
+          <NavigationProperty Name="roles" Relationship="bdsigameModel.rol" FromRole="personas" ToRole="roles" />
+        </EntityType>
+        <EntityType Name="reportes">
+          <Key>
+            <PropertyRef Name="referencia" />
+          </Key>
+          <Property Name="referencia" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="id_estudiante" Type="String" Nullable="false" MaxLength="13" Unicode="false" FixedLength="false" />
+          <Property Name="id_grupo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="id_periodo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="observacion" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+          <Property Name="fecha" Type="DateTime" Precision="0" />
+          <Property Name="acceso" Type="String" MaxLength="13" Unicode="false" FixedLength="false" />
+          <Property Name="notificacion" Type="String" MaxLength="13" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="grupos" Relationship="bdsigameModel.fk_g" FromRole="reportes" ToRole="grupos" />
+          <NavigationProperty Name="periodos" Relationship="bdsigameModel.fk_p" FromRole="reportes" ToRole="periodos" />
+          <NavigationProperty Name="personas" Relationship="bdsigameModel.fk_e" FromRole="reportes" ToRole="personas" />
+        </EntityType>
+        <EntityType Name="roles">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="personas" Relationship="bdsigameModel.rol" FromRole="roles" ToRole="personas" />
+        </EntityType>
+        <EntityType Name="usuarios">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" Nullable="false" MaxLength="13" Unicode="false" FixedLength="false" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="acceso" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="niu_mobil" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="personas" Relationship="bdsigameModel.fk_personas" FromRole="usuarios" ToRole="personas" />
+        </EntityType>
+        <Association Name="jjjjjj">
+          <End Role="areas" Type="bdsigameModel.areas" Multiplicity="0..1" />
+          <End Role="asignatura" Type="bdsigameModel.asignatura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="areas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="asignatura">
+              <PropertyRef Name="area" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ahL">
+          <End Role="asignatura" Type="bdsigameModel.asignatura" Multiplicity="1" />
+          <End Role="horarios" Type="bdsigameModel.horarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="asignatura">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="horarios">
+              <PropertyRef Name="id_asignatura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_asignatur">
+          <End Role="asignatura" Type="bdsigameModel.asignatura" Multiplicity="1" />
+          <End Role="logros" Type="bdsigameModel.logros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="asignatura">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="logros">
+              <PropertyRef Name="id_asignatura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_asignatura">
+          <End Role="asignatura" Type="bdsigameModel.asignatura" Multiplicity="1" />
+          <End Role="matricula1" Type="bdsigameModel.matricula1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="asignatura">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="matricula1">
+              <PropertyRef Name="id_asignatura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_asignaturass">
+          <End Role="asignatura" Type="bdsigameModel.asignatura" Multiplicity="1" />
+          <End Role="notas" Type="bdsigameModel.notas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="asignatura">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="notas">
+              <PropertyRef Name="id_asignatura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_asignaturasss">
+          <End Role="asignatura" Type="bdsigameModel.asignatura" Multiplicity="1" />
+          <End Role="observatorio" Type="bdsigameModel.observatorio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="asignatura">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="observatorio">
+              <PropertyRef Name="id_asignatura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkdir1">
+          <End Role="grupos" Type="bdsigameModel.grupos" Multiplicity="1" />
+          <End Role="directores_g" Type="bdsigameModel.directores_g" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grupos">
+              <PropertyRef Name="id_grupo" />
+            </Principal>
+            <Dependent Role="directores_g">
+              <PropertyRef Name="id_grupo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkdir2">
+          <End Role="personas" Type="bdsigameModel.personas" Multiplicity="1" />
+          <End Role="directores_g" Type="bdsigameModel.directores_g" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="personas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="directores_g">
+              <PropertyRef Name="id_profesor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_grad">
+          <End Role="grados" Type="bdsigameModel.grados" Multiplicity="1" />
+          <End Role="grupos" Type="bdsigameModel.grupos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grados">
+              <PropertyRef Name="id_grado" />
+            </Principal>
+            <Dependent Role="grupos">
+              <PropertyRef Name="id_grado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_grade">
+          <End Role="grados" Type="bdsigameModel.grados" Multiplicity="1" />
+          <End Role="logros" Type="bdsigameModel.logros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grados">
+              <PropertyRef Name="id_grado" />
+            </Principal>
+            <Dependent Role="logros">
+              <PropertyRef Name="id_grado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_g">
+          <End Role="grupos" Type="bdsigameModel.grupos" Multiplicity="1" />
+          <End Role="reportes" Type="bdsigameModel.reportes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grupos">
+              <PropertyRef Name="id_grupo" />
+            </Principal>
+            <Dependent Role="reportes">
+              <PropertyRef Name="id_grupo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ghL">
+          <End Role="grupos" Type="bdsigameModel.grupos" Multiplicity="1" />
+          <End Role="horarios" Type="bdsigameModel.horarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grupos">
+              <PropertyRef Name="id_grupo" />
+            </Principal>
+            <Dependent Role="horarios">
+              <PropertyRef Name="id_grupo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_grup">
+          <End Role="grupos" Type="bdsigameModel.grupos" Multiplicity="1" />
+          <End Role="matricula2" Type="bdsigameModel.matricula2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grupos">
+              <PropertyRef Name="id_grupo" />
+            </Principal>
+            <Dependent Role="matricula2">
+              <PropertyRef Name="id_grupo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_grupo">
+          <End Role="grupos" Type="bdsigameModel.grupos" Multiplicity="1" />
+          <End Role="matricula1" Type="bdsigameModel.matricula1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grupos">
+              <PropertyRef Name="id_grupo" />
+            </Principal>
+            <Dependent Role="matricula1">
+              <PropertyRef Name="id_grupo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_gruposs">
+          <End Role="grupos" Type="bdsigameModel.grupos" Multiplicity="1" />
+          <End Role="notas" Type="bdsigameModel.notas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grupos">
+              <PropertyRef Name="id_grupo" />
+            </Principal>
+            <Dependent Role="notas">
+              <PropertyRef Name="id_grupo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_gruposss">
+          <End Role="grupos" Type="bdsigameModel.grupos" Multiplicity="1" />
+          <End Role="observatorio" Type="bdsigameModel.observatorio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grupos">
+              <PropertyRef Name="id_grupo" />
+            </Principal>
+            <Dependent Role="observatorio">
+              <PropertyRef Name="id_grupo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_jor">
+          <End Role="jornadas" Type="bdsigameModel.jornadas" Multiplicity="1" />
+          <End Role="horarios" Type="bdsigameModel.horarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="jornadas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="horarios">
+              <PropertyRef Name="jornada" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="jornada">
+          <End Role="jornadas" Type="bdsigameModel.jornadas" Multiplicity="0..1" />
+          <End Role="personas" Type="bdsigameModel.personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="jornadas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="personas">
+              <PropertyRef Name="jornada" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_logross">
+          <End Role="logros" Type="bdsigameModel.logros" Multiplicity="0..1" />
+          <End Role="notas" Type="bdsigameModel.notas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="logros">
+              <PropertyRef Name="id_logro" />
+            </Principal>
+            <Dependent Role="notas">
+              <PropertyRef Name="id_logro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_profesor">
+          <End Role="personas" Type="bdsigameModel.personas" Multiplicity="0..1" />
+          <End Role="matricula1" Type="bdsigameModel.matricula1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="personas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="matricula1">
+              <PropertyRef Name="id_profesor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_acudie">
+          <End Role="personas" Type="bdsigameModel.personas" Multiplicity="1" />
+          <End Role="matricula2" Type="bdsigameModel.matricula2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="personas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="matricula2">
+              <PropertyRef Name="id_acudiente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_estudi">
+          <End Role="personas" Type="bdsigameModel.personas" Multiplicity="1" />
+          <End Role="matricula2" Type="bdsigameModel.matricula2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="personas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="matricula2">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_estudiantess">
+          <End Role="personas" Type="bdsigameModel.personas" Multiplicity="1" />
+          <End Role="notas" Type="bdsigameModel.notas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="personas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="notas">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_period">
+          <End Role="periodos" Type="bdsigameModel.periodos" Multiplicity="1" />
+          <End Role="notas" Type="bdsigameModel.notas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="periodos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="notas">
+              <PropertyRef Name="id_periodo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_profesoress">
+          <End Role="personas" Type="bdsigameModel.personas" Multiplicity="1" />
+          <End Role="notas" Type="bdsigameModel.notas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="personas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="notas">
+              <PropertyRef Name="id_profesor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_estudiantesss">
+          <End Role="personas" Type="bdsigameModel.personas" Multiplicity="1" />
+          <End Role="observatorio" Type="bdsigameModel.observatorio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="personas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="observatorio">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_periodosss">
+          <End Role="periodos" Type="bdsigameModel.periodos" Multiplicity="1" />
+          <End Role="observatorio" Type="bdsigameModel.observatorio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="periodos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="observatorio">
+              <PropertyRef Name="id_periodo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_profesoresss">
+          <End Role="personas" Type="bdsigameModel.personas" Multiplicity="1" />
+          <End Role="observatorio" Type="bdsigameModel.observatorio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="personas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="observatorio">
+              <PropertyRef Name="id_profesor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_p">
+          <End Role="periodos" Type="bdsigameModel.periodos" Multiplicity="1" />
+          <End Role="reportes" Type="bdsigameModel.reportes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="periodos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="reportes">
+              <PropertyRef Name="id_periodo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_e">
+          <End Role="personas" Type="bdsigameModel.personas" Multiplicity="1" />
+          <End Role="reportes" Type="bdsigameModel.reportes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="personas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="reportes">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_personas">
+          <End Role="personas" Type="bdsigameModel.personas" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="usuarios" Type="bdsigameModel.usuarios" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="personas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="usuarios">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="rol">
+          <End Role="roles" Type="bdsigameModel.roles" Multiplicity="1" />
+          <End Role="personas" Type="bdsigameModel.personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="roles">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="personas">
+              <PropertyRef Name="rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="bdsigameModelStoreContainer" CdmEntityContainer="bdsigameEntities">
+          <EntitySetMapping Name="areas">
+            <EntityTypeMapping TypeName="bdsigameModel.areas">
+              <MappingFragment StoreEntitySet="areas">
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="asignatura">
+            <EntityTypeMapping TypeName="bdsigameModel.asignatura">
+              <MappingFragment StoreEntitySet="asignatura">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="horas" ColumnName="horas" />
+                <ScalarProperty Name="area" ColumnName="area" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bitacora">
+            <EntityTypeMapping TypeName="bdsigameModel.bitacora">
+              <MappingFragment StoreEntitySet="bitacora">
+                <ScalarProperty Name="id_bitacora" ColumnName="id-bitacora" />
+                <ScalarProperty Name="seccion" ColumnName="seccion" />
+                <ScalarProperty Name="accion" ColumnName="accion" />
+                <ScalarProperty Name="usuario" ColumnName="usuario" />
+                <ScalarProperty Name="id_usuario" ColumnName="id-usuario" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="observacion" ColumnName="observacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="directores_g">
+            <EntityTypeMapping TypeName="bdsigameModel.directores_g">
+              <MappingFragment StoreEntitySet="directores_g">
+                <ScalarProperty Name="referencia" ColumnName="referencia" />
+                <ScalarProperty Name="id_profesor" ColumnName="id_profesor" />
+                <ScalarProperty Name="id_grupo" ColumnName="id-grupo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="grados">
+            <EntityTypeMapping TypeName="bdsigameModel.grados">
+              <MappingFragment StoreEntitySet="grados">
+                <ScalarProperty Name="id_grado" ColumnName="id-grado" />
+                <ScalarProperty Name="nom_grado" ColumnName="nom-grado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="grupos">
+            <EntityTypeMapping TypeName="bdsigameModel.grupos">
+              <MappingFragment StoreEntitySet="grupos">
+                <ScalarProperty Name="id_grupo" ColumnName="id-grupo" />
+                <ScalarProperty Name="id_aula" ColumnName="id-aula" />
+                <ScalarProperty Name="id_grado" ColumnName="id-grado" />
+                <ScalarProperty Name="año" ColumnName="año" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="horarios">
+            <EntityTypeMapping TypeName="bdsigameModel.horarios">
+              <MappingFragment StoreEntitySet="horarios">
+                <ScalarProperty Name="referencia" ColumnName="referencia" />
+                <ScalarProperty Name="id_grupo" ColumnName="id-grupo" />
+                <ScalarProperty Name="id_asignatura" ColumnName="id-asignatura" />
+                <ScalarProperty Name="jornada" ColumnName="jornada" />
+                <ScalarProperty Name="dia" ColumnName="dia" />
+                <ScalarProperty Name="horaI" ColumnName="horaI" />
+                <ScalarProperty Name="horaF" ColumnName="horaF" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="jornadas">
+            <EntityTypeMapping TypeName="bdsigameModel.jornadas">
+              <MappingFragment StoreEntitySet="jornadas">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="horaI" ColumnName="horaI" />
+                <ScalarProperty Name="horaF" ColumnName="horaF" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="logros">
+            <EntityTypeMapping TypeName="bdsigameModel.logros">
+              <MappingFragment StoreEntitySet="logros">
+                <ScalarProperty Name="id_logro" ColumnName="id-logro" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="id_grado" ColumnName="id-grado" />
+                <ScalarProperty Name="id_asignatura" ColumnName="id-asignatura" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="matricula1">
+            <EntityTypeMapping TypeName="bdsigameModel.matricula1">
+              <MappingFragment StoreEntitySet="matricula1">
+                <ScalarProperty Name="referencia" ColumnName="referencia" />
+                <ScalarProperty Name="id_asignatura" ColumnName="id-asignatura" />
+                <ScalarProperty Name="id_grupo" ColumnName="id-grupo" />
+                <ScalarProperty Name="id_profesor" ColumnName="id-profesor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="matricula2">
+            <EntityTypeMapping TypeName="bdsigameModel.matricula2">
+              <MappingFragment StoreEntitySet="matricula2">
+                <ScalarProperty Name="referencia" ColumnName="referencia" />
+                <ScalarProperty Name="id_estudiante" ColumnName="id-estudiante" />
+                <ScalarProperty Name="id_grupo" ColumnName="id-grupo" />
+                <ScalarProperty Name="id_acudiente" ColumnName="id-acudiente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="notas">
+            <EntityTypeMapping TypeName="bdsigameModel.notas">
+              <MappingFragment StoreEntitySet="notas">
+                <ScalarProperty Name="referencia" ColumnName="referencia" />
+                <ScalarProperty Name="id_estudiante" ColumnName="id-estudiante" />
+                <ScalarProperty Name="id_asignatura" ColumnName="id-asignatura" />
+                <ScalarProperty Name="id_grupo" ColumnName="id-grupo" />
+                <ScalarProperty Name="id_periodo" ColumnName="id-periodo" />
+                <ScalarProperty Name="id_profesor" ColumnName="id-profesor" />
+                <ScalarProperty Name="id_logro" ColumnName="id-logro" />
+                <ScalarProperty Name="nota" ColumnName="nota" />
+                <ScalarProperty Name="nota_s" ColumnName="nota-s" />
+                <ScalarProperty Name="equivalencia" ColumnName="equivalencia" />
+                <ScalarProperty Name="equivalencia_s" ColumnName="equivalencia-s" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="observatorio">
+            <EntityTypeMapping TypeName="bdsigameModel.observatorio">
+              <MappingFragment StoreEntitySet="observatorio">
+                <ScalarProperty Name="referencia" ColumnName="referencia" />
+                <ScalarProperty Name="id_estudiante" ColumnName="id-estudiante" />
+                <ScalarProperty Name="id_asignatura" ColumnName="id-asignatura" />
+                <ScalarProperty Name="id_grupo" ColumnName="id-grupo" />
+                <ScalarProperty Name="id_periodo" ColumnName="id-periodo" />
+                <ScalarProperty Name="id_profesor" ColumnName="id-profesor" />
+                <ScalarProperty Name="observacion" ColumnName="observacion" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="notificacion" ColumnName="notificacion" />
+                <ScalarProperty Name="acceso" ColumnName="acceso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="periodos">
+            <EntityTypeMapping TypeName="bdsigameModel.periodos">
+              <MappingFragment StoreEntitySet="periodos">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="rangoI" ColumnName="rangoI" />
+                <ScalarProperty Name="rangoF" ColumnName="rangoF" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="personas">
+            <EntityTypeMapping TypeName="bdsigameModel.personas">
+              <MappingFragment StoreEntitySet="personas">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_tipo" ColumnName="id-tipo" />
+                <ScalarProperty Name="nombres" ColumnName="nombres" />
+                <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="telefono2" ColumnName="telefono2" />
+                <ScalarProperty Name="cel" ColumnName="cel" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="direccion2" ColumnName="direccion2" />
+                <ScalarProperty Name="sexo" ColumnName="sexo" />
+                <ScalarProperty Name="rol" ColumnName="rol" />
+                <ScalarProperty Name="rol_secundario" ColumnName="rol-secundario" />
+                <ScalarProperty Name="rol_terciario" ColumnName="rol-terciario" />
+                <ScalarProperty Name="edad" ColumnName="edad" />
+                <ScalarProperty Name="jornada" ColumnName="jornada" />
+                <ScalarProperty Name="f_naci" ColumnName="f-naci" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="observacion" ColumnName="observacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="reportes">
+            <EntityTypeMapping TypeName="bdsigameModel.reportes">
+              <MappingFragment StoreEntitySet="reportes">
+                <ScalarProperty Name="referencia" ColumnName="referencia" />
+                <ScalarProperty Name="id_estudiante" ColumnName="id-estudiante" />
+                <ScalarProperty Name="id_grupo" ColumnName="id-grupo" />
+                <ScalarProperty Name="id_periodo" ColumnName="id-periodo" />
+                <ScalarProperty Name="observacion" ColumnName="observacion" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="acceso" ColumnName="acceso" />
+                <ScalarProperty Name="notificacion" ColumnName="notificacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="roles">
+            <EntityTypeMapping TypeName="bdsigameModel.roles">
+              <MappingFragment StoreEntitySet="roles">
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuarios">
+            <EntityTypeMapping TypeName="bdsigameModel.usuarios">
+              <MappingFragment StoreEntitySet="usuarios">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="acceso" ColumnName="acceso" />
+                <ScalarProperty Name="niu_mobil" ColumnName="niu-mobil" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,94 @@
+﻿
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head >
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+        <link rel="shortcut icon" href="/BOOTSTRAP/img/plantel/icono.ico" />
+		<title>APP||Login  </title>
+		<meta name="description" content="description"/>
+		<meta name="author" content="Evgeniya"/>
+		<meta name="keyword" content="keywords">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link href="/BOOTSTRAP/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
+		<link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'/>
+        <link href="/BOOTSTRAP/css/style.css" rel="stylesheet" />
+        <script src="/BOOTSTRAP/plugins/jquery/jquery-2.1.0.min.js"></script>
+        <script src="/LOGIN/index.js"></script>
+        <script src="validaciones-tools.js"></script>
+        <script src="/BOOTSTRAP/plugins/bootstrap/bootstrap.min.js"></script>
+       
+</head>
+<body>
+    <div class="modal fade" id="Modal" tabindex="-1 " role="dialog" aria-labelledby="tituloModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Cerrar</span>
+                    </button>
+                    <h4 id="tituloModal" class="modal-title"></h4>
+                </div>
+                <div id="textoModal" class="modal-body"></div>
+                <div id="ModalFooter" class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+       <div class="container-fluid">
+            <div id="page-login" class="row">
+                <div class="col-xs-12 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+                  
+                    <div class="box">
+                        <div class="box-content">
+                            <div class="text-center">
+                                <h3 class="page-header"> APP Notas </h3>
+                                <h3 class="page-header"> Bienvenido al Inicio de Sesión</h3>
+                            </div>
+                          <!--<!--  <!-- Botones para realizar pruebas-->
+                          <!--  <div class="row text-center">
+                                  <a id="Btn32" class="btn-danger btn-block btn-lg text-center ">PROFESOR JULIO (& DIRECTOR_5to)</a>
+                            </div>-->
+                            <!------------------------------------------>
+                            <div id="alerta"></div>
+                                
+                            <div class="form-group">
+                                <label class="control-label">Identificación</label>
+                                <input type="text" class="form-control" onkeydown="return validarNo(event)" name="username" id="iduser" placeholder="No. de Identificacion " autofocus />
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Contraseña</label>
+                                <input type="password" class="form-control" name="password" id="pass" placeholder="Digite su Contraseña " />
+                            </div>
+                            <img id="imgload" src="BOOTSTRAP/img/devoops_getdata.gif" />
+                            <br />
+
+                            <div  id="Exito" class="text-center">
+                                <h4 class="page-header text-primary">Iniciando Sesión...</h4>
+                            </div>
+
+                            <div class="text-center">
+                                <a id="BtnSeccion" class="btn-primary btn-block btn-lg text-center" data-loading-text="CARGANDO...">
+                                    INICIAR SESIÓN
+                                </a>
+                            </div>
+
+                            <div class="text-center">
+                                <img  src="/BOOTSTRAP/img/plantel/logo.png" class="img-responsive text-center" />
+                            </div>
+                            <div class="text-center ">
+                                <a href="http://comprilet.co/edu" class="txt-info">Pagina principal de la Intitución</a>
+                            </div
+                            <div class="text-center ">
+                                <a href="indextest.html" class="txt-info">Test</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
