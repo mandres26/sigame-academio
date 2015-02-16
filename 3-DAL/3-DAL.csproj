@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CBE87122-C751-4BF8-A392-9DB7D99C80C4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>3-DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySql.Data.6.9.5\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySql.Data.Entity.6.9.5\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="areas.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="asignatura.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BDSIGAME.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDSIGAME.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BDSIGAME.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BDSIGAME.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDSIGAME.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="bitacora.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="directores_g.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="grados.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="grupos.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="horarios.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="jornadas.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="logros.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="matricula1.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="matricula2.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="notas.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="observatorio.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="periodos.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="personas.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepoAreas.cs" />
+    <Compile Include="RepoAsignatura.cs" />
+    <Compile Include="RepoBitacora.cs" />
+    <Compile Include="RepoGrados.cs" />
+    <Compile Include="RepoGrupos.cs" />
+    <Compile Include="RepoHorarios.cs" />
+    <Compile Include="RepoJornadas.cs" />
+    <Compile Include="RepoLogros.cs" />
+    <Compile Include="RepoMatricula1.cs" />
+    <Compile Include="RepoMatricula2.cs" />
+    <Compile Include="RepoNotas.cs" />
+    <Compile Include="RepoObservatorio.cs" />
+    <Compile Include="RepoPeriodo.cs" />
+    <Compile Include="RepoPersonas.cs" />
+    <Compile Include="RepoReport.cs" />
+    <Compile Include="RepoRoles.cs" />
+    <Compile Include="reportes.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RepoUsuarios.cs" />
+    <Compile Include="roles.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usuarios.cs">
+      <DependentUpon>BDSIGAME.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="BDSIGAME.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BDSIGAME.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BDSIGAME.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDSIGAME.edmx</DependentUpon>
+      <LastGenOutput>BDSIGAME.Context.cs</LastGenOutput>
+    </None>
+    <None Include="BDSIGAME.edmx.diagram">
+      <DependentUpon>BDSIGAME.edmx</DependentUpon>
+    </None>
+    <None Include="BDSIGAME.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDSIGAME.edmx</DependentUpon>
+      <LastGenOutput>BDSIGAME.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ENTIDADES\ENTIDADES.csproj">
+      <Project>{2a1dfab0-3f7d-4f8c-a161-9d3256fa9d96}</Project>
+      <Name>ENTIDADES</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
