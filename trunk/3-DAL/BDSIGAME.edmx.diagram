@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="86481d2e30a246b3a87dacc99e6008f3" Name="Diagrama1">
+        <EntityTypeShape EntityType="bdsigameModel.areas" Width="1.5" PointX="1.5" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdsigameModel.asignatura" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdsigameModel.bitacora" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdsigameModel.directores_g" Width="1.5" PointX="8.25" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdsigameModel.grados" Width="1.5" PointX="1.5" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdsigameModel.grupos" Width="1.5" PointX="0.75" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdsigameModel.horarios" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdsigameModel.jornadas" Width="1.5" PointX="0.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdsigameModel.logros" Width="1.5" PointX="9" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdsigameModel.matricula1" Width="1.5" PointX="8.25" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdsigameModel.matricula2" Width="1.5" PointX="8.25" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdsigameModel.notas" Width="1.5" PointX="11.25" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdsigameModel.observatorio" Width="1.5" PointX="11.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdsigameModel.periodos" Width="1.5" PointX="9" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdsigameModel.personas" Width="1.5" PointX="6" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdsigameModel.reportes" Width="1.5" PointX="11.25" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdsigameModel.roles" Width="1.5" PointX="3.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdsigameModel.usuarios" Width="1.5" PointX="8.25" PointY="38.125" IsExpanded="true" />
+        <AssociationConnector Association="bdsigameModel.jjjjjj" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_ahL" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_asignatur" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_asignatura" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_asignaturass" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_asignaturasss" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fkdir1" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fkdir2" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_grad" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_grade" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_g" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_ghL" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_grup" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_grupo" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_gruposs" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_gruposss" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_jor" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.jornada" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_logross" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_profesor" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_acudie" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_estudi" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_estudiantess" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_period" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_profesoress" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_estudiantesss" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_periodosss" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_profesoresss" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_p" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_e" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.fk_personas" ManuallyRouted="false" />
+        <AssociationConnector Association="bdsigameModel.rol" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
