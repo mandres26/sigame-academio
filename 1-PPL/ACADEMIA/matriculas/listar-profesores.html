@@ -1,0 +1,166 @@
+﻿<script src="/validaciones-tools.js"></script>
+<script src="/ACADEMIA/matriculas/listar-profesores.js"></script>
+<div class="row">
+    <div id="breadcrumb" class="col-md-12">
+        <ol class="breadcrumb">
+            <li><a >Procesos académicos / Matrículas / Profesores / Listar </a></li>
+        </ol>
+    </div>
+   
+</div>
+
+<div class="box">
+    <div class="box-header">
+        <div class="box-name">
+            <i class="fa fa-table"></i>
+            <span>  </span> <!--Titulo del box-->
+        </div>
+
+        <div class="box-icons">
+            <a class="expand-link">
+                <i class="fa fa-expand"></i>
+            </a>
+            
+        </div>
+        <div class="no-move"></div>
+    </div>
+    <div class="box-content">
+        <!------------------------------------------>
+        <div class="text-center">
+            <h3 class="page-header col-md-9 text-left">Listado de matriculas de los profesores en la instituci&oacute;n</h3>
+            <div id="imgload" class="text-muted">Cargando...  </div>
+
+            <div id="social" class="pull-right col-md-3"> </div>
+            <br />
+            <br />
+        </div>
+        <div id="alerta"></div>
+        <!------------------------------------------>
+        <div id="formPPAL" class="form-group">
+            <!----------- FORMULARIO DE LA GESTION----------------->
+            <div class="row  text-center">
+                <div class="panel panel-primary ">
+                    <br />
+                    <label class="control-label col-md-3" for="comboFiltros">FILTROS DISPONIBLES: </label>
+                    <div class="row col-md-5"><select id="comboFiltros" color:"#80bfff" class="form-control text-danger "></select> </div>
+                    <div class="row col-md-1"></div>
+                    <div class="row col-md-3"><a id="btnG" class="btn btn-primary btn-block" data-loading-text="Cargando...">Gestionar</a></div>
+                    <br />
+                    <br />
+                </div>
+                <br />
+
+                <div id="alerta2"></div>
+                <!------------------------------TIPOS DE FILTROS--------------------------
+            ------------------------------------------------------------------------>
+                <div id="f-profesor" class="panel panel-primary text-center">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Filtrar profesores</h4>
+                    </div>
+                    <div class="panel-body">
+                        <br />
+                        <div class="row col-md-2">
+                            <label id="Label1" class="control-label text-danger" for="txtId">PROFESOR: Identificaci&oacute;n   </label>
+                        </div>
+                        <div class="row col-md-3">
+                            <input id="txtId" autofocus maxlength="12" onkeydown="return validarNo(event)" style='text-transform: uppercase;' placeholder="IDENTIFICACIÓN" class="form-control text-primary" /></div>
+                        <div class="row col-md-2">
+                            <label id="Label2" class="control-label text-danger" for="txtId">NOMBRES:  </label>
+                        </div>
+
+                        <div class="row col-md-3">
+                            <input id="txtIdN" autofocus maxlength="12" onkeydown="return validarLet(event)" style='text-transform: uppercase;' placeholder="CONSULTE POR NOMBRES" class="form-control text-primary" /></div>
+                        <div class="row col-md-1"></div>
+                        <br />
+                        <br />
+                    </div>
+                    <div class="row col-md-3">
+                        <label id="Label3" class="control-label" for=" txtNom ">Nombres / Apellidos</label></div>
+                    <div class="row col-md-4">
+                        <input id="txtNom" class="form-control" disabled /></div>
+                    <div class="row col-md-1"></div>
+                    <div class="row col-md-4">
+                        <input id="txtAp" class="form-control" disabled /></div>
+                    <div class="row col-md-1"></div>
+                    <br /><br />
+                </div>
+                </div>
+                <!-------------------------------------------------------------------------->
+                <div id="f-grupo" class="panel panel-primary text-center">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Filtrar profesores por grupo</h4>
+                    </div>
+                    <div class="panel-body">
+                        <label class="control-label col-md-3 text-danger" for="comboGrupo">GRUPO: Identificaci&oacute;n</label>
+                        <div class="row col-md-3"><select id="comboGrupo" color:"#80bfff" class="form-control text-danger ">2014-5A</select> </div>
+                        <div class="row col-md-1"></div>
+                        <a id="btnS" class="row col-md-2 btn btn-info" data-loading-text="Cargando...">Filtrar por sexo</a>
+                        <div class="row col-md-1"></div>
+                        <a id="btnAG" class="row col-md-2 btn btn-info" data-loading-text="Cargando...">Filtrar por asignatura</a>
+
+                        <div id="f-sexo">
+                            <label class="control-label col-md-3 text-danger" for="comboSexo">SEXO: </label>
+                            <div class="row col-md-3"><select id="comboSexo" color:"#80bfff" class="form-control text-danger "></select> </div>
+                        </div>
+                        <div id="f-asignaturasGrupo">
+                            <div class="row col-md-3"><label id="" class="control-label text-danger" for="comboIdAsigG">ASIGNATURA: Identificaci&oacute;n</label></div>
+                            <div class="row col-md-2"><select id="comboIdAsigG" color:"#80bfff" class="form-control" required></select></div>
+                            <div class="row col-md-2"><label id="" class="control-label " for=" txtIdGradoG">Nombres / Horas </label></div>
+                            <div class="row col-md-3"><input id="txtIdNomAsiG" class="form-control" disabled /></div>
+                            <div class="row col-md-1"><input id="txtIdHorasG" class="form-control" disabled /></div>
+                            <div class="row col-md-1"></div>
+                            <a id="btnPG" class="row col-md-2 btn btn-info" data-loading-text="Cargando...">Filtrar por profesor</a>
+                            <div id="f-profeGrupo">
+                                <div class="row col-md-3"><label id="" class="control-label text-danger" for="txtIdG"> PROFESOR: Identificaci&oacute;n  </label></div>
+                                <div class="row col-md-3"><input id="txtIdG" autofocus maxlength="12" onkeydown="return validarNo(event)" style='text-transform:uppercase;' placeholder="Identificaci&oacute;n del profesor" class="form-control text-primary" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-------------------------------------------------------------------------->
+                <div id="f-asignaturas" class="panel panel-primary text-center">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Filtrar profesores por asignaturas</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row col-md-3"><label id="" class="control-label text-danger" for="comboIdAsig">ASIGNATURA: Identificaci&oacute;n</label></div>
+                        <div class="row col-md-2"><select id="comboIdAsig" color:"#80bfff" class="form-control" required></select></div>
+                        <div class="row col-md-3"><label id="" class="control-label " for=" txtIdGrado">Nombres / Horas </label></div>
+                        <div class="row col-md-3"><input id="txtIdNomAsi" class="form-control" disabled /></div>
+                        <div class="row col-md-1"><input id="txtIdHoras" class="form-control" disabled /></div>
+                    </div>
+                </div>
+                <!-------------------------------------------------------------------------->
+                <div id="botones">
+                    <div class="row col-md-4"></div>
+                    <a id="btnL" class="row col-md-6 btn btn-danger " data-loading-text="Cargando...">Listar</a>
+                    <div class="row col-md-2"></div>
+                    <div class="row col-md-2"></div>
+                </div>
+                <hr /> <!--SEPARADOR-->
+                <br />
+                <div id="f-grilla" class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Listado de profesores matriculados en el sistema</h4>
+                    </div>
+                    <div class="panel-body">
+                        <table id="grilla" class="row col-lg-12 col-sm-1 text-center table table-bordered"> </table>
+
+                        <div class="row col-md-3"></div>
+                        <label id="Ltotal" class=" txt-primary row col-md-2 text-center"></label>
+                        <div class="row col-md-2"></div>
+                        <div class="row col-md-2"></div>
+                    </div>
+                </div>
+                <!--<a id="btnN" class="btn btn-default btn-block btn-lg ">Nuevo</a>-->
+            </div>
+        </div>
+        <span class="boton-top">▲</span>
+        <span id="btnN" class="boton-top2">Nuevo</span>
+    </div>
+</div>
+
+<!---------------------------------------- FOOTER DE LAS PAGINAS----------------------------------------------->
+<div id="PageFooter" class="container-footer">
+</div>
+<!----------------------------------------------------------------------------------------------------------->

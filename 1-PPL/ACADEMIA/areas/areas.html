@@ -1,0 +1,87 @@
+﻿<script src="/validaciones-tools.js"></script>
+<script src="/ACADEMIA/areas/areas.js"></script>
+<!--<script src="http://www.kunalbabre.com/projects/table2CSV.js"> </script>-->
+<script src="/ACADEMIA/areas/table2CSV.js"></script>
+<a href="/ACADEMIA/areas/download.php">download.php</a>
+<script src="/ACADEMIA/areas/generate.js"></script>
+<div class="row">
+    <div id="breadcrumb" class="col-md-12">
+        <ol class="breadcrumb">
+      <li><a >Datos generales / Áreas </a></li>
+        </ol>
+    </div>
+
+</div>
+
+<div class="box">
+    <div class="box-header">
+        <div class="box-name">
+            <i class="fa fa-table"></i>
+            <span>  </span> <!--Titulo del box-->
+        </div>
+
+        <div class="box-icons">
+            <a class="expand-link">
+                <i class="fa fa-expand"></i>
+            </a>
+            <!-- <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+        <div class="no-move"></div>
+    </div>
+    <div class="box-content">
+        <!------------------------------------------>
+        <div class="text-center">
+            <h3 class="page-header col-md-9 text-left">Gestión de las áreas de las asignaturas</h3>
+            <div id="social" class="pull-right col-md-3">
+            </div>
+            <br />
+            <br />
+        </div>
+        <div id="alerta"></div>
+        <!------------------------------------------>
+        <div class="form-group">
+            <div class="form-group text-center">
+
+                <div class="row col-md-3"><label id="" class="control-label" for="txtId">IDENTIFICACIÓN: </label> </div>
+                <div class="row col-md-4"><input id="txtId" class="form-control" style='text-transform:uppercase;' maxlength="59" autofocus placeholder="Descripción del área " onkeydown="return validarLet(event)" required /></div>
+                <div class="row col-md-1"></div>
+                <div class="row col-md-4"><a id="btnG" class="btn btn-success btn-block" data-loading-text="Cargando...">Gestionar</a></div>
+                <div class="row col-md-1"></div>
+                  <div id="botones" class="row text-center panel panel-default">
+                    <br /><br />
+                    <div class="row col-md-4"></div>
+                    <a id="btnR" class="btn btn-success col-md-4" data-loading-text="Cargando...">Registrar</a>
+                    <a id="btnE" class="btn btn-danger col-md-4" data-loading-text="Cargando..."> .:  Eliminar  :.</a>
+                    <div class="row col-md-4"></div>
+                </div>
+            </div>
+            <div class="row col-md-4"></div>
+            <a id="btnL" class="row col-md-4 btn btn-primary " data-loading-text="Cargando...">Listar todos</a>
+            <div class="row col-md-2"></div>
+            <br />
+
+            <br />
+            <br />
+            <div id="formulario" class="panel panel-primary text-center">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Listado de las areas registradas en el sistema</h4>
+                </div>
+                <div class="panel-body">
+                    <table id="grilla" class="row text-center table table-bordered"> </table>
+                </div>
+            </div>
+            <!--<a id="btnN" class="btn btn-default btn-block btn-lg ">Nuevo</a>-->
+        </div>
+          <span class="boton-top">▲</span>
+             <span id="btnN" class="boton-top2">Nuevo</span>
+
+    </div>
+
+</div>
+
+<!---------------------------------------- FOOTER DE LAS PAGINAS----------------------------------------------->
+<div id="PageFooter" class="container-footer">
+</div>
+<!----------------------------------------------------------------------------------------------------------->

@@ -1,0 +1,160 @@
+﻿
+<script src="/validaciones-tools.js"></script>
+<script src="/ACADEMIA/personas/procesar.js"></script>
+<div class="row">
+    <div id="breadcrumb" class="col-md-12">
+        <ol class="breadcrumb">
+          <li><a >Datos generales / Personal / Procesar</a></li>
+        </ol>
+    </div>
+
+</div>
+
+<div class="box">
+    <div class="box-header">
+        <div class="box-name">
+            <i class="fa fa-table"></i>
+            <span>  </span> <!--Titulo del box-->
+        </div>
+
+        <div class="box-icons">
+            <a class="expand-link">
+                <i class="fa fa-expand"></i>
+            </a>
+           
+        </div>
+        <div class="no-move"></div>
+    </div>
+    <div class="box-content">
+        <!------------------------------------------>
+        <div class="text-center">
+            <h3 class="page-header col-md-9 text-left">Gestión del personal de la institución</h3>
+            <div id="imgload" class="text-muted">Cargando...  </div>
+
+            <div id="social" class="pull-right col-md-3"> </div>
+            <br />
+            <br />
+        </div>
+        <div id="alerta"></div>
+        <!------------------------------------------>
+        <div id="formPPAL" class="form-group">
+            <!----------- FORMULARIO DE LA GESTION----------------->
+            <div class="row  text-center">
+                
+                
+                <div class="row col-md-3"><label id="" class="control-label" for="txtId">No. DE IDENTIFICACIÓN</label> </div>
+                <div class="row col-md-4"><input id="txtId" class="form-control text-danger" maxlength="12" style='text-transform:uppercase;' placeholder="identificación de la persona"  required /></div>
+                <div class="row col-md-1"></div>
+                <div class="row col-md-4"><a id="btnG" class="btn btn-success btn-block" data-loading-text="Cargando...">Gestionar</a></div>
+                <hr />
+                <div id="formulario" class="form-group text-center">
+                    <!----------- FORMULARIO DE LAS PERSONAS----------------->
+                    <div class="panel panel-primary text-center">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Datos de sistema</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row col-md-2"><label id="" class="control-label text-danger" for=" combotipo">TIPO DE IDENTIFICACIÓN</label></div>
+                            <div class="row col-md-2"><select id="comboTipo" color:"#80bfff" class="form-control"></select></div>
+                            <label class="control-label col-md-1 text-danger" for="comboRol">ROL PRINCIPAL</label>
+                            <div class="row col-md-3"><select id="comboRol1" color:"#80bfff" class="form-control text-danger "></select> </div>
+                             <div class="row col-md-1"></div>
+                            <div class="row col-md-3"><a id="btnP" class="btn btn-primary btn-block" data-loading-text="Cargando...">Procesar</a></div>
+                            <div class="row col-md-1"></div>
+                     </div>
+                    </div>
+                    <div id="formulario2" class="panel panel-primary text-center">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Datos personales</h4>
+                        </div>
+                        <div class="panel-body">
+                             <div id="alerta2"></div>
+                            <p> Tenga en encuenta que si registra a la persona con el estado <strong>RETIRADO</strong>. Esta será bloqueada por el sistema y  no podrá iniciar sección</p>
+                            <p class="text-danger"> Los campos que contienen el asteristo * son obligatorios</p>
+                            <span class="text-danger"></span>
+                            <div class="row col-md-3"> <label id="" class="control-label text-danger" for="txtApellidos">* APELLIDOS COMPLETOS</label></div>
+                            <div class="row col-md-9"><input id="txtApellidos" maxlength="50" style='text-transform:uppercase;' class="form-control" autocomplete="on" placeholder="SALAZAR ARAUJO, por ejemplo" type='text'  onkeydown="return validarLet(event)" required /></div>
+
+                            <div class="row col-md-3"><label id="" class="control-label text-danger" for="txtNombres">* NOMBRES COMPLETOS</label></div>
+                            <div class="row col-md-9"><input id="txtNombres" maxlength="50" style='text-transform:uppercase;' class="form-control" autocomplete="on" placeholder="CARLOS MARIO, por ejemplo" type='text'  onkeydown="return validarLet(event)" required /></div>
+
+                            <div class="row col-md-3"><label id="" class="control-label text-danger" for="txtDir">* DIRECCIÓN</label></div>
+                            <div class="row col-md-9"><input id="txtDir" class="form-control" style='text-transform:uppercase;' maxlength="59" autocomplete="on" placeholder="Dirección de residencia" type='text'' /></div>
+
+                            <div class="row col-md-3"><label id="Label6" class="control-label" for="txtDir2">DIRECCIÓN AUX</label></div>
+                            <div class="row col-md-9"><input id="txtDir2" class="form-control" style='text-transform:uppercase;' maxlength="59" autocomplete="on" placeholder="Dirección de residencia auxiliar" type='text'' /></div>
+
+                            <div class="row col-md-3"><label id="" class="control-label" for="comboSexo">GÉNERO</label></div>
+                            <div class="row col-md-9"><select id="comboSexo" color:"#80bfff" class="form-control"></select></div>
+                            
+                            <div class="row col-md-3"> <label id="" class="control-label" for="comboEstado">ESTADO</label></div>
+                            <div class="row col-md-9"><select id="comboEstado" color:"#80bfff" class="form-control"></select></div>
+
+                            <div class="row col-md-3"><label id="" class="control-label " for=" fecha">FECHA DE NACIMIENTO</label></div>
+                            <div class="row col-md-2 "><select id="comboFdia" class="form-control "></select></div>
+                            <div class="row col-md-3 "><select id="comboFmes" class="form-control "></select></div>
+                            <div class="row col-md-2 "><select id="comboFano" class="form-control "></select></div>
+                           <div class="row col-md-2 "></div>
+                            <br /><br /><br /><br /><br /><br /><br /><br /><br />    <br />  <br /> 
+                            <div id="formRoles" class="panel panel-primary"> 
+                                <br />  
+                             
+                              <div id="ltel" class="row col-md-3"><label id="Label2" class="control-label text-danger" for="txtTel">* CELULAR</label></div>
+                              <div class="row col-md-9"><input id="txtTel" class="form-control" style='text-transform:uppercase;' maxlength="11" placeholder="# de telefono Celular" onkeydown="return validarNo(event)" required /></div>
+
+                              <div id="lfijo" class="row col-md-3"> <label id="Label3" class="control-label text-danger" for="txtFijo">* FIJO</label></div>
+                              <div class="row col-md-9"> <input id="txtFijo" class="form-control" style='text-transform:uppercase;' maxlength="11" placeholder="# de telefono fijo" onkeydown="return validarNo(event)" required /></div>
+
+                              <div id="Div1" class="row col-md-3"> <label id="Label7" class="control-label" for="txtFijo2">FIJO AUX</label></div>
+                              <div class="row col-md-9"> <input id="txtFijo2" class="form-control" style='text-transform:uppercase;' maxlength="11" placeholder="# de telefono fijo" onkeydown="return validarNo(event)" required /></div>
+
+                            <div id="lemail" class="row col-md-3"> <label id="Label4" class="control-label" for="txtEmail">EMAIL (OPCIONAL)</label></div>
+                            <div class="row col-md-9"><input id="txtEmail" type="email" maxlength="20" class="form-control" style='text-transform:uppercase;' placeholder="COMPRILET@HOTMAIL, POR EJEMPLO" /></div>
+
+                            <div id="ljornada" class="row col-md-3"> <label id="Label5" class="control-label" for="comboJornada">JORNADA LABORAL</label></div>
+                            <div class="row col-md-9"><select id="comboJornada" color:"#80bfff" class="form-control"></select></div>
+                   
+                              <label id="lRol2" class="control-label col-md-3 text-primary" for="comboRol">ROL SECUNDARIO (OPCIONAL)</label>
+                              <div class="row col-md-8"><select id="comboRol2" color:"#80bfff" class="form-control text-primary "></select>  </div>
+                   
+                                <label id="lRol3" class="control-label col-md-3 text-primary" for="comboRol3">ROL DIRECTOR_G (OPCIONAL)</label>
+                              <div class="row col-md-8"><select id="comboRol3" color:"#80bfff" class="form-control text-primary "></select>  </div>
+                   
+
+                                 <br /><br /><br /><br /> <br /><br /> <br />    <br /> <br />  <br /> <br /> 
+                                 </div>
+                            <div class="panel panel-default">
+                                <br />
+                                
+                            <div class="row col-md-3"><label id="Label1" class="control-label text-danger" for="txtDes">OBSERVACÍON </label> </div>
+                            <div class="row col-md-9"><textarea id="txtDes" rows="5" cols="20" class="form-control" required placeholder="Escriba la descripción de la observación.  " /></div>
+                             <br /><br />
+                            <hr />
+                        </div>
+                              </div>
+                    </div>
+                    <hr />
+                    <div id="botones" class="row text-center panel panel-default">
+                        <div class="row col-md-2 "></div>
+                        <a id="btnE" class="btn btn-danger col-md-3" data-loading-text="Cargando..."> .:  Eliminar  :.</a>
+                        <div class="row col-md-2 "></div>
+                        <a id="btnR" class="btn btn-success col-md-5" data-loading-text="Cargando...">Registrar</a>
+                        <div class="row col-md-1 "></div>
+                        <a id="btnM" class="btn btn-warning col-md-3" data-loading-text="Cargando...">Modificar</a>
+                        <br />
+                    </div>
+                </div>
+
+                <!--<a id="btnN" class="btn btn-default btn-block btn-lg ">Nuevo</a>-->
+            </div>
+              <span class="boton-top">▲</span>
+        <span id="btnN" class="boton-top2">Nuevo</span>
+
+        </div>
+    </div>
+</div>
+
+<!---------------------------------------- FOOTER DE LAS PAGINAS----------------------------------------------->
+<div id="PageFooter" class="container-footer">
+</div>
+<!----------------------------------------------------------------------------------------------------------->

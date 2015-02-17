@@ -1,0 +1,131 @@
+﻿    <link rel="stylesheet" href="../../BOOTSTRAP/jqwidgets/styles/jqx.base.css" type="text/css" />
+    <script   src="../../BOOTSTRAP/scripts/jquery-1.11.1.min.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxcore.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxdata.js"></script> 
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxbuttons.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxscrollbar.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxmenu.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxnumberinput.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxcombobox.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxpanel.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxcheckbox.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxlistbox.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxdropdownlist.js"></script>
+    <script   src="../../BOOTSTRAP/scripts/demos.js"></script>
+
+
+
+<script src="/validaciones-tools.js"></script>
+<script src="/ACADEMIA/reportes/individual.js"></script>
+
+
+<div class="row">
+    <div id="breadcrumb" class="col-md-12">
+        <ol class="breadcrumb">
+          <li><a >Reportes / Boletines /Individual </a></li>
+        </ol>
+    </div>
+
+</div>
+
+<div class="box">
+    <div class="box-header">
+        <div class="box-name">
+            <i class="fa fa-table"></i>
+            <span>  </span> <!--Titulo del box-->
+        </div>
+
+        <div class="box-icons">
+            <a class="expand-link">
+                <i class="fa fa-expand"></i>
+            </a>
+           
+        </div>
+        <div class="no-move"></div>
+    </div>
+    <div class="box-content">
+        <!------------------------------------------>
+        <div class="text-center">
+            <h3 class="page-header col-md-9 text-left">Gestión de boletines de forma individual</h3>
+            <div id="imgload" class="text-muted">Cargando...  </div>
+
+            <div id="social" class="pull-right col-md-3"> </div>
+            <br />
+            <br />
+        </div>
+        <div id="alerta"></div>
+        <!------------------------------------------>
+        <div id="formPPAL" class="form-group">
+            <div class="form-group text-center has-primary has-feedback">
+                 <div id="f-inicial" class="panel panel-primary">
+                <br />
+                      <div class="panel-heading">
+                    <h4 class="panel-title">Datos necesarios para generar el reporte acad&eacute;mico</h4>
+                </div>
+                <div class="panel-body">
+                    <p>Para procesar los reportes digite primero la identificaci&oacute;n o nombre del <strong>estudiante</strong> y presione la tecla <strong>Enter</strong> o haga clic en el bot&oacute;n <strong>Gestionar</strong>. Luego seleccione el <strong>grupo y periodo</strong> para continuar.</p>
+                    <div class="panel panel-primary">
+                        <br />
+                <div class="row col-md-2"><label id="Label2" class="control-label text-danger" for="txtId">ESTUDIANTE: Identificaci&oacute;n   </label> </div>
+                <div class="row col-md-3"><input id="txtId" autofocus maxlength="12" onkeydown="return validarNo(event)" style='text-transform: uppercase;' placeholder="DIGITE LA IDENTIFICACIÓN" class="form-control text-primary" /></div>
+                <label class="col-sm-2 control-label">NOMBRES</label>
+                <div id='txtIdN' class="form-control text-info col-sm-3"> </div>
+            <hr /> <br />
+            <div class="row col-md-3"><label id="Label5" class="control-label" for=" txtNom ">Nombres / Apellidos</label></div>
+            <div class="row col-md-3"><input id="txtNomEst" class="form-control" disabled /></div>
+            <div class="row col-md-3"><input id="txtApEst" class="form-control" disabled /></div>
+            <div class="row col-md-1"></div>
+            <div class="row col-md-3"><a id="btnG" class="btn btn-success btn-block " data-loading-text="Cargando...">Gestionar</a></div>
+            <br /><br />
+                                    </div>
+                    </div>
+                    <div id="f-grupo">
+                        <div class="row col-md-3"><label id="" class="control-label text-danger" for="comboIdgrupo">GRUPOS MATRICULADOS: </label></div>
+                        <div class="row col-md-2"><select id="comboIdgrupo" color:"#80bfff" class="form-control" required></select></div>
+                        <div class="row col-md-2"><label id="" class="control-label " for=" txtIdGrado">Grado / A&ntilde;o </label></div>
+                        <div class="row col-md-3"><input id="txtIdGrado" class="form-control" disabled /></div>
+                        <div class="row col-md-3"><input id="txtIdAno" class="form-control" disabled /></div>
+                        <hr /> <!--SEPARADOR--><br />
+                        <div class="panel panel-default">
+                            <br />
+                             <div class="row col-md-3"><label id="" class="control-label text-danger" for=" comboPeriodos ">PERIODO ACAD&Eacute;MICO</label></div>
+                            <div class="row col-md-3 "><select id="comboPeriodos" color:"#80bfff" class="form-control text-success" required></select></div>
+                            <div class="row col-md-2"><label id="" class="control-label " for=" txtRangoI ">Inicia: </label></div>
+                            <div class="row col-md-2"><input id="txtRangoI" class="form-control" disabled /></div>
+                            <div class="row col-md-2"><label id="" class="control-label" for=" txtRangoF ">Termina: </label></div>
+                            <div class="row col-md-2"><input id="txtRangoF" class="form-control" disabled /></div>
+                            <br /><br />
+                        </div>
+                  
+                        <div class="row col-md-5"></div>
+                        <div class="row text-center">
+                            <a id="btnGenerar" class="col-md-3 btn btn-primary" data-loading-text="Generando...">Generar boletín</a>
+                            <div class="row col-md-1"></div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+           
+        </div>
+           <span class="boton-top">▲</span>
+        <span id="btnN" class="boton-top2">Nuevo</span>
+
+    </div>
+</div>
+<!---------------------------------------- FOOTER DE LAS PAGINAS----------------------------------------------->
+<div id="PageFooter" class="container-footer">
+</div>
+<!----------------------------------------------------------------------------------------------------------->
+<!--<script type="text/javascript" src="/BOOTSTRAP/jsPDF/jspdf.js"></script>
+<script type="text/javascript" src="/BOOTSTRAP/jsPDF/libs/FileSaver.js/FileSaver.js"></script>
+<script type="text/javascript" src="/BOOTSTRAP/jsPDF/libs/Blob.js/Blob.js"></script>
+<script type="text/javascript" src="/BOOTSTRAP/jsPDF/libs/Blob.js/BlobBuilder.js"></script>
+<script type="text/javascript" src="/BOOTSTRAP/jsPDF/libs/Deflate/deflate.js"></script>
+<script type="text/javascript" src="/BOOTSTRAP/jsPDF/libs/Deflate/adler32cs.js"></script>
+<script type="text/javascript" src="/BOOTSTRAP/jsPDF/jspdf.plugin.addimage.js"></script>
+<script type="text/javascript" src="/BOOTSTRAP/jsPDF/jspdf.plugin.from_html.js"></script>
+<script type="text/javascript" src="/BOOTSTRAP/jsPDF/jspdf.plugin.ie_below_9_shim.js"></script>
+<script type="text/javascript" src="/BOOTSTRAP/jsPDF/jspdf.plugin.sillysvgrenderer.js"></script>
+<script type="text/javascript" src="/BOOTSTRAP/jsPDF/jspdf.plugin.split_text_to_size.js"></script>
+<script type="text/javascript" src="/BOOTSTRAP/jsPDF/jspdf.plugin.standard_fonts_metrics.js"></script>-->

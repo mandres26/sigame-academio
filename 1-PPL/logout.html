@@ -1,0 +1,54 @@
+﻿<script src="/validaciones-tools.js"></script>
+
+<script>
+    
+    function redireccionar2() {
+        //window.location.href = "login.aspx";
+        window.location.href = "test.aspx";
+    }
+   
+    ModalPregunta("Esta seguro de cerrar la sesión", "Sección.");
+
+    $('#btnACEPTAR').click(function () { // Botón aceptar del mdal pregunta
+        var btn = $('#btnACEPTAR')
+        btn.button('loading')
+        $.ajax(".....").always(function () {
+            logout();
+            btn.button('reset')
+        });
+
+    });
+    $('#btnCANCELAR').click(function () { // Botón aceptar del mdal pregunta
+        redireccionar();
+    });
+
+    function logout() {
+        jsonData = "{'dtob':" + JSON.stringify(getBitacora("LOGOUT", "SALIR", "NINGUNA")) + "}";
+        $.ajax({
+            type: "POST",
+            url: "/WS/users.asmx/b_salir",
+            data: jsonData,
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            async: true,
+            success: function (result) {
+                if (result.d == "S") {
+                    Modal("Sesión terminada.", "Sesión.");
+                    localStorage.clear('SeccionId');
+                    localStorage.clear('SeccionNombres');
+                    localStorage.clear('SeccionApellidos');
+                    localStorage.clear('SeccionRol');
+                    localStorage.clear('SeccionSexo');
+                    setTimeout("redireccionar2()", 1500);
+                }
+            },
+            error: function (result) {
+                Modal("Upss en el sistema: No podemos cerrar su sección debido a que el servidor no esta disponible. Intenta otra vez.", "Servidor no disponible");
+            }
+        });
+    }
+</script>
+
+
+
+

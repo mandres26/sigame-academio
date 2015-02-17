@@ -1,0 +1,83 @@
+﻿<script src="/validaciones-tools.js"></script>
+<div class="row">
+    <div id="breadcrumb" class="col-md-12">
+        <ol class="breadcrumb">
+            <li><a href="#">Inicio</a></li>
+        </ol>
+    </div>
+   
+</div>
+
+<div class="box">
+    <div class="box-header">
+        <div class="box-name">
+            <!-- <i class="fa fa-table"></i>-->
+            <span> <!--<strong> COMPRILET-SOFT: </strong>-->  Bienvenido a SIGAME</span>
+        </div>
+
+        <div class="box-icons">
+            <a class="expand-link">
+                <i class="fa fa-expand"></i>
+            </a>
+            <!--<a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>-->
+        </div>
+        <div class="no-move"></div>
+    </div>
+    <div class="box-content">
+        <div class="text-center">
+            <h2 class="page-header col-md-9 text-left  text-primary"><strong> Sistema de Informaci&oacuten para la Gestión Academica y Monitoreo Estudiantil.</strong></h2>
+            <div id="social" class="pull-right col-md-3">
+            </div>
+            <br />
+        </div>
+        <div class="col-md-5 text-justify">
+            
+            <h4>
+                Hola,
+                <label id="userNametxt"> COMPRILET </label>,
+                queremos compartirte que es un reto y un fundamento importante para el Colegio Mis Primeras Letras, armonizar y coordinar todos los procesos y refuerzos orientados a facilitar la integraci&oacuten y formaci&oacuten de los estudiantes a trav&eacutes de sus &aacutereas de gesti&oacuten y la inclusi&oacuten de la instituci&oacuten educativa con las TICs.
+                <br />
+                <br />
+
+
+                Atentamente,
+                <br />
+                <strong>Equipo COMPRILET.</strong>
+                <br />
+
+            </h4>
+
+        </div>
+        <div class="text-center col-md-7">
+            <div class="text-right "><img src="/BOOTSTRAP/img/plantel/innovacion.jpg" class="img-responsive" /></div>
+        </div>
+        <br />
+        <br />
+        <br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+        
+        <hr /> <!--SEPARADOR-->
+        <span class="boton-top">▲</span>
+      
+
+    </div>
+
+</div>
+    <div class="container-footer">
+        <img src="/BOOTSTRAP/img/plantel/eslogan.png" class="img-responsive text-center fa-youtube" />
+    </div>
+<script type="text/javascript">
+      $(document).ready(function () {
+          WinMove();
+          validar_pagina();
+          bienvenida()
+          function bienvenida() {
+              var username = localStorage.getItem('SeccionNombres') + " " + localStorage.getItem('SeccionApellidos');
+              $("#userNametxt").text(username);
+          }
+    });
+</script>

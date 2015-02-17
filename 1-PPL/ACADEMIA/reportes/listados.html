@@ -1,0 +1,88 @@
+﻿<script src="/validaciones-tools.js"></script>
+<script src="/ACADEMIA/reportes/listados.js"></script>
+
+
+<div class="row">
+    <div id="breadcrumb" class="col-md-12">
+        <ol class="breadcrumb">
+           <li><a >Reportes / Listados académicos </a></li>
+        </ol>
+    </div>
+    
+</div>
+
+<div class="box">
+    <div class="box-header">
+        <div class="box-name">
+            <i class="fa fa-table"></i>
+            <span>  </span> <!--Titulo del box-->
+        </div>
+
+        <div class="box-icons">
+            <a class="expand-link">
+                <i class="fa fa-expand"></i>
+            </a>
+           
+        </div>
+        <div class="no-move"></div>
+    </div>
+    <div class="box-content">
+        <!------------------------------------------>
+        <div class="text-center">
+            <h3 class="page-header col-md-9 text-left">Listado de estudiantes por grupo</h3>
+            <div id="imgload" class="text-muted">Cargando...  </div>
+
+            <div id="social" class="pull-right col-md-3"> </div>
+            <br />
+            <br />
+        </div>
+        <div id="alerta"></div>
+        <!------------------------------------------>
+        <div id="formPPAL" class="form-group">
+            <!----------- FORMULARIO DE LA GESTION----------------->
+            <div class="row  text-center">
+                <div class="panel panel-primary ">
+                    <br />
+                    <label class="control-label col-md-3" for="comboFiltros">REPORTES DISPONIBLES: </label>
+                    <div class="row col-md-5"><select id="comboFiltros" color:"#80bfff" class="form-control text-danger "></select> </div>
+                    <div class="row col-md-1"></div>
+                    <div class="row col-md-3"><a id="btnG" class="btn btn-primary btn-block" data-loading-text="Cargando...">Gestionar</a></div>
+                    <br />
+                    <br />
+                </div>
+                <br />
+
+                   <!-------------------------------------------------------------------------->
+                <div id="f-grupo" class="panel panel-primary text-center">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Listado de estudiantes por grupos y periodos</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row col-md-3"><label id="" class="control-label text-danger" for=" comboPeriodo ">PERIODO ACAD&Eacute;MICO</label></div>
+                        <div class="row col-md-3 "><select id="comboPeriodos" color:"#80bfff" disabled class="form-control text-success" required></select></div>
+                        <div class="row col-md-1"></div>
+
+                        <label class="control-label col-md-3 text-danger" for="comboGrupo">GRUPO:</label>
+                        <div class="row col-md-3"><select id="comboGrupo" color:"#80bfff" class="form-control text-danger "></select> </div>
+                       
+                    </div>
+                </div>
+                  <!-------------------------------------------------------------------------->
+                <div id="botones">
+                    <div class="row col-md-4"></div>
+                    <a id="btnGenerar" class="row col-md-6 btn btn-danger " data-loading-text="Cargando...">Generar</a>
+                    <div class="row col-md-2"></div>
+                    <div class="row col-md-2"></div>
+                </div>
+                <hr /> <!--SEPARADOR-->
+            </div>
+        </div>
+          <span class="boton-top">▲</span>
+        <span id="btnN" class="boton-top2">Nuevo</span>
+    </div>
+</div>
+
+<!---------------------------------------- FOOTER DE LAS PAGINAS----------------------------------------------->
+<div id="PageFooter" class="container-footer">
+</div>
+<!----------------------------------------------------------------------------------------------------------->

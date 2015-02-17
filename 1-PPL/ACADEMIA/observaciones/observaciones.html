@@ -1,0 +1,164 @@
+﻿    <link rel="stylesheet" href="../../BOOTSTRAP/jqwidgets/styles/jqx.base.css" type="text/css" />
+    <script   src="../../BOOTSTRAP/scripts/jquery-1.11.1.min.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxcore.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxdata.js"></script> 
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxbuttons.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxscrollbar.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxmenu.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxnumberinput.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxcombobox.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxpanel.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxcheckbox.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxlistbox.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxdropdownlist.js"></script>
+    <script   src="../../BOOTSTRAP/scripts/demos.js"></script>
+
+
+
+<script src="/validaciones-tools.js"></script>
+<script src="/ACADEMIA/observaciones/observaciones.js"></script>
+<div class="row">
+    <div id="breadcrumb" class="col-md-12">
+        <ol class="breadcrumb">
+            <li><a >Procesos académicos / Observaciones / Procesar </a></li>
+        </ol>
+    </div>
+
+</div>
+
+<div class="box">
+    <div class="box-header">
+        <div class="box-name">
+            <i class="fa fa-table"></i>
+            <span>  </span> <!--Titulo del box-->
+        </div>
+
+        <div class="box-icons">
+            <a class="expand-link">
+                <i class="fa fa-expand"></i>
+            </a>
+          
+        </div>
+        <div class="no-move "></div>
+    </div>
+    <div class="box-content">
+        <!------------------------------------------>
+        <div class="text-center">
+            <h3 class="page-header col-md-9 text-left">Gesti&oacuten de observaciones disciplinarias de estudiantes</h3>
+            <div id="imgload" class="text-muted">Cargando...  </div>
+
+            <div id="social" class="pull-right col-md-3"> </div>
+            <br />
+            <br />
+        </div>
+        <div id="alerta"></div>
+        <!------------------------------------------>
+        <div id="formPPAL" class="form-group">
+
+            <div class="form-group text-center has-primary has-feedback">
+                 <div id="f-inicial" class="panel panel-primary">
+                <br />
+                <div class="row col-md-2"><label id="Label1" class="control-label text-danger" for="txtId">PROFESOR: Identificaci&oacute;n   </label> </div>
+                <div class="row col-md-3"><input id="txtId" autofocus maxlength="12" onkeydown="return validarNo(event)" style='text-transform: uppercase;' placeholder="DIGITE LA IDENTIFICACIÓN" class="form-control text-primary" /></div>
+                <label class="col-sm-2 control-label">NOMBRES</label>
+                <div id='txtIdN' class="form-control text-info col-sm-3"> </div>
+            <hr /> <br />
+            <div class="row col-md-3"><label id="Label5" class="control-label" for=" txtNom ">Nombres / Apellidos</label></div>
+            <div class="row col-md-3"><input id="txtNom" class="form-control" disabled /></div>
+            <div class="row col-md-3"><input id="txtAp" class="form-control" disabled /></div>
+            <div class="row col-md-1"></div>
+            <div class="row col-md-3"><a id="btnG" class="btn btn-success btn-block " data-loading-text="Cargando...">Gestionar</a></div>
+            <br /><br />
+            </div>
+                <div id="formulario1" class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Listado de asignaturas que tiene matriculadas</h4>
+                    </div>
+                    <div class="panel-body">
+                         <p> Selecione primero el <strong>periodo</strong>, escoga la asignatura y haga clic en el bot&oacute;n  <strong>procesar</strong> para cargar los estudiantes de cada grupo.</p>
+                        
+                        
+                        <div class="panel panel-default">
+                            <br />
+                             <div class="row col-md-3"><label id="Label4" class="control-label text-danger" for=" comboPeriodos ">PERIODO ACAD&Eacute;MICO</label></div>
+                            <div class="row col-md-3 "><select id="comboPeriodos" color:"#80bfff" class="form-control text-success" required></select></div>
+                            <div class="row col-md-2"><label id="Label6" class="control-label " for=" txtRangoI ">Inicia: </label></div>
+                            <div class="row col-md-2"><input id="txtRangoI" class="form-control" disabled /></div>
+                            <div class="row col-md-2"><label id="Label7" class="control-label" for=" txtRangoF ">Termina: </label></div>
+                            <div class="row col-md-2"><input id="txtRangoF" class="form-control" disabled /></div>
+                            <br /><br />
+                        </div>
+                        <table id="grilla1" class="row text-center table table-bordered">
+                            <!--Grilla de para enviar las notas con los logros individualmente.-->
+                        </table>
+                    </div>
+                </div>
+
+                <div id="formulario2" class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Procesar observación disciplinaria</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div id="alerta1" class="row col-md-12"></div>
+                           
+                         <div class="row col-md-2"><label id="Label2" class="control-label text-danger" for="txtId">ESTUDIANTE:   </label> </div>
+                <div class="row col-md-3"><input id="txtIdEst" autofocus maxlength="12" onkeydown="return validarNo(event)" style='text-transform: uppercase;' placeholder="DIGITE LA IDENTIFICACIÓN" class="form-control text-primary" /></div>
+                <label class="col-sm-2 control-label">NOMBRES</label>
+                <div id='txtIdEstN' class="form-control text-info col-sm-3"> </div>
+                        <hr /> <br />
+            <div class="row col-md-3"><label id="Label3" class="control-label" for=" txtNom ">Nombres / Apellidos</label></div>
+            <div class="row col-md-3"><input id="txtNomEst" class="form-control" disabled /></div>
+                        <div class="row col-md-1"></div>
+            <div class="row col-md-4"><input id="txtApEst" class="form-control" disabled /></div>
+            <div class="row col-md-1"></div>
+
+            <hr /> <br />
+                        <div class="row col-md-2"></div>
+                        <div class="row col-md-4"><a id="btnGER" class="btn btn-success btn-block" data-loading-text="Cargando...">Gestionar registro</a></div>
+                        <div class="row col-md-1"></div>
+                        <div class="row col-md-4"><a id="btnGEM" class="btn btn-danger btn-block boton-downAux" data-loading-text="Cargando...">Gestionar modificaciones</a></div>
+
+                          <div id="alerta2" class="row col-md-12"></div>
+
+                        <br /><br />
+                        <div id="f-grilla" class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Listado de observaciones que tiene el estudiante</h4>
+                            </div>
+                            <div class="panel-body">
+                                <p> Escoja la <strong>observacion</strong>, haga clic en los botones <strong>modificar, eliminar o archivar</strong> para procesar.</p>
+                                <table id="grilla2" class="row text-center table table-bordered"></table>
+                            </div>
+                        </div>
+                        <div id="f-observacion" class="panel panel-primary ">
+                            <div class="panel-body">
+                                <div class="row col-md-3"><label id="" class="control-label text-danger" for=" comboTipo ">TIPO: </label></div>
+                                <div class="row col-md-3"><select id="comboTipo" color:"#80bfff" class="form-control text-success" required></select></div>
+                                <div class="row col-md-1"></div>
+                                <hr /> <!--SEPARADOR-->
+                                <div class="row col-md-3"><label id="" class="control-label text-danger" for="txtDes"> DESCRIPCI&Oacute;N: </label> </div>
+                                <div class="row col-md-9"><textarea id="txtDes" rows="4" cols="15" class="form-control" /></div>
+
+                                <div class="row col-md-4"></div>
+                                <a id="btnR" class="btn btn-primary  col-md-5 clsR" data-loading-text="Cargando...">Registrar</a>
+                                <a id="btnM" class="btn btn-warning  col-md-5 clsM" data-loading-text="Cargando...">Enviar modificación</a>
+                                <div class="row col-md-1"></div>
+                            </div>
+                        </div>
+                        <a id="btnNE" class="btn btn-default btn-block btn-lg ">Gestionar otro estudiante</a>
+                    </div>
+                </div>
+            </div>
+            <!--<a id="btnN" class="btn btn-default btn-block btn-lg ">Nuevo</a>-->
+        </div>
+        <!--<a id="btnT" class="btn btn-warning btn-block btn-lg ">DATOS DE PREUBA</a>-->
+           <span class="boton-top">▲</span>
+        <span id="btnN" class="boton-top2">Nuevo</span>
+
+    </div>
+</div>
+
+<!---------------------------------------- FOOTER DE LAS PAGINAS----------------------------------------------->
+<div id="PageFooter" class="container-footer">
+</div>
+<!----------------------------------------------------------------------------------------------------------->

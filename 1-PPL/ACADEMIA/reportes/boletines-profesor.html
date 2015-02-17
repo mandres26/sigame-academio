@@ -1,0 +1,74 @@
+﻿<script src="/validaciones-tools.js"></script>
+<script src="/ACADEMIA/reportes/boletines-profesor.js"></script>
+
+
+<div class="row">
+    <div id="breadcrumb" class="col-md-12">
+        <ol class="breadcrumb">
+          <li><a >Reportes / Boletines /Individual </a></li>
+        </ol>
+    </div>
+
+</div>
+
+<div class="box">
+    <div class="box-header">
+        <div class="box-name">
+            <i class="fa fa-table"></i>
+            <span>  </span> <!--Titulo del box-->
+        </div>
+
+        <div class="box-icons">
+            <a class="expand-link">
+                <i class="fa fa-expand"></i>
+            </a>
+           
+        </div>
+        <div class="no-move"></div>
+    </div>
+    <div class="box-content">
+        <!------------------------------------------>
+        <div class="text-center">
+            <h3 class="page-header col-md-9 text-left">Gestión de boletines </h3>
+            <div id="imgload" class="text-muted">Cargando...  </div>
+
+            <div id="social" class="pull-right col-md-3"> </div>
+            <br />
+            <br />
+        </div>
+        <div id="alerta"></div>
+        <!------------------------------------------>
+        <div id="formPPAL" class="form-group">
+            <div id="formulario" class="panel panel-primary text-center">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Seleccione un grupo y periodo para continuar</h4>
+                    </div>
+                    <div class="panel-body">
+                        <label class="control-label col-md-2 text-danger" for="comboGrupo">GRUPOS QUE DIRIGE</label>
+                        <div class="row col-md-2"><select id="comboGrupo" color:"#80bfff" class="form-control text-danger "></select> </div>
+                        <div class="row col-md-1"></div>
+                        <div class="row col-md-2"><label id="" class="control-label text-danger" for=" comboPeriodo ">PERIODO ACAD&Eacute;MICO</label></div>
+                        <div class="row col-md-2 "><select id="comboPeriodos" color:"#80bfff"  class="form-control text-success" required></select></div>
+                        <div class="row col-md-1"></div>
+                        <a id="btnG" class="row col-md-3 btn btn-success " data-loading-text="Cargando...">Listar estudiantes</a>
+
+                        <table id="grilla1" class="row col-lg-12 text-center table table-bordered"> </table>
+                        <div class="row col-md-3"></div>
+                        <label id="Ltotal1" class=" txt-primary row col-md-2 text-center"></label>
+                        <div class="row col-md-2"></div>
+                        
+                        <div class="row col-md-2"></div>
+                    </div>
+                </div>
+             </div>
+           
+        </div>
+           <span class="boton-top">▲</span>
+        <span id="btnN" class="boton-top2">Nuevo</span>
+
+    </div>
+
+<!---------------------------------------- FOOTER DE LAS PAGINAS----------------------------------------------->
+<div id="PageFooter" class="container-footer">
+</div>
+<!----------------------------------------------------------------------------------------------------------->

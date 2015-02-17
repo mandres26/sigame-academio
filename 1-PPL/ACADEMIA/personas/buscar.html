@@ -1,0 +1,99 @@
+﻿    <link rel="stylesheet" href="../../BOOTSTRAP/jqwidgets/styles/jqx.base.css" type="text/css" />
+    <script   src="../../BOOTSTRAP/scripts/jquery-1.11.1.min.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxcore.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxdata.js"></script> 
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxbuttons.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxscrollbar.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxmenu.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxnumberinput.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxcombobox.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxpanel.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxcheckbox.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxlistbox.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxdropdownlist.js"></script>
+    <script   src="../../BOOTSTRAP/scripts/demos.js"></script>
+
+
+
+<script src="/validaciones-tools.js"></script>
+<script src="/ACADEMIA/personas/buscar.js"></script>
+<div class="row">
+    <div id="breadcrumb" class="col-md-12">
+        <ol class="breadcrumb">
+            <li><a >Datos generales / Personal / Buscar</a></li>
+        </ol>
+    </div>
+    
+</div>
+
+<div class="box">
+    <div class="box-header">
+        <div class="box-name">
+            <i class="fa fa-table"></i>
+            <span>  </span> <!--Titulo del box-->
+        </div>
+
+        <div class="box-icons">
+            <a class="expand-link">
+                <i class="fa fa-expand"></i>
+            </a>
+           
+        </div>
+        <div class="no-move"></div>
+    </div>
+    <div class="box-content">
+        <!------------------------------------------>
+        <div class="text-center">
+            <h3 class="page-header col-md-9 text-left">Busqueda por nombres de personas</h3>
+            <div id="imgload" class="text-muted">Cargando...  </div>
+
+            <div id="social" class="pull-right col-md-3"> </div>
+            <br />
+            <br />
+        </div>
+        <div id="alerta"></div>
+        <!------------------------------------------>
+        <div id="formPPAL" class="form-group">
+            <!----------- FORMULARIO DE LA GESTION----------------->
+            <div class="row  text-center">
+                <div class="panel panel-primary ">
+                    <br />
+                    <label class="col-sm-4 control-label">NOMBRES Y APELLIDOS</label>
+                    <div id='txtId' class="form-control text-info col-sm-10"> </div>
+
+              
+                    <div class="row col-md-4"></div>
+                    <a id="btnL" class="row col-md-5 btn btn-success " data-loading-text="Cargando...">Buscar</a>
+                    <div class="row col-md-2"></div>
+                    <div class="row col-md-2"></div>
+                       <br />   <br />   <br />   <br />
+                               </div>
+
+                <div id="f-grilla" class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Listado de estudiantes matriculados en el sistema</h4>
+                    </div>
+                    <div class="panel-body">
+                        <table id="grilla" class="row col-lg-12 text-center table table-bordered"> </table>
+
+                        <div class="row col-md-3"></div>
+                        <label id="Ltotal" class=" txt-primary row col-md-2 text-center"></label>
+                        <div class="row col-md-2"></div>
+                        <!--<a id="btnI" class="row col-md-3 btn btn-info" data-loading-text="Cargando...">Imprimir listado</a>-->
+                        <div class="row col-md-2"></div>
+                    </div>
+
+                </div>
+                <!--<a id="btnN" class="btn btn-default btn-block btn-lg ">Nuevo</a>-->
+
+            </div>
+        </div>
+          <span class="boton-top">▲</span>
+        <span id="btnN" class="boton-top2">Nuevo</span>
+    </div>
+</div>
+
+<!---------------------------------------- FOOTER DE LAS PAGINAS----------------------------------------------->
+<div id="PageFooter" class="container-footer">
+</div>
+<!----------------------------------------------------------------------------------------------------------->

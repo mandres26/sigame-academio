@@ -1,0 +1,117 @@
+﻿<script src="/validaciones-tools.js"></script>
+<script src="/ACADEMIA/notas/listar-individuales.js"></script>
+<div class="row">
+    <div id="breadcrumb" class="col-md-12">
+        <ol class="breadcrumb">
+           <li><a >Procesos académicos / Notas / Individual / Listar </a></li>
+        </ol>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-header">
+        <div class="box-name">
+            <i class="fa fa-table"></i>
+            <span>  </span> <!--Titulo del box-->
+        </div>
+
+        <div class="box-icons">
+            <a class="expand-link">
+                <i class="fa fa-expand"></i>
+            </a>
+         
+        </div>
+        <div class="no-move"></div>
+    </div>
+    <div class="box-content">
+        <!------------------------------------------>
+        <div class="text-center">
+            <h3 class="page-header col-md-9 text-left">Listado de notas acad&eacute;micas de forma individual</h3>
+            <div id="imgload" class="text-muted">Cargando...  </div>
+
+            <div id="social" class="pull-right col-md-3"> </div>
+            <br />
+            <br />
+        </div>
+        <div id="alerta"></div>
+        <!------------------------------------------>
+        <div id="formPPAL" class="form-group">
+            <!----------- FORMULARIO DE LA GESTION----------------->
+            <div class="row  text-center">
+                <div class="panel panel-primary ">
+                    <br />
+                    <label class="control-label col-md-3" for="comboFiltros">FILTROS DISPONIBLES: </label>
+                    <div class="row col-md-5"><select id="comboFiltros" color:"#80bfff" class="form-control text-danger "></select> </div>
+                    <div class="row col-md-1"></div>
+                    <div class="row col-md-3"><a id="btnG" class="btn btn-primary btn-block" data-loading-text="Cargando...">Gestionar</a></div>
+                    <br />
+                    <br />
+                </div>
+                <br />
+                <!--<div id="alerta"></div>-->
+                <!------------------------------TIPOS DE FILTROS--------------------------
+            <!-------------------------------------------------------------------------->
+                <div id="f-grupo" class="panel panel-primary text-center">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Filtrar estudiantes por grupo y periodo</h4>
+                    </div>
+                    <div class="panel-body">
+                        <label class="control-label col-md-2 text-danger" for="comboIdgrupo">GRUPO: Identificaci&oacute;n</label>
+                        <div class="row col-md-2"><select id="comboIdgrupo" color:"#80bfff" class="form-control text-danger ">2014-5A</select> </div>
+
+                        <div class="row col-md-2"><label id="" class="control-label text-danger" for="txtId"> ESTUDIANTE: Identificaci&oacute;n  </label></div>
+                        <div class="row col-md-3"><input id="txtId" maxlength="12" onkeydown="return validarNo(event)" style='text-transform:uppercase;' placeholder="Identificaci&oacute;n" class="form-control text-primary" /></div>
+
+                        <div id="f-periodo">
+                            <div class="row col-md-2"><label id="" class="control-label text-danger" for=" comboPeriodos ">PERIODO ACAD&Eacute;MICO</label></div>
+                            <div class="row col-md-2 "><select id="comboPeriodos" color:"#80bfff" class="form-control text-success" required></select></div>
+                        </div>
+                        <div id="f-asignatura">
+                            <hr />
+                            <br />
+                            <div class="row col-md-2"><label id="" class="control-label text-danger" for="comboIdAsig">ASIGNATURA: Identificaci&oacute;n</label></div>
+                            <div class="row col-md-2"><select id="comboIdAsig" color:"#80bfff" class="form-control" required></select></div>
+                            <div class="row col-md-2"><label id="" class="control-label " for=" txtIdGrado">Nombres / Horas </label></div>
+                            <div class="row col-md-3"><input id="txtIdNomAsi" class="form-control" disabled /></div>
+                            <div class="row col-md-2"><input id="txtIdHoras" class="form-control" disabled /></div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-------------------------------------------------------------------------->
+                <div id="botones">
+                    <div class="row col-md-4"></div>
+                    <a id="btnL" class="row col-md-5 btn btn-danger " data-loading-text="Cargando...">Listar</a>
+                    <div class="row col-md-3"></div>
+                    <div class="row col-md-2"></div>
+                </div>
+                <hr /> <!--SEPARADOR-->
+                <br />
+                <div id="f-grilla" class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Listado de estudiantes matriculados en el sistema</h4>
+                    </div>
+                    <div class="panel-body">
+                        <table id="grilla" class="row col-lg-12 text-center table table-bordered"> </table>
+
+                        <div class="row col-md-3">
+                        </div>
+                        <label id="Ltotal" class=" txt-primary row col-md-2 text-center"></label>
+                        <div class="row col-md-2"></div>
+                        <!--<a id="btnI" class="row col-md-3 btn btn-info" data-loading-text="Cargando...">Imprimir listado</a>-->
+                        <div class="row col-md-2"></div>
+                    </div>
+                </div>
+                <!--<a id="btnN" class="btn btn-default btn-block btn-lg ">Nuevo</a>-->
+            </div>
+        </div>
+        <span class="boton-top">▲</span>
+        <span id="btnN" class="boton-top2">Nuevo</span>
+
+    </div>
+</div>
+
+<!---------------------------------------- FOOTER DE LAS PAGINAS----------------------------------------------->
+<div id="PageFooter" class="container-footer">
+</div>
+<!----------------------------------------------------------------------------------------------------------->

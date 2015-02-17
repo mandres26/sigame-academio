@@ -1,0 +1,517 @@
+﻿<!DOCTYPE html>
+<html lang="es-co">
+<head>
+    <meta charset="utf-8">
+    <title>Súper usuario</title>
+    <link rel="shortcut icon" href="/BOOTSTRAP/img/plantel/icono.ico" />
+    <meta name="description" content="description">
+    <meta name="author" content="DevOOPS">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/BOOTSTRAP/plugins/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="/BOOTSTRAP/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+    <script src="BOOTSTRAP/js/cargarmaster.js"></script>
+    <link href="BOOTSTRAP/css/fuente-google.woff" rel="stylesheet" />
+    <script src="/ACADEMIA/inicio.js"></script>
+    <link href="/BOOTSTRAP/css/font-awesome.css" rel="stylesheet" />
+    <link href="/BOOTSTRAP/css/fonts-googleapis.css" rel="stylesheet" />
+    <script src="/BOOTSTRAP/plugins/jquery/jquery-2.1.0.min.js"></script>
+    <link href="/BOOTSTRAP/css/style.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+    <script src="validaciones-tools.js"></script>
+    <style>
+        
+        .boton-top {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            background: #2062A1;
+            cursor: pointer;
+        }
+        .boton-top2 {
+            display: block;
+            position: fixed;
+            bottom: 0;
+            right: auto;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            background: #808080;
+            cursor: pointer;
+        }
+    </style>
+   
+   
+</head>
+<body >
+    <div id="screensaver">
+        <canvas id="canvas"></canvas>
+        <i class="fa fa-lock" id="screen_unlock"></i>
+    </div>
+    <div id="modalbox">
+        <div class="devoops-modal">
+            <div class="devoops-modal-header">
+                <div class="modal-header-name">
+                    <span>Basic table</span>
+                </div>
+                <div class="box-icons">
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="devoops-modal-inner">
+            </div>
+            <div class="devoops-modal-bottom">
+            </div>
+        </div>
+    </div>
+    <header class="navbar">
+        <div class="container-fluid expanded-panel">
+            <div class="row">
+                <div id="logo" class="col-xs-12 col-sm-2">
+                    <a href="super.html">SÚPER</a>
+
+
+                </div>
+                <div id="top-panel" class="col-xs-12 col-sm-10">
+                    <div class="row">
+                        <div class="col-xs-8 col-sm-4">
+                            <!--Boton del Menú-->
+                            <a href="#" class="show-sidebar">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                            <div id="search">
+                              <div  id="goodwill" ></div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-4 col-sm-8 top-panel-right">
+                            <ul class="nav navbar-nav pull-right panel-menu">
+                                
+                                 <li class="dropdown hidden-xs">
+                                    <a  class="dropdown-toggle account" data-toggle="dropdown">
+                                        <div  id="AvatarSeccion" class="avatar">                                            
+                                         
+                                        </div>
+                                        <i class="fa  pull-right"></i>
+                                        <div class="user-mini pull-right">
+                                            <span class="welcome">Fecha y hora de sesión:</span>
+                                            <span id="SpanSeccion"> 2012/2/3 </span>
+                                        </div>
+                                    </a>
+                                    
+                                </li>
+
+
+                               <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle account" data-toggle="dropdown">
+                                        <div  id="AvatarAno" class="avatar">                                            
+                                         
+                                        </div>
+                                        <i class="fa fa-angle-down pull-right"></i>
+                                        <div class="user-mini pull-right">
+                                            <span class="welcome">AÑO:</span>
+                                            <span id="SpanAno"></span> <!--Ojo que esto va ligado al SeccionAnoAcademico-->
+                                            <script>
+                                                $("#SpanAno").text(localStorage.getItem('SeccionAnoAcademico'));
+                                            </script>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li> <a href="" >                                               
+                                                <span id="SpanAno1" class="hidden-sm text">2015</span>
+                                            <script>
+                                                $('#SpanAno1').click(function () {
+                                                    $("#SpanAno").text("2015");
+                                                    localStorage.setItem('SeccionAnoAcademico', "2015");
+                                                    alert("AÑO ACADEMICO 2015: Será redireccionado a la página principal. Clic en Aceptar para cargar los datos.");
+                                                    setTimeout("window.location.href = 'index.html'", 9000); //tiempo expresado en milisegundos
+                                                });
+                                            </script>
+                                            </a>
+                                            <a href="">
+                                                <span id="SpanAno2" class="hidden-sm text">2014</span>
+                                                 <script>
+                                                     $('#SpanAno2').click(function () {
+                                                         $("#SpanAno").text("2014");
+                                                         localStorage.setItem('SeccionAnoAcademico', "2014");
+                                                         alert("AÑO ACADEMICO 2014: Será redireccionado a la página principal. Clic en Aceptar para cargar los datos.");
+                                                         setTimeout("window.location.href = 'index.html'", 9000); //tiempo expresado en milisegundos
+                                                     });
+                                            </script>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle account" data-toggle="dropdown">
+                                        <div  id="AvatarUser" class="avatar">                                            
+                                         
+                                        </div>
+                                        <i class="fa fa-angle-down pull-right"></i>
+                                        <div class="user-mini pull-right">
+                                            <span class="welcome">Bienvenido(a),</span>
+                                            <span id="userName"> COMPRILET-SOFT </span>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                             <a href="/ACADEMIA/usuarios/password.html" class="ajax-link">
+                                                <i class="fa fa-wrench"></i>
+                                                <span  class="hidden-sm text">Datos de usuario</span>
+                                            </a>
+                                            <a href="logout.html" class="ajax-link">
+                                                <i class="fa fa-power-off"></i>
+                                                <span id="logout" class="hidden-sm text">Cerrar Sección</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="hidden-xs">
+								<a  class="modal-link">
+									<span id="spanVigencia" class="badge"> VIGENCIA</span>
+								</a>
+							</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="main" class="container-fluid">
+        <div class="row">
+            <div id="sidebar-left" class="col-xs-2 col-sm-2">
+                <ul class="nav main-menu">
+                    <li class="dropdown">
+                        <a href="/ACADEMIA/inicio.html" class="dropdown-toggle ajax-link">
+                            <i class="fa fa-home"></i>
+                            <!--<span class="hidden-xs">Inicio</span>  SI DESEO QUE EL ICONO SE OCULTE CUNADO PASA A MOBILE ACTIVO LA CLASE hidden-xs-->
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="fa fa-pencil-square-o"></i>
+                            <span>Datos generales</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="fa fa-group"></i>
+                                    <span class="">Personal</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="ajax-link" href="/ACADEMIA/personas/procesar.html">Procesar</a></li>
+                                    <li><a class="ajax-link" href="/ACADEMIA/personas/buscar.html">Busqueda</a></li>
+                                    <!--<li><a class="ajax-link" href="/ACADEMIA/personas/listar-personas.html">Listar personal</a></li>-->
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a class="ajax-link" href="/ACADEMIA/grados/grados.html">Grados</a>
+                            </li>
+
+                            <li>
+                                <a class="ajax-link" href="/ACADEMIA/grupos/grupos.html">Grupos</a>
+                            </li>
+                            <li>
+                                <a class="ajax-link" href="/ACADEMIA/areas/areas.html">Áreas</a>
+                            </li>
+                            <li>
+                                <a class="ajax-link" href="/ACADEMIA/asignaturas/asignaturas.html">Asignaturas</a>
+                            </li>
+
+                            <li>
+                                <a class="ajax-link" href="/ACADEMIA/periodos/periodos.html">Periodos</a>
+                            </li>
+                            <li>
+                                <a class="ajax-link" href="/ACADEMIA/jornadas/jornadas.html">Jornadas</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="fa fa-sitemap"></i>
+                            <span>Procesos académicos</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="fa fa-male"></i>
+                                    <span>Matrículas/Estudiantes</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="ajax-link" href="/ACADEMIA/matriculas/matriculas-estudiantes.html">Procesar</a></li>
+                                    <!--<li><a class="ajax-link" href="/ACADEMIA/matriculas/listar-estudiantes.html">Listar</a></li>-->
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="fa fa-male"></i>
+                                    <span>Matrículas/Profesores</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="ajax-link" href="/ACADEMIA/Matriculas/matriculas-profesores.html">Procesar</a></li>
+                                    <li><!--<a class="ajax-link" href="/ACADEMIA/Matriculas/listar-profesores.html">Listar</a>--></li>
+                                </ul>
+                            </li>
+                             <li class="dropdown">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="fa fa-male"></i>
+                                    <span>Directores de grupo</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="ajax-link" href="/ACADEMIA/Matriculas/directoresg.html">Procesar</a></li>
+                                    <li><a class="ajax-link" href="/ACADEMIA/Matriculas/listar-directoresg.html">Listar todos</a></li>
+                                </ul>
+                            </li>
+
+                            <!--<li class="dropdown">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="fa fa-user"></i>
+                                    <span>Notas/Individual</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="ajax-link" href="/ACADEMIA/notas/notas-individuales.html">Procesar</a></li>
+                                    <li><a class="ajax-link" href="/ACADEMIA/notas/listar-individuales.html">Listar</a></li>
+                                </ul>
+                            </li>-->
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="fa fa-users"></i>
+                                    <span>Notas/Grupal</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="ajax-link" href="/ACADEMIA/notas/notas-grupos.html">Procesar</a></li>
+                                    <!--<li><a class="ajax-link" href="/ACADEMIA/notas/listar-grupos.html">Listar</a></li>-->
+
+                                    <!--<li><a class="ajax-link" href="/ACADEMIA/notas/test.html">TEST</a></li>-->
+                                    <!--<li><a class="ajax-link" href="/ACADEMIA/notas/listar-todos.html">Listar todos</a></li>-->
+                                </ul>
+                            </li>
+
+                             <li class="dropdown">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="fa fa-user"></i>
+                                    <span>Superaciones</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="ajax-link" href="/ACADEMIA/notas/superar-notas.html">Superar notas</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="fa fa-calendar"></i>
+                                    <span>Observaciones</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="ajax-link" href="/ACADEMIA/observaciones/observaciones.html">Procesar</a></li>
+                                    <!--<li><a class="ajax-link" href="/ACADEMIA/observaciones/listar-observaciones.html">Listar</a></li>-->
+                                </ul>
+
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="fa fa-foursquare"></i>
+                                    <span class="">Horarios</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="ajax-link" href="/ACADEMIA/horarios/horarios.html">Procesar</a></li>
+                                    <!--<li><a class="ajax-link" href="/ACADEMIA/horarios/listar-horarios.html">Listar </a></li>-->
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="fa fa-tachometer"></i>
+                                    <span>Logros</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="ajax-link" href="/ACADEMIA/logros/logros.html">Procesar</a></li>
+                                    <li><a class="ajax-link" href="/ACADEMIA/logros/listar-logros.html">Listar</a></li>
+                                </ul>
+                            </li>
+
+
+                        </ul>
+
+                      <li class="dropdown">
+                       <a href="#" class="dropdown-toggle">
+                            <i class="fa fa-bar-chart-o"></i>
+                            <span>Reportes</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="fa fa-calendar"></i>
+                                    <span class="">Boletines</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="ajax-link" href="/ACADEMIA/reportes/habilitar.html">Habilitar/Deshabilitar</a></li>
+                                  <li><a class="ajax-link" href="/ACADEMIA/reportes/individual.html">Individual</a></li>
+                                  <li><a class="ajax-link" href="/ACADEMIA/reportes/grupal.html">Grupal</a></li>
+                                  <li><a class="ajax-link" href="/ACADEMIA/reportes/consolidado.html">Consolidado</a></li>
+
+                                </ul>
+                            </li>
+
+                             <li class="dropdown">
+                                <a href="/ACADEMIA/reportes/listados.html" class="dropdown-toggle ajax-link">
+                                    <i class="fa fa-foursquare"></i>
+                                    <span>Listados académicos</span>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="/ACADEMIA/reportes/hvidas.html" class="dropdown-toggle ajax-link">
+                                    <i class="fa fa-sitemap"></i>
+                                    <span>Hojas de vidas</span>
+                                </a>
+                            </li>
+                            </ul>
+                      </li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="fa fa-wrench"></i>
+                            <span>Procesos especiales</span>
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <li class="dropdown">
+                                <a href="/ACADEMIA/roles/roles.html" class="dropdown-toggle ajax-link">
+                                    <i class="fa "></i>
+                                    <span>Roles</span>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="/ACADEMIA/usuarios/usuarios.html" class="dropdown-toggle ajax-link">
+                                    <i class="fa "></i>
+                                    <span>Gestionar Usuarios</span>
+                                </a>
+                            </li>
+                             <li class="dropdown">
+                                <a href="/ACADEMIA/usuarios/usuarios-exportar.html" class="dropdown-toggle ajax-link">
+                                    <i class="fa "></i>
+                                    <span>Exportar Usuarios</span>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="/ACADEMIA/bitacoras/bitacoras.html" class="dropdown-toggle ajax-link">
+                                    <i class="fa "></i>
+                                    <span>Bitácora</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+            </div>
+            <!--<!--Desde aca comienza el contenido de  ppal-->
+            <div id="content" class="col-xs-12 col-sm-10">
+                <div class="preloader">
+                    <img src="/BOOTSTRAP/img/devoops_getdata.gif" class="devoops-getdata" alt="preloader" />
+                </div>
+                <div id="ajax-content" ">
+
+                </div>
+            </div>
+            <!--End Content-->
+        </div>
+
+    </div>
+    
+    <!------------------------------------ MODAL PARA EL RESULTADO DE LAS OPERACIONES --------------------------------->
+    <div class="modal fade" id="Modal" tabindex="-1 " role="dialog" aria-labelledby="tituloModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Cerrar</span>
+                    </button>
+                    <h4 id="tituloModal" class="modal-title"></h4>
+                </div>
+                <div id="textoModal" class="modal-body"></div>
+                <div id="ModalFooter" class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+      <!------------------------------------ MODAL PARA EL ACEPTAR --------------------------------->
+    <div class="modal fade" id="ModalPregunta" tabindex="-1 " role="dialog" aria-labelledby="tituloModalPregunta" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Cerrar</span>
+                    </button>
+                    <h4 id="tituloModalPregunta" class="modal-title"></h4>
+                </div>
+                <div id="textoModalPregunta" class="modal-body"></div>
+                <div id="ModalFooterPregunta" class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!------------------------------------ FIN DEL MODAL PARA LAS OPERACIONES ---------------------------------------->
+
+    <script src="/BOOTSTRAP/plugins/jquery/jquery-2.1.0.min.js"></script>
+    <script src="/BOOTSTRAP/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/BOOTSTRAP/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="/BOOTSTRAP/plugins/justified-gallery/jquery.justifiedgallery.min.js"></script>
+    <script src="/BOOTSTRAP/plugins/tinymce/tinymce.min.js"></script>
+    <script src="/BOOTSTRAP/plugins/tinymce/jquery.tinymce.min.js"></script>
+    <!-- All functions for this theme + document.ready processing -->
+    <script src="/BOOTSTRAP/js/devoopsCOMPRILET.js"></script>  <!--OJO que este es qeu me permite las animaciones con el boton del menu ppal-->
+    
+
+      <script>    if (localStorage.getItem('SeccionSexo') == 'MASCULINO') {
+        $("#AvatarUser").append('<img src="/BOOTSTRAP/img/avatar-hombre.png" class="img-rounded" alt="avatar" />');
+    }
+    else if (localStorage.getItem('SeccionSexo') == 'FEMENINO') {
+        $("#AvatarUser").append('<img src="/BOOTSTRAP/img/avatar-mujer.png" class="img-rounded" alt="avatar" />');
+    } else {
+        $("#AvatarUser").append('<img src="/BOOTSTRAP/img/avatar-sinsexo.png" class="img-rounded" alt="avatar" />');
+    }
+          if (localStorage.getItem('SeccionRol') == "ACUDIENTE") {
+              Modal("No tiene permisos para ingresar a esta url.", "Acceso denegado");
+              setTimeout("window.location.href = 'acudiente.html'", 2000); //tiempo expresado en milisegundos
+          }
+          else if (localStorage.getItem('SeccionRol') == "PROFESOR") {
+              Modal("No tiene permisos para ingresar a esta url.", "Acceso denegado");
+              setTimeout("window.location.href = 'profesor.html'", 2000); //tiempo expresado en milisegundos
+          }
+          else if (localStorage.getItem('SeccionRol') == "ADMINISTRATIVO") {
+              Modal("No tiene permisos para ingresar a esta url.", "Acceso denegado");
+              setTimeout("window.location.href = 'admin.html'", 2000); //tiempo expresado en milisegundos
+          }
+          $("#AvatarAno").append('<img src="/BOOTSTRAP/img/ano-academico.png" class="img-rounded" alt="avatar" />');
+          $("#AvatarSeccion").append('<img src="/BOOTSTRAP/img/seccion.png" class="img-rounded" alt="avatar" />');
+
+          
+      </script>
+
+</body>
+</html>

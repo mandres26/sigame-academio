@@ -1,0 +1,149 @@
+﻿    <link rel="stylesheet" href="../../BOOTSTRAP/jqwidgets/styles/jqx.base.css" type="text/css" />
+    <script   src="../../BOOTSTRAP/scripts/jquery-1.11.1.min.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxcore.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxdata.js"></script> 
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxbuttons.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxscrollbar.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxmenu.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxnumberinput.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxcombobox.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxpanel.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxcheckbox.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxlistbox.js"></script>
+    <script   src="../../BOOTSTRAP/jqwidgets/jqxdropdownlist.js"></script>
+    <script   src="../../BOOTSTRAP/scripts/demos.js"></script>
+
+
+<script src="/validaciones-tools.js"></script>
+<script src="/ACADEMIA/matriculas/matriculas-estudiantes.js"></script>
+<div class="row">
+    <div id="breadcrumb" class="col-md-12">
+        <ol class="breadcrumb">
+              <li><a >Procesos académicos / Matrículas / Estudiantes / Procesar </a></li>
+        </ol>
+    </div>
+   
+</div>
+
+<div class="box">
+    <div class="box-header">
+        <div class="box-name">
+            <i class="fa fa-table"></i>
+            <span>  </span> <!--Titulo del box-->
+        </div>
+
+        <div class="box-icons">
+            <a class="expand-link">
+                <i class="fa fa-expand"></i>
+            </a>
+           
+        </div>
+        <div class="no-move"></div>
+    </div>
+    <div id="matriculasEstudiantes" class="box-content">
+        <!------------------------------------------>
+        <div class="text-center">
+            <h3 class="page-header col-md-9 text-left">Gesti&oacute;n de matriculas de los estudiantes en la instituci&oacute;n</h3>
+            <div id="imgload" class="text-muted">Cargando...  </div>
+
+            <div id="social" class="pull-right col-md-3"> </div>
+            <br />
+            <br />
+        </div>
+        <div id="alerta"></div>
+        <!------------------------------------------>
+        <div id="formPPAL" class="form-group">
+            <div class="form-group text-center has-primary has-feedback">
+                 <div id="f-inicial" class="panel panel-primary">
+                <br />
+                <div class="row col-md-2"><label id="Label2" class="control-label text-danger" for="txtId">ESTUDIANTE: Identificaci&oacute;n   </label> </div>
+                <div class="row col-md-3"><input id="txtId" autofocus maxlength="12" onkeydown="return validarNo(event)" style='text-transform: uppercase;' placeholder="DIGITE LA IDENTIFICACIÓN" class="form-control text-primary" /></div>
+                <label class="col-sm-2 control-label">NOMBRES</label>
+                <div id='txtIdN' class="form-control text-info col-sm-3"> </div>
+            <hr /> <br />
+            <div class="row col-md-3"><label id="Label5" class="control-label" for=" txtNom ">Nombres / Apellidos</label></div>
+            <div class="row col-md-3"><input id="txtNomEst" class="form-control" disabled /></div>
+            <div class="row col-md-3"><input id="txtApEst" class="form-control" disabled /></div>
+            <div class="row col-md-1"></div>
+            <div class="row col-md-3"><a id="btnG" class="btn btn-success btn-block " data-loading-text="Cargando...">Gestionar</a></div>
+            <br /><br />
+            <div id="formulario" class="panel panel-primary text-center">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Datos de la matricula acad&eacute;mica</h4>
+                </div>
+                <div class="panel-body">
+                    <p>Para procesar esta matricula digite primero la identificaci&oacute;n del <strong>acudiente</strong> y presione la tecla <strong>Enter</strong> o haga clic en el bot&oacute;n <strong>gestionar</strong>. Luego seleccione el <strong>grupo</strong> al cual se va a matricular y haga proceda a realizar la acci&oacute;n de registrar o eliminar.</p>
+                    
+                <div class="row col-md-2"><label id="Label6" class="control-label text-danger" for="txtId">ACUDIENTE: Identificaci&oacute;n   </label> </div>
+                <div class="row col-md-3"><input id="txtIdAcu" autofocus maxlength="12" onkeydown="return validarNo(event)" style='text-transform: uppercase;' placeholder="DIGITE LA IDENTIFICACIÓN" class="form-control text-primary" /></div>
+                <label class="col-sm-2 control-label">NOMBRES</label>
+                <div id='txtIdAcuN' class="form-control text-info col-sm-3"> </div>
+            <hr /> <br />
+            <div class="row col-md-3"><label id="Label7" class="control-label" for=" txtNom ">Nombres / Apellidos</label></div>
+            <div class="row col-md-3"><input id="txtNomAcu" class="form-control" disabled /></div>
+            <div class="row col-md-3"><input id="txtApAcu" class="form-control" disabled /></div>
+            <div class="row col-md-1"></div>
+            <div class="row col-md-3"><a id="btnGA" class="btn btn-success btn-block " data-loading-text="Cargando...">Gestionar</a></div>
+            <br /><br />
+
+
+
+                    <div id="f-grupo">
+                        <div class="row col-md-3"><label id="" class="control-label text-danger" for="comboIdgrupo">GRUPO: Identificaci&oacute;n</label></div>
+                        <div class="row col-md-2"><select id="comboIdgrupo" color:"#80bfff" class="form-control" required></select></div>
+                        <div class="row col-md-3"><label id="" class="control-label " for=" txtIdGrado">Grado / Aula / A&ntilde;o </label></div>
+                        <div class="row col-md-2"><input id="txtIdGrado" class="form-control" disabled /></div>
+                        <div class="row col-md-2"><input id="txtIdAula" class="form-control" disabled /></div>
+                        <div class="row col-md-2"><input id="txtIdAno" class="form-control" disabled /></div>
+
+                        <hr /> <!--SEPARADOR-->
+                        <br /> <br /><br /><br />
+                        <div class="row text-center panel panel-default" >
+                            <br />
+                            <div id="meses" class="panel panel-primary">
+                                <br />
+                                <div class="row col-md-5">
+                                    <label id="Label1" class="control-label" for="comboMes1">PERIODO DE LA CONSTANCIA EN MESES: Inicio / Fin</label>
+                                </div>
+                                <div class="row col-md-3">
+                                    <select id="comboMes1" class="form-control" style='text-transform: uppercase;' /></div>
+                                <div class="row col-md-3">
+                                    <select id="comboMes2" class="form-control" style='text-transform: uppercase;' /></div>
+
+                                <div class="row col-md-4"></div>
+                                <a id="btnGenerarFam2" class="col-md-5 btn btn-warning" data-loading-text="Cargando...">Generar</a>
+                                <div class="row col-md-3"></div>
+                                   <br /> <br /><br />
+                            </div>
+
+
+                             <div class="row col-md-1"></div>
+                             <a id="btnGenerar" class="row col-md-5 btn btn-primary" data-loading-text="Cargando...">Constancia de estudio</a>
+                               <div class="row col-md-1"></div>
+                            <a id="btnGenerarFam" class="row col-md-5 btn btn-primary" data-loading-text="Cargando...">Constancia - familias en acción</a>
+                            <!--<div class="row col-md-1"></div>-->
+                                <br />
+                            <div class="row col-md-3"></div>
+                            <a id="btnR" class="col-md-3 btn btn-success" data-loading-text="Cargando...">Registrar</a>
+                            <div class="row col-md-1"></div>
+                           
+                            <a id="btnE" class="col-md-3 btn btn-danger" data-loading-text="Cargando..."> .:  Eliminar :.</a>
+                            <div class="row col-md-2"></div>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<a id="btnN" class="btn btn-default btn-block btn-lg ">Nuevo</a>-->
+        </div>
+        <!--<a id="btnT" class="btn btn-warning btn-block btn-lg ">DATOS DE PREUBA</a>-->
+       <span class="boton-top">▲</span>
+        <span id="btnN" class="boton-top2">Nuevo</span>
+
+    </div>
+</div>
+
+<!---------------------------------------- FOOTER DE LAS PAGINAS----------------------------------------------->
+<div id="PageFooter" class="container-footer">
+</div>
+<!----------------------------------------------------------------------------------------------------------->
