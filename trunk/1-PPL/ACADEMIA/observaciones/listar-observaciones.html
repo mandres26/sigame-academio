@@ -1,0 +1,264 @@
+﻿<script src="/validaciones-tools.js"></script>
+<script src="/ACADEMIA/observaciones/listar-observaciones.js"></script>
+<div class="row">
+    <div id="breadcrumb" class="col-md-12">
+        <ol class="breadcrumb">
+                <li><a >Procesos académicos / Observaciones / Listar </a></li>
+        </ol>
+    </div>
+
+</div>
+
+<div class="box">
+    <div class="box-header">
+        <div class="box-name">
+            <i class="fa fa-table"></i>
+            <span>  </span> <!--Titulo del box-->
+        </div>
+
+        <div class="box-icons">
+            <a class="expand-link">
+                <i class="fa fa-expand"></i>
+            </a>
+           
+        </div>
+        <div class="no-move"></div>
+    </div>
+    <div class="box-content">
+        <!------------------------------------------>
+        <div class="text-center">
+            <h3 class="page-header col-md-9 text-left">Listado de observaciones disiciplinarias de los estudiantes</h3>
+            <div id="imgload" class="text-muted">Cargando...  </div>
+
+            <div id="social" class="pull-right col-md-3"> </div>
+            <br />
+            <br />
+        </div>
+        <div id="alerta"></div>
+        <!------------------------------------------>
+        <div id="formPPAL" class="form-group">
+            <div class="form-group text-center">
+                <div id="f-inicial">
+                    <div class="panel panel-primary ">
+                        <br />
+                        <label class="control-label col-md-3" for="comboFiltros">FILTROS DISPONIBLES: </label>
+                        <div class="row col-md-5"><select id="comboFiltros" color:"#80bfff" class="form-control text-danger "></select> </div>
+                        <div class="row col-md-1"></div>
+                        <div class="row col-md-3"><a id="btnG" class="btn btn-primary btn-block" data-loading-text="Cargando...">Gestionar</a></div>
+                        <br />
+                        <br />
+                    </div>
+                    <br />
+                    <div id="alerta"></div>
+                </div>
+                    <!------------------------------TIPOS DE FILTROS--------------------------
+                       <!------------------------------POR GRUPO--------------------------->
+                    <div id="f-grupo" class="panel panel-primary text-center">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Filtrar por grupos</h4>
+                        </div>
+                        <div class="panel-body">
+                            <label class="control-label col-md-3 text-danger" for="comboIdgrupo">GRUPO: Identificaci&oacute;n</label>
+                            <div class="row col-md-3"><select id="comboIdgrupo" color:"#80bfff" class="form-control text-danger ">2014-5A</select> </div>
+                            <div class="row col-md-1"></div>
+                            <a id="btnPP" class="row col-md-3 btn btn-info" data-loading-text="Cargando...">Filtrar por periodo y profesor</a>
+                            <div id="f-profeGrupo">
+                                <hr />
+                                <div class="row col-md-3"><label id="" class="control-label text-danger" for="txtIdPro1"> PROFESOR: Identificaci&oacute;n  </label></div>
+                                <div class="row col-md-5"><input id="txtIdPro1" autofocus maxlength="12" onkeydown="return validarNo(event)" style='text-transform:uppercase;' placeholder="Digite la Identificaci&oacute;n del profesor" class="form-control text-primary" /></div>
+
+                                <div class="row col-md-2"><label id="" class="control-label text-danger" for=" comboPeriodos1 ">PERIODO ACAD&Eacute;MICO</label></div>
+                                <div class="row col-md-2 "><select id="comboPeriodos1" color:"#80bfff" class="form-control text-success" required></select></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--------------------------------POR Asignaturas-------------------------------->
+                    <div id="f-asignaturas" class="panel panel-primary text-center">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Filtrar por asignaturas</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row col-md-3"><label id="" class="control-label text-danger" for="comboIdAsig">ASIGNATURA: Identificaci&oacute;n</label></div>
+                            <div class="row col-md-2"><select id="comboIdAsig" color:"#80bfff" class="form-control" required></select></div>
+                            <div class="row col-md-3"><label id="" class="control-label " for=" txtIdGrado">Nombres / Horas </label></div>
+                            <div class="row col-md-3"><input id="txtIdNomAsi" class="form-control" disabled /></div>
+                            <div class="row col-md-1"><input id="txtIdHoras" class="form-control" disabled /></div>
+                        </div>
+                    </div>
+
+                    <!--<! -------------------------------POR ESTUDIANTES ---------------------->
+                    <div id="f-estudiantes" class="panel panel-primary text-center">
+                        <div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Filtrar por estudiante</h4>
+                            </div>
+                            <div class="panel-body">
+
+                                <div class="row col-md-2">
+                                    <label id="Label4" class="control-label text-danger" for="txtIdEst">ESTUDIANTE: Identificaci&oacute;n   </label>
+                                </div>
+                                <div class="row col-md-3">
+                                    <input id="txtIdEst" autofocus maxlength="12" onkeydown="return validarNo(event)" style='text-transform: uppercase;' placeholder="DIGITE LA IDENTIFICACIÓN" class="form-control text-primary" />
+                                </div>
+                                <div class="row col-md-2">
+                                    <label id="Label5" class="control-label text-danger" for="txtIdEstN">NOMBRES:  </label>
+                                </div>
+                                <div class="row col-md-3">
+                                    <input id="txtIdEstN" autofocus maxlength="12" onkeydown="return validarLet(event)" style='text-transform: uppercase;' placeholder="CONSULTE POR NOMBRES" class="form-control text-primary" />
+                                </div>
+                                <div class="row col-md-1"></div>
+                                <br />
+                                <br />
+                            </div>
+                        </div>
+                        <div class="row col-md-3">
+                            <label id="Label6" class="control-label" for=" txtNomEst ">Nombres / Apellidos</label>
+                        </div>
+                        <div class="row col-md-4">
+                            <input id="txtNomEst" class="form-control" disabled />
+                        </div>
+                        <div class="row col-md-1"></div>
+                        <div class="row col-md-4">
+                            <input id="txtApEst" class="form-control" disabled />
+                        </div>
+                        <div class="row col-md-1"></div>
+                        <br />
+                        <br />
+                    </div>
+                    </div>
+                    <!--<! -------------------------------POR PROFESORES ---------------------->
+                    <div id="f-profesores" class="panel panel-primary text-center">
+                        <div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Filtrar por profesores</h4>
+                            </div>
+                            <div class="panel-body">
+
+                                <div class="row col-md-2">
+                                    <label id="Label1" class="control-label text-danger" for="txtIdProfe">PROFESOR: Identificaci&oacute;n   </label>
+                                </div>
+                                <div class="row col-md-3">
+                                    <input id="txtIdProfe" autofocus maxlength="12" onkeydown="return validarNo(event)" style='text-transform: uppercase;' placeholder="DIGITE LA IDENTIFICACIÓN" class="form-control text-primary" />
+                                </div>
+                                <div class="row col-md-2">
+                                    <label id="Label2" class="control-label text-danger" for="txtIdProfeN">NOMBRES:  </label>
+                                </div>
+                                <div class="row col-md-3">
+                                    <input id="txtIdProfeN" autofocus maxlength="12" onkeydown="return validarLet(event)" style='text-transform: uppercase;' placeholder="CONSULTE POR NOMBRES" class="form-control text-primary" />
+                                </div>
+                                <div class="row col-md-1"></div>
+                                <br />
+                                <br />
+                            </div>
+                        </div>
+                        <div class="row col-md-3">
+                            <label id="Label3" class="control-label" for=" txtNomEst ">Nombres / Apellidos</label>
+                        </div>
+                        <div class="row col-md-4">
+                            <input id="txtNomProfe" class="form-control" disabled />
+                        </div>
+                        <div class="row col-md-1"></div>
+                        <div class="row col-md-4">
+                            <input id="txtApProfe" class="form-control" disabled />
+                        </div>
+                        <div class="row col-md-1"></div>
+                        <br />
+                        <br />
+                    </div>
+                    </div>
+                    <!--<! -------------------------------POR PERIODOS ---------------------->
+                    <div id="f-periodos" class="panel panel-primary text-center">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Filtrar por periodo </h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row col-md-2"><label id="" class="control-label text-danger" for=" comboPeriodos2 ">PERIODO ACAD&Eacute;MICO</label></div>
+                            <div class="row col-md-3 "><select id="comboPeriodos2" color:"#80bfff" class="form-control text-success" required></select></div>
+                        </div>
+                    </div>
+                    <!--<! -------------------------------POR FECHA ---------------------->
+                    <div id="f-fechas" class="panel panel-primary text-center">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Filtrar por fecha </h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row col-md-1"><label id="" class="control-label text-danger"> INICIO:  </label></div>
+                            <div class="row col-md-1 "></div>
+                            <div class="row col-md-2 "><select id="comboFdia" class="form-control "></select></div>
+                            <div class="row col-md-3 "><select id="comboFmes" class="form-control "></select></div>
+                            <div class="row col-md-2 "><select id="comboFano" class="form-control "></select></div>
+                            <hr />
+                            <div class="row col-md-2"><label id="" class="control-label text-primary"> FIN: </label></div>
+                            <div class="row col-md-2 "><select id="comboFdiaF" class="form-control "></select></div>
+                            <div class="row col-md-3 "><select id="comboFmesF" class="form-control "></select></div>
+                            <div class="row col-md-2 "><select id="comboFanoF" class="form-control "></select></div>
+
+                        </div>
+                    </div>
+                    <!-------------------------------------------------------------------------->
+                    <!--<! -------------------------------POR ARCHIVO ---------------------->
+                    <div id="f-archivos" class="panel panel-primary text-center">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Filtrar por archivo </h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row col-md-2"><label id="" class="control-label text-danger" for=" comboArchivo ">ESTADO:</label></div>
+                            <div class="row col-md-3 "><select id="comboArchivo" color:"#80bfff" class="form-control text-success" required></select></div>
+                        </div>
+                    </div>
+                    <!--<! -------------------------------POR NOTIFIACIÓN ---------------------->
+                    <div id="f-notificacion" class="panel panel-primary text-center">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Filtrar por notificación </h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row col-md-2"><label id="" class="control-label text-danger" for=" comboNoti ">ESTADO:</label></div>
+                            <div class="row col-md-3 "><select id="comboNoti" color:"#80bfff" class="form-control text-success" required></select></div>
+                        </div>
+                    </div>
+                    <!-------------------------------------------------------------------------->
+                    <!-------------------------------------------------------------------------->
+                    <div id="botones">
+                        <div class="row col-md-4"></div>
+                        <a id="btnL" class="row col-md-6 btn btn-danger " data-loading-text="Cargando...">Listar</a>
+                        <div class="row col-md-2"></div>
+                        <div class="row col-md-2"></div>
+                    </div>
+                <br /><br />
+                  <!--  <hr />--> 
+                <!--SEPARADOR-->
+                   <!-- <br />-->
+                    <div id="f-grilla" class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Listado de observaciones registradas en el sistema</h4>
+                        </div>
+                        <div class="panel-body">
+                            <table id="grilla" class="row col-lg-12 text-center table table-bordered"> </table>
+                            <div class="row col-md-1"></div>
+
+                            <label id="Ltotal" class=" txt-primary row col-md-1 text-center"></label>
+                            <div class="row col-md-1"></div>
+                            <label class="control-label col-md-3  text-danger"  id="LcomboIdgrupoEst" for="comboIdgrupoEst">GRUPOS EN QUE EL ESTUDIANTE ESTA MATRICULADO ¿EN CÚAL GRUPO DESEA VER LAS OBSERVACIONES?:</label>
+                            <div class="row col-md-3"><select id="comboIdgrupoEst" color:"#80bfff" class="form-control text-danger "></select> </div>
+                            <div class="row col-md-1"></div>
+                            <a id="btnI" class="row col-md-3 btn btn-danger" data-loading-text="Cargando...">Generar archivo con observaciones</a>
+                             
+                          
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!--<a id="btnT" class="btn btn-warning btn-block btn-lg ">DATOS DE PREUBA</a>-->
+          <span class="boton-top">▲</span>
+        <span id="btnN" class="boton-top2">Nuevo</span>
+       
+     </div>
+</div>
+
+<!---------------------------------------- FOOTER DE LAS PAGINAS----------------------------------------------->
+<div id="PageFooter" class="container-footer">
+</div>
+<!----------------------------------------------------------------------------------------------------------->

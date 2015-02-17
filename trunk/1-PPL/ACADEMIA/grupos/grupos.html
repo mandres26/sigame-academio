@@ -1,0 +1,95 @@
+﻿<script src="/validaciones-tools.js"></script>
+<script src="/ACADEMIA/grupos/grupos.js"></script>
+<div class="row">
+    <div id="breadcrumb" class="col-md-12">
+        <ol class="breadcrumb">
+           <li><a >Datos generales / Grupos </a></li>
+        </ol>
+    </div>
+    
+</div>
+
+<div class="box" >
+    <div class="box-header">
+        <div class="box-name">
+            <i class="fa fa-table"></i>
+            <span>  </span> <!--Titulo del box-->
+        </div>
+
+        <div class="box-icons">
+            <a class="expand-link">
+                <i class="fa fa-expand"></i>
+            </a>
+            
+        </div>
+        <div class="no-move"></div>
+    </div>
+    <div class="box-content">
+        <!------------------------------------------>
+        <div class="text-center">
+            <h3 class="page-header col-md-9 text-left">Gestión de grupos de la institución</h3>
+            <div id="imgload" class="text-muted">Cargando...  </div>
+
+            <div id="social" class="pull-right col-md-3"> </div>
+            <br />
+            <br />
+        </div>
+        <div id="alerta"></div>
+        <!------------------------------------------>
+        <div id="formPPAL" class="form-group">
+            <div class="form-group text-center">
+
+                 <div class="row col-md-12"><label id="Label1" class="control-label text-danger" >FORMATO DE GESTIÓN:       AÑO    -    GRADO   AULA</label> </div>
+                
+                <div class="row col-md-3"><label id="" class="control-label" for="txtIdgrupo">IDENTIFICACIÓN DEL GRUPO</label> </div>
+                
+                <div class="row col-md-2"><input id="txtAno" class="form-control" maxlength="4" type="number" min="2000" max="2016"  style='text-transform:uppercase;' onkeydown="return validarNo(event)" required /></div>
+                 <div class="row col-md-1"><label id="Label2" class="control-label" >-</label> </div>
+                <div class="row col-md-1"><select id="comboGrado" color:"#80bfff" class="form-control" required></select></div>
+                <div class="row col-md-2"><input id="txtAula" class="form-control" maxlength="2" autocomplete="on" style='text-transform:uppercase;' placeholder="AULA" required /></div>
+                
+                <div class="row col-md-1"></div>
+                <div class="row col-md-4"><a id="btnG" class="btn btn-success btn-block" data-loading-text="Cargando...">Gestionar</a></div>
+                <div id="formulario">
+                    <div class="row col-md-1"></div>
+                    <div class="row col-md-4"><label id="Label3" class="control-label text-danger" >IDENTIFICACIÓN GENERADA</label> </div>
+                    <div class="row col-md-3"><input id="txtId" class="form-control" maxlength="10" style='text-transform:uppercase;' autofocus placeholder=" " required /></div>
+                    <div class="row col-md-4"></div>
+                </div>
+                <div id="botones" class="row text-center panel panel-default">
+                    <hr /> <br /><br /><br /><br />
+                    <div class="row col-md-4"></div>
+                    <a id="btnE" class="btn btn-danger col-md-2" data-loading-text="Cargando..."> .:  Eliminar  :.</a>
+                    <a id="btnR" class="btn btn-success col-md-5" data-loading-text="Cargando...">Registrar</a>
+                    <div class="row col-md-1"></div>
+                    <a id="btnM" class="btn btn-warning col-md-2" data-loading-text="Cargando...">Modificar</a>
+                    <div class="row col-md-4"></div>
+                </div>
+            </div>
+            <br />
+            <div class="row col-md-4"></div>
+            <a id="btnL" class="row col-md-5 btn btn-primary " data-loading-text="Cargando...">Listar todos</a>
+            <div class="row col-md-2"></div>
+            <br /><br /> <br /> <br />
+            <div id="formulario1" class="panel panel-primary text-center">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Listado de grupos registrados en el sistema</h4>
+                </div>
+                <div class="panel-body">
+                    <table id="grillaG" class="row text-center table table-bordered"> </table>
+                </div>
+            </div>
+
+            <!--<a id="btnN" class="btn btn-default btn-block btn-lg ">Nuevo</a>-->
+        </div>
+         <span class="boton-top">▲</span>
+        <span id="btnN" class="boton-top2">Nuevo</span>
+
+    </div>
+
+</div>
+
+<!---------------------------------------- FOOTER DE LAS PAGINAS----------------------------------------------->
+<div id="PageFooter" class="container-footer">
+</div>
+<!----------------------------------------------------------------------------------------------------------->

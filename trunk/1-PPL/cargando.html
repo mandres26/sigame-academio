@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="es-co">
+<head>
+    <meta charset="utf-8">
+    <title>Cargando Sesión ...</title>
+    <meta name="description" content="description">
+    <meta name="author" content="DevOOPS">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/BOOTSTRAP/plugins/bootstrap/bootstrap.css" rel="stylesheet">
+    <script src="/BOOTSTRAP/plugins/jquery/jquery-2.1.0.min.js"></script>
+    <script src="/BOOTSTRAP/plugins/jquery/jquery.cookie.js"></script>
+    <link href="/BOOTSTRAP/css/style.css" rel="stylesheet">
+    <script src="validaciones-tools.js"></script>
+    <script>
+        function cargar_pagina() {
+            var username = localStorage.getItem('SeccionNombres') + " " + localStorage.getItem('SeccionApellidos');
+            $("#userName").text(username+" || Rol: ");
+            var rol = localStorage.getItem('SeccionRol');
+            $("#userRol").text(rol +"  ... ");
+            if (rol == "ADMINISTRATIVO") {
+                setTimeout("window.location.href = 'admin.html'", 1000); //tiempo expresado en milisegundos
+            } else if (rol == "ACUDIENTE") {
+                setTimeout("window.location.href = 'acudiente.html'", 1000); //tiempo expresado en milisegundos
+            } else if (rol == "SUPER") {
+                setTimeout("window.location.href = 'super.html'", 1000); //tiempo expresado en milisegundos
+            } else if (rol == "PROFESOR") {
+                setTimeout("window.location.href = 'profesor.html'", 1000); //tiempo expresado en milisegundos
+            }
+            else {
+                setTimeout("window.location.href = 'login.html'", 4000); //tiempo expresado en milisegundos
+                Modal("Error de congruencia: Este usuario contiene un rol que <strong> NO tiene un formulario principal habilitado. </strong> ", "El formulario para este usuario no esta disponible");
+            }
+        }
+       </script>
+</head>
+<body onload="cargar_pagina()">
+    <img src="/BOOTSTRAP/img/devoops_getdata.gif" alt="preloader" />
+    <div id="content" class="col-xs-12 col-sm-10">
+        <span class="welcome">Iniciando Sesión como: </span>
+        <span id="userName"> SIGAME </span>
+        <span id="userRol"> SIGAME </span>
+    </div>
+</body>
+</html>

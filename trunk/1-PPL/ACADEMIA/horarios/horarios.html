@@ -1,0 +1,124 @@
+﻿<script src="/validaciones-tools.js"></script>
+<script src="/ACADEMIA/horarios/horarios.js"></script>
+<div class="row">
+    <div id="breadcrumb" class="col-md-12">
+        <ol class="breadcrumb">
+            <li><a >Procesos académicos / Horarios / Procesar </a></li>
+        </ol>
+    </div>
+    
+</div>
+
+<div class="box" >
+    <div class="box-header">
+        <div class="box-name">
+            <i class="fa fa-table"></i>
+            <span>  </span> <!--Titulo del box-->
+        </div>
+
+        <div class="box-icons">
+            <a class="expand-link">
+                <i class="fa fa-expand"></i>
+            </a>
+            
+        </div>
+        <div class="no-move"></div>
+    </div>
+    <div class="box-content">
+        <!------------------------------------------>
+        <div class="text-center">
+            <h3 class="page-header col-md-9 text-left">Gestión de horarios de clases</h3>
+
+            <div id="imgload" class="text-muted" >Cargando...  </div>
+
+            <div id="social" class="pull-right col-md-3"> </div>
+            <br />
+            <br />
+        </div>
+        <div id="alerta"></div>
+       <!------------------------------------------>
+        <div id="formPPAL" class="form-group">
+            <div class="form-group text-center">
+                <div class="panel panel-primary ">
+                    <br />
+                    <label class="control-label col-md-3 text-danger" for="comboIdgrupo">GRUPO: Identificaci&oacute;n</label>
+                    <div class="row col-md-2"><select id="comboIdgrupo" color:"#80bfff" class="form-control text-danger ">2014-5A</select> </div>
+                    <hr />
+                    <div class="panel panel-default ">
+                        <br />
+                        <div class="row col-md-2"><label id="" class="control-label text-danger" for="comboJornada">JORNADA</label> </div>
+                        <div class="row col-md-3"><select id="comboJornada" color:"#80bfff" class="form-control" required></select></div>
+                        <div class="row col-md-2"><label id="" class="control-label" for="txtHoraI">  INICIA: </label> </div>
+                        <div class="row col-md-3"><input id="txtHoraIJ" type="time" class="form-control" disabled maxlength="5" /></div>
+                        <div class="row col-md-2"><label id="" class="control-label" for="txtHoraF">  TERMINA:  </label> </div>
+                        <div class="row col-md-2"><input id="txtHoraFJ" type="time" class="form-control" disabled maxlength="5" /></div>
+                        <br />  <br /> 
+                      </div>
+                    <div class="row col-md-3"><label id="" class="control-label text-danger" for="comboIdAsig">ASIGNATURA: Identificaci&oacute;n</label></div>
+                    <div class="row col-md-3"><select id="comboIdAsig" color:"#80bfff" class="form-control" required></select></div>
+                    <div class="row col-md-2"><label id="" class="control-label " for=" txtIdNomAsi">Nombres / Horas </label></div>
+                    <div class="row col-md-3"><input id="txtIdNomAsi" class="form-control" disabled /></div>
+                    <div class="row col-md-2"><input id="txtIdHoras" class="form-control" disabled /></div>
+                    <hr />
+                    <div class="row col-md-2"></div>
+                    <div class="row col-md-4"><a id="btnGR" class="btn btn-primary btn-block" data-loading-text="Cargando...">Gestionar registro</a></div>
+                    <div class="row col-md-2"></div>
+                    <div class="row col-md-5"><a id="btnGM" class="btn btn-danger btn-block" data-loading-text="Cargando...">Gestionar modificación</a></div>
+                    <div class="row col-md-2"></div>
+                    <hr />
+                    <hr />
+                    <div id="f2">
+                        <div id="alerta2"></div>
+                        <div id="f-grilla" class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Listado de horarios registrados en el sistema</h4>
+                            </div>
+                            <div class="panel-body">
+
+                                <p> Escoja el <strong>horario</strong>, haga clic en los botones <strong>modificar o eliminar </strong> para procesar.</p>
+                                <table id="grilla" class="row text-center table table-bordered"></table>
+                            </div>
+                        </div>
+
+                        <div id="f-horas" class="panel panel-info">
+                            <br />
+                            <label class="control-label col-md-3 text-danger" for="comboDia">DIA DE LA SEMANA:</label>
+                            <div class="row col-md-4"><select id="comboDia" color:"#80bfff" class="form-control text-danger ">2014-5A</select> </div>
+                            <div class="row col-md-7"></div>
+                            <hr />
+                            <div class="row col-md-3"><label id="" class="control-label" for="txtHoraI">HORA INICIAL: </label> </div>
+                            <div class="row col-md-3"><input id="txtHoraI" type="time" class="form-control" maxlength="5" /></div>
+                            <div class="row col-md-1"></div>
+                            <div class="row col-md-3"><label id="" class="control-label" for="txtHoraF">HORA FINAL: </label> </div>
+                            <div class="row col-md-3"><input id="txtHoraF" type="time" class="form-control" maxlength="5" /></div>
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+
+                <div id="botones" class="row text-center">
+                    <hr />
+                    <div class="row col-md-4"></div>
+                    <a id="btnR" class="btn btn-success clsR col-sm-5" data-loading-text="Cargando...">Registrar</a>
+                    <a id="btnM" class="btn btn-warning clsM col-sm-5" data-loading-text="Cargando...">Modificar</a>
+                    <div class="row col-md-4"></div>
+                </div>
+            </div>
+            <!--<a id="btnN" class="btn btn-default btn-block btn-lg ">Nuevo</a>-->
+        </div>
+        <span class="boton-top">▲</span>
+        <span id="btnN" class="boton-top2">Nuevo</span>
+
+    </div>
+
+</div>
+
+<!---------------------------------------- FOOTER DE LAS PAGINAS----------------------------------------------->
+<div id="PageFooter" class="container-footer">
+</div>
+<!--<div id="imgload" class="container-footer">
+</div>-->
+
+
+<!----------------------------------------------------------------------------------------------------------->

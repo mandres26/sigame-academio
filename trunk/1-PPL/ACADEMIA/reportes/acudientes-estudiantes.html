@@ -1,0 +1,74 @@
+﻿<script src="/validaciones-tools.js"></script>
+<script src="/ACADEMIA/reportes/acudientes-estudiantes.js"></script>
+<div class="row">
+    <div id="breadcrumb" class="col-md-12">
+        <ol class="breadcrumb">
+                      <li><a >Reportes / Boletínes </a></li>
+        </ol>
+    </div>
+
+</div>
+
+<div class="box">
+    <div class="box-header">
+        <div class="box-name">
+            <i class="fa fa-table"></i>
+            <span>  </span> <!--Titulo del box-->
+        </div>
+
+        <div class="box-icons">
+            <a class="expand-link">
+                <i class="fa fa-expand"></i>
+            </a>
+           
+        </div>
+        <div class="no-move"></div>
+    </div>
+    <div class="box-content">
+        <!------------------------------------------>
+        <div class="text-center">
+            <h3 class="page-header col-md-9 text-left">Gestión de boletines academicos</h3>
+            <div id="imgload" class="text-muted">Cargando...  </div>
+
+            <div id="social" class="pull-right col-md-3"> </div>
+            <br />
+            <br />
+        </div>
+        <div id="alerta"></div>
+        <!------------------------------------------>
+        <div id="formPPAL" class="form-group">
+            <div class="form-group text-center">
+                <div id="f-grilla" class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Estudiantes que usted tiene matriculados en la institución</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div  class="panel panel-primary">
+                            <br />
+                            <div class="row col-md-3"><label id="" class="control-label text-danger" for=" comboPeriodos ">PERIODO ACAD&Eacute;MICO</label></div>
+                            <div class="row col-md-3 "><select id="comboPeriodos" color:"#80bfff" class="form-control text-success" required></select></div>
+                            <div class="row col-md-2"><label id="" class="control-label " for=" txtRangoI ">Inicia: </label></div>
+                            <div class="row col-md-2"><input id="txtRangoI" class="form-control" disabled /></div>
+                            <div class="row col-md-2"><label id="" class="control-label" for=" txtRangoF ">Termina: </label></div>
+                            <div class="row col-md-2"><input id="txtRangoF" class="form-control" disabled /></div>
+                            <br /><br />
+                         </div>
+                        <table id="grilla1" class="row col-lg-12 text-center table table-bordered"> </table>
+                        <div class="row col-md-3"></div>
+                        <label id="Ltotal1" class=" txt-primary row col-md-2 text-center"></label>
+                        <div class="row col-md-2"></div>
+                        
+                        <div class="row col-md-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="boton-top">▲</span>
+
+    </div>
+</div>
+
+<!---------------------------------------- FOOTER DE LAS PAGINAS----------------------------------------------->
+<div id="PageFooter" class="container-footer">
+</div>
+<!----------------------------------------------------------------------------------------------------------->
