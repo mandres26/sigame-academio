@@ -1,0 +1,14 @@
+C:\Users\CLIENTES SINGS\Desktop\R_SIGAME\2-BLL\bin\Release\2-BLL.dll
+C:\Users\CLIENTES SINGS\Desktop\R_SIGAME\2-BLL\bin\Release\2-BLL.pdb
+C:\Users\CLIENTES SINGS\Desktop\R_SIGAME\2-BLL\bin\Release\3-DAL.dll
+C:\Users\CLIENTES SINGS\Desktop\R_SIGAME\2-BLL\bin\Release\ENTIDADES.dll
+C:\Users\CLIENTES SINGS\Desktop\R_SIGAME\2-BLL\bin\Release\EntityFramework.dll
+C:\Users\CLIENTES SINGS\Desktop\R_SIGAME\2-BLL\bin\Release\AutoMapper.dll
+C:\Users\CLIENTES SINGS\Desktop\R_SIGAME\2-BLL\bin\Release\3-DAL.pdb
+C:\Users\CLIENTES SINGS\Desktop\R_SIGAME\2-BLL\bin\Release\ENTIDADES.pdb
+C:\Users\CLIENTES SINGS\Desktop\R_SIGAME\2-BLL\bin\Release\EntityFramework.xml
+C:\Users\CLIENTES SINGS\Desktop\R_SIGAME\2-BLL\bin\Release\AutoMapper.xml
+C:\Users\CLIENTES SINGS\Desktop\R_SIGAME\2-BLL\bin\Release\es\EntityFramework.resources.dll
+C:\Users\CLIENTES SINGS\Desktop\R_SIGAME\2-BLL\obj\Release\2-BLL.csprojResolveAssemblyReference.cache
+C:\Users\CLIENTES SINGS\Desktop\R_SIGAME\2-BLL\obj\Release\2-BLL.dll
+C:\Users\CLIENTES SINGS\Desktop\R_SIGAME\2-BLL\obj\Release\2-BLL.pdb
